@@ -134,7 +134,17 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let outPutArr = [];
+  arr.forEach((element, index, arr) => {
+    if (arr[index] % 3 === 0 && arr[index] % 5 === 0){
+      outPutArr.push('Fizz Buzz');
+    } else if (arr[index] % 5 === 0){
+      outPutArr.push('Buzz');
+    } else if (arr[index] % 3 === 0){
+      outPutArr.push('Fizz');
+    } else (outPutArr.push(arr[index]));
+  });
+  return outPutArr;
 };
 
 /* ------------------------------------------------------------------------------------------------
