@@ -58,7 +58,18 @@ For example, ['Alphabet', 'alphabet', 'carrot', 'Zebra'] is correctly sorted, an
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetizeBetter = (arr) => {
-  // Solution code here...
+  arr.sort ( (a, b) => {
+    var nameA = a.toUpperCase();
+    var nameB = b.toUpperCase();
+    if(nameA < nameB){
+      return -1;
+    }
+    if(nameA > nameB){
+      return 1;
+    }
+    return 0;
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
