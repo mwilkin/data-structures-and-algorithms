@@ -193,6 +193,10 @@ const meetings = [
   new Meeting('Friday', '1200', '1345'),
 ];
 
+const weekDays = [
+
+];
+
 const sortMeetingsByDay = (arr) => {
   
   arr.sort ((a,b) => {
