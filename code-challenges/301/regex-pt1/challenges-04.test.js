@@ -61,13 +61,10 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // let halloween = /[(oct](\b)?(ober)?(\b)*/gi;
-  // if(halloween.test(input)){
-  //   return true;
-  // } else {
-  //   return false;
-  // }
+  let halloween = /[oct]{3}?(ober)?(\b)*/gi;
+  return halloween.test(input);
 };
+// regexr.com indicates that this should work!?
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
