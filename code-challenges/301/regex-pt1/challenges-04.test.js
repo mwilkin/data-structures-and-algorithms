@@ -61,8 +61,12 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  let halloween = /[october]*/gi;
-  return halloween.test(input);
+  // let halloween = /[(oct](\b)?(ober)?(\b)*/gi;
+  // if(halloween.test(input)){
+  //   return true;
+  // } else {
+  //   return false;
+  // }
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -76,7 +80,8 @@ The expected output of "Hello, and have a wonderful day!" is ["and ", "have ", "
 ------------------------------------------------------------------------------------------------ */
 
 const noPunctuation = str => {
-  // Solution code here...
+  let magicStuff = /\w+\s/g;
+  return str.match(magicStuff);
 };
 
 /* ------------------------------------------------------------------------------------------------
