@@ -61,7 +61,8 @@ Do not use the vertical bar (pipe) in your pattern.
 ------------------------------------------------------------------------------------------------ */
 
 const matchMonth = (input) => {
-  // Solution code here...
+  let halloween = /[october]*/gi;
+  return halloween.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
