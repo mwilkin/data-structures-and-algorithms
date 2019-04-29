@@ -96,8 +96,10 @@ const splitFoods = (recipe) => {
   let result = [];
   for(let i = 0; i < recipe.ingredients.length; i++){
     let items = recipe.ingredients[i].split(' ');
-    items.shift();
-    items.shift();
+    items = items.splice(2, 3);
+    
+    // items.shift();
+    // items.shift();
 
     result.push(items.join(' '));
   }
