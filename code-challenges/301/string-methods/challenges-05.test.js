@@ -134,13 +134,19 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  let result = arr.filter(arr => arr % 2 === 0);
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 === 0){
+      arr.splice(i, 1);
+      i--;
+    }
+  }
   
   
+  // let result = arr.filter(arr => arr % 2 === 0);
   
   // arr.forEach(element => {
-  //   if(element % 2 === 0){
-  //     arr.splice(element, 1);
+  //   if(element % 1 !== 0){
+  //     arr.splice(element, -1);
   //   }
   // });
  
@@ -151,8 +157,8 @@ const removeEvenValues = (arr) => {
   //   }
   // });
   // return arr;
-  return result;
-};
+  return arr;
+};  
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
