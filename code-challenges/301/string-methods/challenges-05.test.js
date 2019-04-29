@@ -81,11 +81,6 @@ const listFoods = (recipe) => {
     let items = element.slice(element.indexOf(' ', 3));
     result.push(items.slice(1));
   });
-
-  // for(let i = 0; i < recipe.ingredients.length; i++){
-  //   let items = recipe.ingredients[i].slice(recipe.ingredients[i].indexOf(' ', 4));
-  //   result.push(items.slice(1));
-  // }
   return result;
 };
 
@@ -139,12 +134,24 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  arr.forEach(element => {
-    if(element % 2 === 0){
-      arr.splice(element, arr.length);
-    }
-  });
-  return arr;
+  let result = arr.filter(arr => arr % 2 === 0);
+  
+  
+  
+  // arr.forEach(element => {
+  //   if(element % 2 === 0){
+  //     arr.splice(element, 1);
+  //   }
+  // });
+ 
+ 
+  // arr.forEach(element => {
+  //   if(element % 2 === 0){
+  //     arr.splice(1, element+1);
+  //   }
+  // });
+  // return arr;
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
