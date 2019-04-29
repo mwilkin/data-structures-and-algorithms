@@ -134,29 +134,11 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const removeEvenValues = (arr) => {
-  for(let i = 0; i < arr.length; i++){
+  for(let i = arr.length; i >= 0; i--){
     if(arr[i] % 2 === 0){
       arr.splice(i, 1);
-      i--;
     }
   }
-  
-  
-  // let result = arr.filter(arr => arr % 2 === 0);
-  
-  // arr.forEach(element => {
-  //   if(element % 1 !== 0){
-  //     arr.splice(element, -1);
-  //   }
-  // });
- 
- 
-  // arr.forEach(element => {
-  //   if(element % 2 === 0){
-  //     arr.splice(1, element+1);
-  //   }
-  // });
-  // return arr;
   return arr;
 };  
 
