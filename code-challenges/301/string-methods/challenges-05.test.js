@@ -94,10 +94,15 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  for(let i = 0; i < recipe.ingredients.length; i++){
-    let items = recipe.ingredients[i].split(' ').splice(2, 3).join(' ');
+
+  recipe.ingredients.forEach(element => {
+    let items = element.split(' ').splice(2, 3).join(' ');
     result.push(items);
-  }
+  });
+  // for(let i = 0; i < recipe.ingredients.length; i++){
+  //   let items = recipe.ingredients[i].split(' ').splice(2, 3).join(' ');
+  //   result.push(items);
+  // }
   return result;
 };
 
@@ -113,7 +118,10 @@ Return a new array containing just the verbs. For example, ['Mix until evenly di
 
 const stepActions = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i = 0; i < recipe.steps.length; i++){
+    let action = recipe.steps[i].slice(0, 1);
+    result.push(action);
+  }
   return result;
 };
 
