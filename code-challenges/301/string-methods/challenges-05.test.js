@@ -94,7 +94,13 @@ You may also use other string or array methods.
 
 const splitFoods = (recipe) => {
   let result = [];
-  // Solution code here...
+  for(let i = 0; i < recipe.ingredients.length; i++){
+    let items = recipe.ingredients[i].split(' ');
+    items.shift();
+    items.shift();
+
+    result.push(items.join(' '));
+  }
   return result;
 };
 
