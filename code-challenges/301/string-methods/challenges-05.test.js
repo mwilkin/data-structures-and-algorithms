@@ -122,13 +122,6 @@ const stepActions = (recipe) => {
   recipe.steps.forEach(element => {
     result.push(element.split(' ')[0]);
   });
-  
-  
-  
-  // for(let i = 0; i < recipe.steps.length; i++){
-  //   let action = recipe.steps[i].split(' ');
-  //   result.push(action[0]);
-  // }
   return result;
 };
 
