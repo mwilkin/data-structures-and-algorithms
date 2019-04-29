@@ -95,11 +95,11 @@ You may also use other string or array methods.
 const splitFoods = (recipe) => {
   let result = [];
   for(let i = 0; i < recipe.ingredients.length; i++){
-    let items = recipe.ingredients[i].split(' ').splice(2, 3);
+    let items = recipe.ingredients[i].split(' ').splice(2, 3).join(' ');
     // items = items.splice(2, 3);
 
 
-    result.push(items.join(' '));
+    result.push(items);
   }
   return result;
 };
