@@ -133,7 +133,7 @@ Write a function named totalCharacters that takes in an array and returns the nu
 const totalCharacters = (arr) => {
   let total = 0;
   arr.forEach(element => {
-    if (element.name !== null){
+    if (element.name !== null){ 
       total +=1;
     }
     if (element.spouse !== null){
