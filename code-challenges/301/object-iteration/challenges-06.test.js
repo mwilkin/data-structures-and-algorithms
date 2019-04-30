@@ -7,6 +7,7 @@ Write a function named getCourseKeys that takes in the courseInfo object and ret
 
 For example: (['name', 'duration', 'topics', 'finalExam']).
 ------------------------------------------------------------------------------------------------ */
+
 const courseInfo = { name: 'Code 301', duration: { dayTrack: '4 weeks', eveningTrack: '8 weeks'},
   topics: ['SMACSS', 'APIs', 'NodeJS', 'SQL', 'jQuery', 'functional programming'],
   finalExam: true };
@@ -19,7 +20,7 @@ const getCourseKeys = (obj) => {
 CHALLENGE 2
 Use the characters data below for the remainder of the challenges.
 
-Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
+Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
 ------------------------------------------------------------------------------------------------ */
 
 let characters = [
@@ -67,16 +68,6 @@ let characters = [
   }
 ];
 
-const totalCharacters = (arr) => {
-  // Solution code here...
-};
-
-/*------------------------------------------------------------------------------------------------
-CHALLENGE 3
-
-Write a function named getHouses that returns a new array containing the names of all of the houses in the data set.
------------------------------------------------------------------------------------------------- */
-
 const getHouses = (arr) => {
   let houses = [];
   arr.forEach(element => {
@@ -85,15 +76,15 @@ const getHouses = (arr) => {
   return houses;
 };
 
-/* ------------------------------------------------------------------------------------------------
-CHALLENGE 4
+/*------------------------------------------------------------------------------------------------
+CHALLENGE 3
 
 Write a function named hasChildrenValues that uses Object.values to determine if any given character in the data set has children.
 
 This function should take in an array of data and a character name and return a Boolean.
 
 For example:
-hasChildrenValues(characters, 'Sansa') will return true
+hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Eddard') will return false
 ------------------------------------------------------------------------------------------------ */
 
@@ -104,18 +95,28 @@ const hasChildrenValues = (arr, character) => {
 // arr.forEach(character => {
 //   if(Object.values(character.children.length) > 0);
 //   return true;
-// });
+
 
 /* ------------------------------------------------------------------------------------------------
-CHALLENGE 5
+CHALLENGE 4
 
-Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 4, but uses the data's entries instead of its keys.
+Write a function named hasChildrenEntries that is similar to your hasChildrenValues function from challenge 3, but uses the data's entries instead of its values.
 
-The input and output of this function are the same as the input and output from challenge 4.
+The input and output of this function are the same as the input and output from challenge 3.
 ------------------------------------------------------------------------------------------------ */
 
 const hasChildrenEntries = (arr, character) => {
   // Solution code here...
+};
+
+/* ------------------------------------------------------------------------------------------------
+CHALLENGE 5
+
+Write a function named totalCharacters that takes in an array and returns the number of characters in the array.
+------------------------------------------------------------------------------------------------ */
+
+const totalCharacters = (arr) => {
+  return Object.entries(arr).length;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -176,19 +177,13 @@ describe('Testing challenge 1', () => {
 });
 
 describe('Testing challenge 2', () => {
-  test('something specific', () => {
-    expect(totalCharacters(characters)).toStrictEqual(7);
-  });
-});
-
-describe('Testing challenge 3', () => {
-  test('something specific', () => {
+  test('It should return an array of the names of the houses', () => {
     expect(getHouses(characters)).toStrictEqual([ 'Stark', 'Arryn', 'Lannister', 'Targaryen', 'Tyrell', 'Stark', 'Snow' ]);
     expect(getHouses(characters).length).toStrictEqual(7);
   });
 });
 
-describe('Testing challenge 4', () => {
+describe('Testing challenge 3', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenValues(characters, 'Daenarys')).toBeTruthy();
   });
@@ -198,13 +193,19 @@ describe('Testing challenge 4', () => {
   });
 });
 
-describe('Testing challenge 5', () => {
+describe('Testing challenge 4', () => {
   test('It should return true for characters that have children', () => {
     expect(hasChildrenEntries(characters, 'Eddard')).toBeTruthy();
   });
 
   test('It should return false to characters who do not have children', () => {
     expect(hasChildrenEntries(characters, 'Jon S.')).toBeFalsy();
+  });
+});
+
+describe('Testing challenge 5', () => {
+  test('It should return the number of characters in the array', () => {
+    expect(totalCharacters(characters)).toStrictEqual(27);
   });
 });
 
