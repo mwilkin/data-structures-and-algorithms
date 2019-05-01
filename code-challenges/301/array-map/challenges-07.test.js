@@ -70,7 +70,11 @@ For example: evenOdd([1,2,3]) returns ['odd','even','odd'].
 
 const evenOdd = (arr) => {
   let result = arr.map(element => {
-
+    if(element % 2 === 0){
+      return 'even';
+    } else if(element % 2 === 1){
+      return 'odd';
+    } else { return 'N/A';}
   });
   return result;
 };
