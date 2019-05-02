@@ -164,7 +164,16 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+  let digits = arr.filter(element => /\d/.test(element));
+
+  let newArray = digits.map(element => {
+    if (element % 2 === 0) {
+      return 'even';
+    } else if(element % 2 === undefined){
+      return;
+    } else return 'odd';
+  });
+  return newArray;
 };
 
 /* ------------------------------------------------------------------------------------------------
