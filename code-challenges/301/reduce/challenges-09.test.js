@@ -142,7 +142,7 @@ const characters = [
 
 const countNumberOfChildren = (arr) => {
   let kids = arr.reduce((acc, child) => {
-    acc.push.children;
+    acc.push(character.children);
     return acc;
   });
   return kids.length;
@@ -179,7 +179,11 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  // Solution code here...
+  let resultPrimes = arr.reduce(( acc, count) => {
+    acc += arr[count];
+    return acc;
+  });
+  return resultPrimes;
 };
 
 /* ------------------------------------------------------------------------------------------------
