@@ -141,11 +141,12 @@ const characters = [
 ];
 
 const countNumberOfChildren = (arr) => {
-  let kids = arr.reduce((acc, child) => {
-    acc.push(character.children);
-    return acc;
-  });
-  return kids.length;
+  return arr.reduce((accumulator, child) => {
+    if(child.children) {
+      accumulator += child.children.length;
+    }
+    return accumulator;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
