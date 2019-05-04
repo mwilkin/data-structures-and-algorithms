@@ -179,11 +179,12 @@ const isPrime = (value) => {
 };
 
 const countPrimeNumbers = (arr) => {
-  let resultPrimes = arr.reduce(( acc, count) => {
-    acc += arr[count];
+  return arr.reduce(( acc, count) => {
+    if(isPrime(count)){
+      acc +=1;
+    }
     return acc;
-  });
-  return resultPrimes;
+  }, 0);
 };
 
 /* ------------------------------------------------------------------------------------------------
