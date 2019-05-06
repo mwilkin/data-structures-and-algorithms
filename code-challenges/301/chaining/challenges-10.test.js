@@ -12,7 +12,17 @@ For example, count(ls]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  let total = 0;
+  if(input.length > 0){
+    input.map (element => {
+      element.map ( item => {
+        if (item === target){
+          total ++;
+        }
+      });
+    });
+  }
+  return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
