@@ -12,19 +12,18 @@ For example, count(ls]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  let total = 0;
-  if(input.length > 0){
-    input.map (element => {
-      element.map ( item => {
-        if (item === target){
-          total ++;
-        }
-      });
+  let counter = 0;
+  if(input.length === 0) return;
+  input.map (element => {
+    element.map ( item => {
+      if (item === target){
+        counter ++;
+      }
     });
-  }
-  return total;
+  });
+  return counter;
 };
-
+// use reduce
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
