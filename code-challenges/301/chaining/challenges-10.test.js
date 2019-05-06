@@ -12,8 +12,19 @@ For example, count(ls]) returns 4.
 ------------------------------------------------------------------------------------------------ */
 
 const count = (target, input) => {
-  // Solution code here...
+  let total = 0;
+  if(input.length > 0){
+    input.map (element => {
+      element.map ( item => {
+        if (item === target){
+          total ++;
+        }
+      });
+    });
+  }
+  return total;
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -26,8 +37,19 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  // Solution code here...
+  let result = 0;
+  input.map(number => {
+    result += number.reduce((a , b) =>{
+      return a + b;
+    });
+  });
+  return result;
 };
+
+// let result = input.reduce(( prev , curr) => {
+//   return prev.concat(curr);
+// });
+// return result.reduce ((a , b ) => (a + b), 0);
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
@@ -42,7 +64,7 @@ For example, [ [0,2,5,4], [2,4,10], [] ] should return [ [1, 32], [1024], [] ].
 ------------------------------------------------------------------------------------------------ */
 
 const divisibleByFiveTwoToThePower = (input) => {
-  // Solution code here...
+  return input.map(arr => arr.filter(element => typeof element === 'number' && element % 5 === 0).map ((element) => Math.pow(2, element)));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -108,7 +130,11 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  // Solution code here...
+  return data.filter(character => {
+    return character.gender === 'male' || character.gender === 'female';
+  }).map(element => {
+    return element.name;
+  }).join(' and ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -118,7 +144,14 @@ Write a function named findShortest that, given the Star Wars data from Challeng
 ------------------------------------------------------------------------------------------------ */
 
 let findShortest = (data) => {
-  // Solution code here...
+  return data.reduce( (accumulator, current) =>{
+    if(accumulator.height*1 > current.height*1){
+      return accumulator = current;
+    } else {
+      return accumulator;
+    }
+  }).name;
+
 };
 
 /* ------------------------------------------------------------------------------------------------
