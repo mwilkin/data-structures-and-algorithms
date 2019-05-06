@@ -37,14 +37,20 @@ For example, [[1, 2, 3, 4, 5], [6, 7, 2, 4, 5, 7], [9, 2, 3, 6,]] returns 66.
 ------------------------------------------------------------------------------------------------ */
 
 const totalSum = (input) => {
-  let result = input.reduce(( prev , curr) => {
-    return prev.concat(curr);
+  let result = 0;
+  input.map(number => {
+    result += number.reduce((a , b) =>{
+      return a + b;
+    });
   });
-  return result.reduce ((a , b ) => (a + b), 0)
-
+  return result;
 };
-//  input.reduce((a, b) => {b.map(b, i) = (a[i] + b), [])
-// a + b, 0)
+
+// let result = input.reduce(( prev , curr) => {
+//   return prev.concat(curr);
+// });
+// return result.reduce ((a , b ) => (a + b), 0);
+
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 3
 
