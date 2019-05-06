@@ -130,7 +130,7 @@ let starWarsData = [{
 }];
 
 let findMaleAndFemale = (data) => {
-  data.filter(character => {
+  return data.filter(character => {
     return character.gender === 'male' || character.gender === 'female';
   }).map(element => {
     return element.name;
