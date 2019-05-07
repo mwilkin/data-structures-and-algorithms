@@ -9,8 +9,8 @@ If the PIN is four numerical digits long, return true. Otherwise, return false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePin = (pin) => {
-  let digitReg = /^(\d{4})$/g;
-  return digitReg.test(pin);
+  let pinReg = /^(\d{4})$/g;
+  return pinReg.test(pin);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -30,8 +30,8 @@ Note: if you ever need to validate an email using a regex in practice, the Inter
 ------------------------------------------------------------------------------------------------ */
 
 const validateEmail = (email) => {
-  let digitReg = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g;
-  return digitReg.test(email);
+  // let emailReg = //g;
+  // return emailReg.test(email);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -56,7 +56,8 @@ Return either true or false.
 ------------------------------------------------------------------------------------------------ */
 
 const validatePhoneNumber = (phoneNumber) => {
-  // Solution code here...
+  let phoneReg = /^(\d{3}|\(\d{3}\))-? ?\d{3}-? ?\d{4}$/g;
+  return phoneReg.test(phoneNumber);
 };
 
 /* ------------------------------------------------------------------------------------------------
