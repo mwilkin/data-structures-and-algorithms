@@ -23,8 +23,8 @@ const alkiBeach = [33, 31, 147, 130, 27, 93, 38, 126, 141, 63, 46, 17];
 const cookieStores = [firstPike, seaTac, seattleCenter, capHill, alkiBeach];
 
 const grandTotal = (stores) => {
-  // Solution code here...
-
+  let result = stores.reduce( (acc, curr) => curr.map((num, index) => (acc[index] + num), []));
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -38,7 +38,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-  // Solution code here...
+  let result = [];
+  data.forEach((element, index) => {
+    let returnObj ={
+      sales: element + ' cookies',
+      time: hours[index],
+    };
+    result.push(returnObj);
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -60,7 +68,7 @@ const errands = [
 ];
 
 const howManyTreats = (arr) => {
-  // Solution code here...
+  return arr[2].items[1].quantity;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,7 +90,9 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  if(board[row][col] === '#'){
+    return 'hit';
+  } return 'miss';
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -94,7 +104,13 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let result = 1;
+  numbers.map((accumulator) => {
+    accumulator.forEach(element => {
+      result *= element;
+    });
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -114,7 +130,8 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  return sumFx = (accumulator, current) => accumulator + current;
+  return weather.reduce(sumFx);
 };
 
 /* ------------------------------------------------------------------------------------------------
