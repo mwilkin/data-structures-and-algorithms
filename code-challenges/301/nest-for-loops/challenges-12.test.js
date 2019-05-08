@@ -130,10 +130,16 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  let sumFx = weather.reduce(( accumulator, current) => {
-    return accumulator + current;
-  });
-  return sumFx;
+  let answer
+
+  // let total = weather.forEach(week =>{
+  //   return week.reduce(( accumulator, current) => {
+  //     accumulator + current;
+  //   }, 0);
+
+  // });
+  // console.log(total);
+  // return total;
 };
 
 /* ------------------------------------------------------------------------------------------------
