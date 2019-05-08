@@ -38,12 +38,15 @@ Write a function named salesData that uses forEach to iterate over the hourlySal
 ------------------------------------------------------------------------------------------------ */
 
 const salesData = (hours, data) => {
-//   return hours.forEach(element, index) => {
-//     something.map(object => {
-//       let returnObj ={};
-//       returnObj[]
-//     })
-//   }
+  let result = [];
+  data.forEach((element, index) => {
+    let returnObj ={
+      sales: element + ' cookies',
+      time: hours[index],
+    };
+    result.push(returnObj);
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -127,7 +130,7 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  const sumFx = (accumulator, current) => accumulator + current;
+  return sumFx = (accumulator, current) => accumulator + current;
   return weather.reduce(sumFx);
 };
 
