@@ -87,7 +87,9 @@ The top row of the board is considered row zero and row numbers increase as they
 ------------------------------------------------------------------------------------------------ */
 
 const battleship = (board, row, col) => {
-  //  Solution code here...
+  if(board[row][col] === '#'){
+    return 'hit';
+  } return 'miss';
 };
 
 /* ------------------------------------------------------------------------------------------------
