@@ -101,8 +101,13 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  let start = 1;
-  return numbers.reduce((accumulator, value) => value.map(accumulator =>  start *= accumulator ));
+  let result = 1;
+  numbers.map((accumulator) => {
+    accumulator.forEach(element => {
+      result *= element;
+    });
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
