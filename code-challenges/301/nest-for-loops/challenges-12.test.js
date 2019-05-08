@@ -101,7 +101,8 @@ For example, the following input returns a product of 720: [[1,2], [3,4], [5,6]]
 ------------------------------------------------------------------------------------------------ */
 
 const calculateProduct = (numbers) => {
-  // Solution code here...
+  let start = 1;
+  return numbers.reduce((accumulator, value) => value.map(accumulator =>  start *= accumulator ));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,7 +122,8 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  // Solution code here...
+  const sumFx = (accumulator, current) => accumulator + current;
+  return weather.reduce(sumFx);
 };
 
 /* ------------------------------------------------------------------------------------------------
