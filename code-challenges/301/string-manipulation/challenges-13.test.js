@@ -82,7 +82,11 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  // Solution code here...
+  return arr.filter(element => {
+    if( element.includes(target)) {
+      return true;
+    } else return false;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -98,7 +102,13 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 ------------------------------------------------------------------------------------------------ */
 
 const unenrollBrook = (arr) => {
-  // Solution code here...
+  return arr.map(element => {
+    return element.filter(item =>{
+      if(!(item.includes('Brook'))){
+        return item;
+      }
+    });
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
