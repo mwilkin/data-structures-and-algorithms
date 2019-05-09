@@ -104,7 +104,7 @@ For example, [['Brook Testing', 'Actual Person'], ['Human Person', 'Brook again'
 const unenrollBrook = (arr) => {
   return arr.map(element => {
     return element.filter(item =>{
-      if(!(item.includes('Brook'))){
+      if(!item.includes('Brook')){
         return item;
       }
     });
