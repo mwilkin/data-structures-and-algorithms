@@ -54,7 +54,11 @@ Write a function named allHappy that takes in an array of strings and returns a 
 ------------------------------------------------------------------------------------------------ */
 
 const allHappy = (arr) => {
-  // Solution code here...
+  // let result = arr.forEach(element => {
+  //   return element.test(':)');
+  // });
+  // console.log(result);
+  // return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,7 +68,11 @@ Write a function named findAnything that takes in an array of strings, along wit
 ------------------------------------------------------------------------------------------------ */
 
 const findAnything = (arr, target) => {
-  // Solution code here...
+  return arr.filter(element => {
+    if(element.includes(target)){
+      return element;
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
