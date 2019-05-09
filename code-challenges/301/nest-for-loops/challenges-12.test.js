@@ -130,10 +130,25 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  return sumFx = (accumulator, current) => accumulator + current;
-  return weather.reduce(sumFx);
+  let result = 0;
+  let elementCount = 0;
+  weather.forEach(row => {
+    row.forEach(element => {
+      result += element;
+      elementCount ++;
+    });
+  });
+  return result/elementCount;
 };
 
+// let total = weather.reduce(week =>{
+//   return week.reduce(( accumulator, current) => {
+//     return accumulator + current;
+//   }, 0);
+
+// });
+// console.log(total);
+// return total;
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
@@ -152,7 +167,13 @@ let lowestWeeklyTemperatureData = [
 ];
 
 const lowestWeeklyAverage = (weather) => {
-  // Solution code here...
+  let lowestAvg = 999;
+  weather.forEach(week => {
+    let sum = week.reduce((acc, val) => acc + val);
+    let avg = sum / week.length;
+    lowestAvg = lowestAvg > avg ? avg : lowestAvg;
+  });
+  return lowestAvg;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -168,9 +189,11 @@ For example, excel('1,1,1\n4,4,4\n9,9,9') returns [3, 12, 27].
 ------------------------------------------------------------------------------------------------ */
 
 const excel = (str) => {
-  // Solution code here...
+  return str.split('\n').map(row => {
+    let numbers = row.split(',').map(Number);
+    return numbers.reduce(( acc, val) => acc + val);
+  });
 };
-
 /* ------------------------------------------------------------------------------------------------
 TESTS
 
