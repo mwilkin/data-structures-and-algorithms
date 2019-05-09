@@ -130,18 +130,25 @@ const weeklyTemperatures = [
 ];
 
 const averageDailyTemperature = (weather) => {
-  let answer
-
-  // let total = weather.forEach(week =>{
-  //   return week.reduce(( accumulator, current) => {
-  //     accumulator + current;
-  //   }, 0);
-
-  // });
-  // console.log(total);
-  // return total;
+  let result = 0;
+  let elementCount = 0;
+  weather.forEach(row => {
+    row.forEach(element => {
+      result += element;
+      elementCount ++;
+    });
+  });
+  return result/elementCount;
 };
 
+// let total = weather.reduce(week =>{
+//   return week.reduce(( accumulator, current) => {
+//     return accumulator + current;
+//   }, 0);
+
+// });
+// console.log(total);
+// return total;
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
 
