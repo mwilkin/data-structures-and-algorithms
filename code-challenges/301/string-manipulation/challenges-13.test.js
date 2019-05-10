@@ -83,7 +83,7 @@ Write a function named findEvery that takes in an array of strings, along with a
 ------------------------------------------------------------------------------------------------ */
 
 const findEvery = (arr, target) => {
-  return arr.forEach(element => {
+  return arr.every(element => {
     if( element.includes(target)) {
       return true;
     } else return false;
