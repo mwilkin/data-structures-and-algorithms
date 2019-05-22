@@ -1,14 +1,17 @@
 {
-  "name": "3-code-challenges",
+  "name": "code-challenges",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --verbose",
-    "watch": "jest --watchall"
+    "watch": "jest --watchall --verbose --coverage",
+    "start": "node index.js",
+    "lint": "eslint **/*.js",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
   },
   "keywords": [],
-  "author": "",
+  "author": "Matt Wilkin",
   "license": "MIT",
   "dependencies": {
     "jest": "^24.1.0"
