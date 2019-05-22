@@ -16,6 +16,8 @@ ____
 
 [Insert and Shift Array](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayShift)
 
+[Array Binary Search](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayBinarySearch)
+
 _____
 ### Authored by Matt Wilkin
 
