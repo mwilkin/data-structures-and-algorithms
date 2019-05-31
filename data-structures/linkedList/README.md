@@ -11,7 +11,8 @@ Implement insert, includes, and print methods
 I reviewed the class demo, did a lot of research to learn more about Linked Lists, and then planned my project
 
 ## API
-<!-- Description of each method publicly available to your Linked List -->
+
+Methods: insert, includes, printList
 
 
 ------
