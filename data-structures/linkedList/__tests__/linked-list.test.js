@@ -37,4 +37,15 @@ describe('Linked List Module', () => {
     // expect(list.tail.value).toEqual(2);
   });
 
+  // it('Will return true when finding a value within the linked list that exists', () =>{
+
+  // });
+
+  // it('Will return false when searching for a value in the linked list that does not exist', () =>{
+
+  // });
+
+  it('Can properly return a collection of all the values that exist in the linked list', () =>{
+    expect(list.printList()).toEqual([7, 4, 2, 1, 7, 7]);
+  });
 })
