@@ -8,6 +8,21 @@ ________
 
 ## 301
 
+[array-map](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/array-map)
+[chaining](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/chaining)
+[filter](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/filter)
+[for-each](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/for-each)
+[last-challenge](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/last-challenge)
+[nested-for-loops](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/nest-for-loops)
+[object-iteration](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/object-iteration)
+[reduce](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/reduce)
+[regex-pt1](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/regex-pt1)
+[regex-pt2](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/regex-pt2)
+[sort](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/sort)
+[string-manipulation](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/string-manipulation)
+[string-methods](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/string-methods)
+[value-vs-reference](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/301/value-vs-reference)
+
 ____
 
 ## 401 
