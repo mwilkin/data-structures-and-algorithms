@@ -29,4 +29,12 @@ describe('Linked List Module', () => {
     expect(list.head.value).toEqual(1);
   });
 
+  it('Can properly insert multiple nodes into the linked list', () => {
+    list.insert(2);
+    list.insert(4);
+    list.insert(7);
+    expect(list.head.next.value).toEqual(4);
+    // expect(list.tail.value).toEqual(2);
+  });
+
 })
