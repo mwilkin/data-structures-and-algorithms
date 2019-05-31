@@ -24,4 +24,9 @@ describe('Linked List Module', () => {
     expect(list.insert(7)).toEqual(7);
   });
 
+  it('The head property will properly point to the first node in the linked list', () => {
+    list.insert(1);
+    expect(list.head.value).toEqual(1);
+  });
+
 })
