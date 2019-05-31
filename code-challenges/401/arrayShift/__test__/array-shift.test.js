@@ -20,11 +20,7 @@ describe('insertShiftArray function', () => {
   });
 
   it('should return null when the first argument is not an array', () =>{
-    expect(array_shift.insertedShiftArray(true, 5).toBeNull();
-    expect(array_shift.insertedShiftArray(1, 5).toBeNull();
-    expect(array_shift.insertedShiftArray({}, 5).toBeNull();
-    expect(array_shift.insertedShiftArray([], 5).toBeNull();
-    expect(array_shift.insertedShiftArray(undefined, 5).toBeNull();
-    expect(array_shift.insertedShiftArray(null, 5).toBeNull();
+    expect(array_shift.insertShiftArray(true, 5)).toBeNull();
+    expect(array_shift.insertShiftArray('one', 5)).toBeNull();
   });
 });
