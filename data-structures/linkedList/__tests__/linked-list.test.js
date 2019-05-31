@@ -19,5 +19,9 @@ describe('Linked List Module', () => {
     expect(list).toBeDefined();
   });
 
-  
+  it('Can properly insert into the linked list', () => {
+    list.insert(7);
+    expect(list.insert(7)).toEqual(7);
+  });
+
 })
