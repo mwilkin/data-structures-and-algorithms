@@ -44,11 +44,14 @@ describe('Linked List Module', () => {
     expect(list.includes(30)).toEqual(true);
   });
 
-  // it('Will return false when searching for a value in the linked list that does not exist', () =>{
-
-  // });
+  it('Will return false when searching for a value in the linked list that does not exist', () =>{
+    list.insert(21);
+    list.insert(45);
+    list.insert(100);
+    expect(list.includes(22)).toEqual(false);
+  });
 
   it('Can properly return a collection of all the values that exist in the linked list', () =>{
-    expect(list.printList()).toEqual([16, 30, 9, 7, 4, 2, 1, 7, 7]);
+    expect(list.printList()).toEqual([100, 45, 21, 16, 30, 9, 7, 4, 2, 1, 7, 7]);
   });
 })

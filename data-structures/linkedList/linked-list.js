@@ -1,7 +1,7 @@
 'use strict';
 
 class LinkedListNode {
-  constructor(value) {
+  constructor(value, next) {
     this.value = value;
     this.next = null;
     // this.head = null;
@@ -23,6 +23,16 @@ class LinkedList{
 
   includes(value){
     //returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
+    let thisNode = this.head;
+    while(thisNode) {
+      if(thisNode.value === value){
+        return true;
+      } else{
+        thisNode = thisNode.next;
+      }
+    }
+    return false;
+
   }
 
   printList(){
