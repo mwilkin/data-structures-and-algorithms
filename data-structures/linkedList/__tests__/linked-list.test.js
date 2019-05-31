@@ -10,8 +10,14 @@
 
 'use strict';
 
-const linkedList = require('../linked-;ist.js');
+const linkedList = require('../linked-list.js');
 
 describe('Linked List Module', () => {
   let list = new linkedList();
+
+  it('Can successfully instantiate an empty linked list', () => {
+    expect(list).toBeDefined();
+  });
+
+  
 })
