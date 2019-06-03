@@ -14,7 +14,17 @@ class LinkedList{
   }
 
   insert(value){
+    // if(!value) throw 'Missing value parameter';
     let node = new LinkedListNode(value);
+
+    // if(!this.head){
+    //   this.head = node;
+    //   return this.head;
+    // }
+    // node.next = this.head;
+    // this.head = node;
+    // return this.head;
+
     node.value = value;
     node.next = this.head;
     this.head = node;

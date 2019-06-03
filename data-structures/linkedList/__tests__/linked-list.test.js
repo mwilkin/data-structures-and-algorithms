@@ -13,29 +13,40 @@
 const linkedList = require('../linked-list.js');
 
 describe('Linked List Module', () => {
-  let list = new linkedList();
+  let list = new LinkedList();
 
-  it('Can successfully instantiate an empty linked list', () => {
-    expect(list).toBeDefined();
+  // let list;
+  //beforeEach(() => {
+  //   list = new LinkedList
+  // }
+
+  describe('constructor', () => {
+    it('Can successfully instantiate an empty linked list', () => {
+      expect(list).toBeDefined();
+    });
   });
 
-  it('Can properly insert into the linked list', () => {
-    list.insert(7);
-    expect(list.insert(7)).toEqual(7);
+  describe('insert(value) method', () => {
+    it('Can properly insert into the linked list', () => {
+      list.insert(7);
+      expect(list.insert(7)).toEqual(7);
+    });
+
+    it('The head property will properly point to the first node in the linked list', () => {
+      list.insert(1);
+      list.insert(2);
+      expect(list.head.value).toEqual(2);
+    });
+
+    it('Can properly insert multiple nodes into the linked list', () => {
+      list.insert(2);
+      list.insert(4);
+      list.insert(7);
+      expect(list.head.next.value).toEqual(4);
+      // expect(list.tail.value).toEqual(2);
+    });
   });
 
-  it('The head property will properly point to the first node in the linked list', () => {
-    list.insert(1);
-    expect(list.head.value).toEqual(1);
-  });
-
-  it('Can properly insert multiple nodes into the linked list', () => {
-    list.insert(2);
-    list.insert(4);
-    list.insert(7);
-    expect(list.head.next.value).toEqual(4);
-    // expect(list.tail.value).toEqual(2);
-  });
 
   it('Will return true when finding a value within the linked list that exists', () =>{
     list.insert(9);
@@ -51,7 +62,27 @@ describe('Linked List Module', () => {
     expect(list.includes(22)).toEqual(false);
   });
 
-  it('Can properly return a collection of all the values that exist in the linked list', () =>{
-    expect(list.printList()).toEqual([100, 45, 21, 16, 30, 9, 7, 4, 2, 1, 7, 7]);
+  describe('the print method', () => {
+    it('Can properly return a collection of all the values that exist in the linked list', () =>{
+      expect(list.printList()).toEqual([100, 45, 21, 16, 30, 9, 7, 4, 2, 2, 1, 7, 7]);
+    });
+
+    // note to self: insert console.log in print function for this to work
+    // it('should console.log zero times for and empty list', () => {
+    //   let mockConsoleLog = jest.spyOne(console, 'log');
+    //    mockConsoleLog.mockImplementation(() => true);
+    //    list.print();
+    //    expect(mockConsoleLog).not ...(finish this from the video class 6 @ 9:42AM)
+    // });
+
   });
+
+  //it('should throw an error when no value is passed',()=>{
+  // var error;
+  // try{
+  // 
+  // }
+ // });
+
+
 })
