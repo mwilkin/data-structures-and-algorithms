@@ -10,9 +10,9 @@ Implement insert, includes, print, append, insertAfter, and insertBefore methods
 
 I reviewed the class demo, did a lot of research to learn more about Linked Lists, and then planned my project
 
-## API
+## Methods: 
 
-Methods: insert
+insert
 
 includes
 
@@ -24,7 +24,7 @@ insertBefore(value, index)
 
 insertAfter(value, index)
 
-
+<img src="./assets/ll_insertions.jpg" width="400">
 
 ------
 ------
