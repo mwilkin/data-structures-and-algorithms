@@ -4,7 +4,7 @@ Implementing Singly Linked List utilizing classes
 
 ## Challenge
 
-Implement insert, includes, and print methods
+Implement insert, includes, print, append, insertAfter, and insertBefore methods
 
 ## Approach & Efficiency
 
