@@ -82,3 +82,19 @@ Can successfully insert a node before the first node of a linked list
 Can successfully insert after a node in the middle of the linked list
 Can successfully insert a node after the last node of the linked list
 Unit tests must be passing before you submit your final solution code.
+
+kth-from-the-end
+### Feature Tasks
+
+Write a method for the Linked List class which takes a number, k, as a parameter. 
+
+Return the node’s value that is k from the end of the linked list. 
+
+You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+Unit Tests
+Where k is greater than the length of the linked list
+Where k and the length of the list are the same
+Where k is not a positive integer
+Where the linked list is of a size 1
+“Happy Path” where k is not at the end, but somewhere in the middle of the linked list

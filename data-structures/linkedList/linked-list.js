@@ -94,6 +94,28 @@ class LinkedList{
     }
   }
 
+  nthFromEnd(k){
+    let length = 0;
+    let current = this.head;
+
+    while(current){
+      length++;
+      current = current.next;
+    }
+
+    if(0 > k || k > length){
+      throw 'Please check input value';
+    }
+
+    let iterator = length - k;
+
+    current = this.head;
+    for(let i = 0; i < iterator+1; i++){
+      current = current.next;
+    }
+    return current.value;
+  }
+
   printList(){
     let current = this.head;
     while(current){
