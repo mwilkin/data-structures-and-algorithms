@@ -4,63 +4,81 @@ Implementing Singly Linked List utilizing classes
 
 ## Challenge
 
-Implement insert, includes, and print methods
+Implement insert, includes, print, append, insertAfter, and insertBefore methods
 
 ## Approach & Efficiency
 
 I reviewed the class demo, did a lot of research to learn more about Linked Lists, and then planned my project
 
-## API
+## Methods: 
 
-Methods: insert, includes, printList
+insert
 
+includes
+
+printList
+
+append(value)
+
+insertBefore(value, index)
+
+insertAfter(value, index)
+
+<img src="./assets/ll_insertions.jpg" width="400">
 
 ------
 ------
 
-### Features
+Code Challenge
+Linked list insertions.
 
-Create a Node class that has properties for the value stored in the Node, and a pointer to the next Node.
+Specifications
+Read all of these instructions carefully. Name things exactly as described.
+Do all your work in a public repository called data-structures-and-algorithms, with a well-formatted, detailed top-level README.md.
+Create a new branch in your repo called ll_insertions.
+Your top-level readme should contain a “Table of Contents” navigation to all of your challenges and implementations so far. (Don’t forget to update it!)
+Place this implementation in your Data-Structures folder within your repository.
+On your branch, create…
+C#: Extend your LinkedList class according to the feature tasks below.
+JavaScript: Extend your LinkedList class according to the feature tasks below
+Python: Extend your LinkedList class according to the feature tasks below
+Java: Extend your LinkedList class according to the feature tasks below
+Include any language-specific configuration files required for this challenge to become an individual component, module, library, etc.
+NOTE: You can find an example of this configuration for your course in your class lecture repository.
+Feature Tasks
+Write the following methods for the Linked List class:
 
-Within your LinkedList class, include a head property. Upon instantiation, an empty Linked List should be created.
-
-This object should be aware of a default empty value assigned to head when the linked list is instantiated.
-
-Define a method called insert which takes any value as an argument and adds a new node with that value to the head of the list with an O(1) Time performance.
-
-Define a method called includes which takes any value as an argument and returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
-
-Define a method called print which takes in no arguments and returns a collection all of the current Node values in the Linked List.
-
-At no time should an exception or stack trace be shown to the end user. Catch and handle any such exceptions and return a printed value or operation which cleanly represents the state and either stops execution cleanly, or provides the user with clear direction and output.
-
-Be sure to follow your language/frameworks standard naming conventions (e.g. C# uses PascalCasing for all method and class names).
-
-### Structure and Testing
-
+.append(value) which adds a new node with the given value to the end of the list
+.insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+.insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+Examples
+.append(value)
+Input	Args	Output
+head -> [1] -> [3] -> [2] -> X	5	head -> [1] -> [3] -> [2] -> [5] -> X
+head -> X	1	head -> [1] -> X
+.insertBefore(value, newVal)
+Input	Args	Output
+head -> [1] -> [3] -> [2] -> X	3, 5	head -> [1] -> [5] -> [3] -> [2] -> X
+head -> [1] -> [3] -> [2] -> X	1, 5	head -> [5] -> [1] -> [3] -> [2] -> X
+head -> [1] -> [2] -> [2] -> X	2, 5	head -> [1] -> [5] -> [2] -> [2] -> X
+head -> [1] -> [3] -> [2] -> X	4, 5	Exception
+.insertAfter(value, newVal)
+Input	Args	Output
+head -> [1] -> [3] -> [2] -> X	3, 5	head -> [1] -> [3] -> [5] -> [2] -> X
+head -> [1] -> [3] -> [2] -> X	2, 5	head -> [1] -> [3] -> [2] -> [5] -> X
+head -> [1] -> [2] -> [2] -> X	2, 5	head -> [1] -> [2] -> [5] -> [2] -> X
+head -> [1] -> [3] -> [2] -> X	4, 5	Exception
+Unit Tests
 Utilize the Single-responsibility principle: any methods you write should be clean, reusable, abstract component parts to the whole challenge. You will be given feedback and marked down if you attempt to define a large, complex algorithm in one function definition.
 
-### Write tests to prove the following functionality:
+You have access to the Node class and all the properties on the Linked List class.
 
-Can successfully instantiate an empty linked list
-Can properly insert into the linked list
-The head property will properly point to the first node in the linked list
-Can properly insert multiple nodes into the linked list
-Will return true when finding a value within the linked list that exists
-Will return false when searching for a value in the linked list that does not exist
-Can properly return a collection of all the values that exist in the linked list
-Ensure your tests are passing before you submit your solution.
+Write tests to prove the following functionality:
 
-### Stretch Goal
-
-Create a new branch called doubly_linked_list, and, using the resources available to you online, implement a doubly linked list (completely separate from your singly linked list).
-
-### Submission Instructions
-
-Create a pull request from your branch to your master branch
-In your open pull request, leave as a comment a checklist of the specifications and tasks above, with the actual steps that you completed checked off
-Submitting your completed work to Canvas:
-Copy the link to your open pull request and paste it into the corresponding Canvas assignment
-Leave a description of how long this assignment took you in the comments box
-Add any additional comments you like about your process or any difficulties you may have had with the assignment
-Merge your branch into master, and delete your branch (don’t worry, the PR link will still work)
+Can successfully add a node to the end of the linked list
+Can successfully add multiple nodes to the end of a linked list
+Can successfully insert a node before a node located i the middle of a linked list
+Can successfully insert a node before the first node of a linked list
+Can successfully insert after a node in the middle of the linked list
+Can successfully insert a node after the last node of the linked list
+Unit tests must be passing before you submit your final solution code.

@@ -1,22 +1,28 @@
 'use strict';
 
 class LinkedListNode {
-  constructor(value, next) {
+  constructor(value) {
     this.value = value;
     this.next = null;
-    // this.head = null;
   }
 }
 
 class LinkedList{
   constructor() {
-    this.head = null;
+    // this.head = null;
+    this.head = new LinkedListNode();
   }
 
   insert(value){
     // if(!value) throw 'Missing value parameter';
     let node = new LinkedListNode(value);
+    node.value = value;
+    node.next = this.head;
+    this.head = node;
+    return node.value;
 
+
+  //Placeholder for myself, considering changing insert
     // if(!this.head){
     //   this.head = node;
     //   return this.head;
@@ -25,14 +31,9 @@ class LinkedList{
     // this.head = node;
     // return this.head;
 
-    node.value = value;
-    node.next = this.head;
-    this.head = node;
-    return node.value;
   }
 
   includes(value){
-    //returns a boolean result depending on whether that value exists as a Node’s value somewhere within the list.
     let thisNode = this.head;
     while(thisNode) {
       if(thisNode.value === value){
@@ -42,26 +43,63 @@ class LinkedList{
       }
     }
     return false;
+  }
 
+  append(value){
+    let current = this.head;
+    let newNode = new LinkedListNode(value);
+    while(current.next !== null) {
+      current = current.next;
+    }
+    current.next = newNode;
+  }
+
+  insertBefore(value, newValue){
+    let current = this.head;
+    let newNode = new LinkedListNode(newValue);
+
+    while(current.next !== null){
+      if(current.value === value){
+        newNode.next = this.head;
+        this.head = newNode;
+        return newValue;
+      } else {
+        while(current){
+          if(current.next.value === value){
+            newNode.next = current.next;
+            current.next = newNode;
+            return newValue;
+          } else{
+            current = current.next;
+          }
+        }
+      }
+    }
+
+  }
+
+  insertAfter(value, newValue){
+
+    let newNode = new LinkedListNode(newValue);
+    let current = this.head;
+
+    while(current){
+      if(current.value === value) {
+        newNode.next = current.next;
+        current.next = newNode;
+        return newValue;
+      } else {
+        current = current.next;
+      }
+    }
   }
 
   printList(){
     let current = this.head;
-    let results = [];
     while(current){
-      results.push(current.value);
+      console.log(current.value)
       current = current.next;
     }
-    return results;
-
-    // let string = '';
-    // while(current){
-    //   str += current.element + ' ';
-    //   current = current.next;
-    // }
-    // console.log(string);
-    // //returns a collection all of the current Node values in the Linked List.
-    // return string;
   }
 }
 
