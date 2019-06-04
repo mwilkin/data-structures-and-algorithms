@@ -79,8 +79,10 @@ class LinkedList{
   }
 
   insertAfter(value, newValue){
-    let newNode = new LinkedListNode(value);
+
+    let newNode = new LinkedListNode(newValue);
     let current = this.head;
+
     while(current){
       if(current.value === value) {
         newNode.next = current.next;
