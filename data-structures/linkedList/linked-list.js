@@ -48,8 +48,9 @@ class LinkedList{
   }
 
   append(value){
-    let current = this.head;
     let newNode = new LinkedListNode(value);
+    let current = this.head;
+    
     while(current.next !== null) {
       current = current.next;
     }
@@ -94,29 +95,8 @@ class LinkedList{
         current = current.next;
       }
     }
+    return 'Node not found';
   }
-
-  // kthFromEnd(k){
-  //   let length = 0;
-  //   let current = this.head;
-
-  //   while(current){
-  //     length++;
-  //     current = current.next;
-  //   }
-
-  //   if(0 > k || k > length){
-  //     throw 'Please check input value';
-  //   }
-
-  //   let iterator = length - k;
-
-  //   current = this.head;
-  //   for(let i = 0; i < iterator+1; i++){
-  //     current = current.next;
-  //   }
-  //   return current.value;
-  // }
 
    kthFromEnd(k){
     let current = this.head;

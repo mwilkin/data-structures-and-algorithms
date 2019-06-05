@@ -70,19 +70,17 @@ describe('Linked List Module', () => {
   describe('append method', () => {
     it ('should successfully add an element to the end of the list', () => {
       list.insert(1);
-      list.insert(5);
       list.append(20);
       expect (list.head.next.next.value).toEqual(20);
 
     });
 
     it('can append multiple nodes to the end of the list', () => {
-      list.append(5);
+      list.insert(4);
       list.append(7);
       list.append(12);
-      expect(list.head.value).toEqual(5);
-      expect(list.head.next.value).toEqual(7);
-      expect(list.head.next.next.value).toEqual(12);
+      expect(list.head.next.next.value).toEqual(7);
+      expect(list.head.next.next.next.value).toEqual(12);
     });
   });
 
