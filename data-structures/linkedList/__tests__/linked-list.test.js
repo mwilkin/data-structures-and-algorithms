@@ -54,9 +54,12 @@ describe('Linked List Module', () => {
   describe('the print method', () => {
     it('Can properly console log all the values that exist in the linked list', () =>{
       let mockConsoleLog = jest.spyOn(console, 'log');
+
       mockConsoleLog.mockImplementation(() => true);
+      
       list.printList();
-      expect(mockConsoleLog).not.toBeCalled();
+
+      expect(mockConsoleLog).toBeCalled();
     });
   });
 
