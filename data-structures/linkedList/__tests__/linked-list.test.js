@@ -156,27 +156,21 @@ describe('kthFromEnd()', () => {
     });
 
     it('Where the linked list is of a size 1', () => {
-      list.insert(1);
+      let node = {value: 1, next: null};
+      list.head = node;
 
-      expect(() => {
-        list.kthFromEnd(1);
-      }).toThrow();
-      expect(list.kthFromEnd(0).value).toEqual(1);
+      expect(list.kthFromEnd(1)).toEqual(1);
     });
 
     it('"Happy Path" where k is not at the end, but somewhere in the middle of the linked list', () => {
-      // list.insert(1);
-      // list.insert(2);
-      // list.insert(3);
-      // list.insert(4);
-      // list.insert(5);
-
       let node5 = {value: 5, next: null};
       let node4 = {value: 4, next: node5};
       let node3 = {value: 3, next: node4};
       let node2 = {value: 2, next: node3};
       let node = {value: 1, next: node2};
       list.head = node;
-      expect(list.kthFromEnd(1).value).toEqual(4);
+      list.length = 5;
+      
+      expect(list.kthFromEnd(1)).toEqual(4);
     });
 });
