@@ -158,6 +158,7 @@ describe('kthFromEnd()', () => {
     it('Where the linked list is of a size 1', () => {
       let node = {value: 1, next: null};
       list.head = node;
+      list.length = 1;
 
       expect(list.kthFromEnd(1)).toEqual(1);
     });
