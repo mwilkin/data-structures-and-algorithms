@@ -131,18 +131,18 @@ describe('kthFromEnd()', () => {
       let node3 = {value: 3, next: null};
       let node2 = {value: 2, next: node3};
       let node = {value: 1, next: node2};
-
       list.head = node;
 
       expect(list.kthFromEnd(5)).toEqual('Index is invalid');
     });
 
     it('Where k and the length of the list are the same', () => {
-      list.insert(1);
-
-      expect(() => {
-        list.kthFromEnd(4);
-      }).toThrow();
+      let node3 = {value: 3, next: null};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
+      list.head = node;
+      list.length = 3;
+      expect(list.kthFromEnd(3)).toEqual(1);
     });
 
     it('Where k is not a positive integer', () => {
