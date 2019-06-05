@@ -63,13 +63,6 @@ describe('Linked List Module', () => {
     });
   });
 
-  //it('should throw an error when no value is passed',()=>{
-  // var error;
-  // try{
-  // 
-  // }
- // });
-
   describe('append method', () => {
     it ('should successfully add an element to the end of the list', () => {
       list.insert(1);
@@ -115,14 +108,26 @@ describe('Linked List Module', () => {
     });
 
     it('can insert a node after the last node', () => {
-      //Arrange
-     let node3 = {value: 3, next: null};
-     let node2 = {value: 2, next: node3};
-     let node = {value: 1, next: node2};
-     // 1 -> 2 -> 3
-    list.insertAfter(3, 4);
-    //Assert
-    expect(list.head.next.next.next.value).toEqual(4);
+      list.insert(11);
+      list.insert(22);
+      list.insert(33);
+      list.insertAfter(11, 1);
+      expect(list.head.next.next.next.value).toEqual(1);
+    
+    
+    
+    
+    
+    //   //Arrange
+    //  let node3 = {value: 3, next: null};
+    //  let node2 = {value: 2, next: node3};
+    //  let node = {value: 1, next: node2};
+    //  // 1 -> 2 -> 3
+    // list.insertAfter(3, 4);
+    // //Assert
+
+    // expect(list.head.value).toEqual(1);
+    // expect(list.head.next.next.value).toEqual(4);
 
     });
   });
@@ -130,34 +135,6 @@ describe('Linked List Module', () => {
 
 
 });
-
-
-// describe('Adds a new node after a value'), () => {
-
-//   it ('inserts an item in the middle of a linked list', () => {
-//     list.insert(4);
-//     list.insert(8);
-//     list.insert(37);
-//     list.insertAfter(Math.ceil(list.length/2),77);
-//     expect(list.head.value).toEqual(4);
-//     expect(list.head.next.value).toEqual(8);
-//     expect(list.head.next.next.value).toEqual(77);
-//     expect(list.head.next.next.next.value).toEqual(37);
-//     expect (list.head.next.next.next.next.value).toEqual(null);
-//   });
-
-//   it ('inserts an item at the end of a linked list', () => {
-//     list.insert(4);
-//     list.insert(8);
-//     list.insert(37);
-//     list.insertAfter(37,77);
-//     expect(list.head.value).toEqual(4);
-//     expect(list.head.next.value).toEqual(8);
-//     expect(list.head.next.next.value).toEqual(37);
-//     expect(list.head.next.next.next.value).toEqual(77);
-//     expect (list.head.next.next.next.next.value).toEqual(null);
-//   });
-
 
 // Class 7
 
