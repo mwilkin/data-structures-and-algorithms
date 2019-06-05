@@ -150,10 +150,9 @@ describe('kthFromEnd()', () => {
       let node3 = {value: 3, next: node4};
       let node2 = {value: 2, next: node3};
       let node = {value: 1, next: node2};
-      
-      expect(() => {
-        list.kthFromEnd(-5);
-      }).toThrow();
+      list.head = node;
+
+      expect(list.kthFromEnd(-1)).toEqual('Index is invalid');
     });
 
     it('Where the linked list is of a size 1', () => {
