@@ -50,7 +50,7 @@ class LinkedList{
   append(value){
     let newNode = new LinkedListNode(value);
     let current = this.head;
-    
+
     while(current.next !== null) {
       current = current.next;
     }
@@ -100,13 +100,21 @@ class LinkedList{
 
    kthFromEnd(k){
     let current = this.head;
-    let listLength = this.length;
-    let counter = listLength - 1;
-    while( counter !== k){
-      current = current.next;
-      counter --;
+    let index = (this.length - k) -1;
+
+    if(k > this.length || k < 0){
+      return 'Index is invalid';
+    } else if(k === this.length){
+      return this.head.value;
     }
-    return current;
+    for(let i = 0; i <= index; i++){
+      if(i === index){
+        return current.value;
+      } else {
+        current = current.next;
+      }
+    }
+    
   }
 
   printList(){

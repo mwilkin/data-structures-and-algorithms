@@ -108,31 +108,14 @@ describe('Linked List Module', () => {
     });
 
     it('can insert a node after the last node', () => {
-      list.insert(11);
-      list.insert(22);
-      list.insert(33);
-      list.insertAfter(11, 1);
+      let node3 = {value: 33, next: null};
+      let node2 = {value: 22, next: node3};
+      let node = {value: 11, next: node2};
+      list.head = node;
+      list.insertAfter(33, 1);
       expect(list.head.next.next.next.value).toEqual(1);
-    
-    
-    
-    
-    
-    //   //Arrange
-    //  let node3 = {value: 3, next: null};
-    //  let node2 = {value: 2, next: node3};
-    //  let node = {value: 1, next: node2};
-    //  // 1 -> 2 -> 3
-    // list.insertAfter(3, 4);
-    // //Assert
-
-    // expect(list.head.value).toEqual(1);
-    // expect(list.head.next.next.value).toEqual(4);
-
     });
   });
-
-
 
 });
 
@@ -145,21 +128,13 @@ describe('kthFromEnd()', () => {
   });
 
     it('Where k is greater than the length of the linked list ', () => {
-      // list.insert(1);
-      // list.insert(2);
-      // list.insert(3);
-      // list.insert(4);
-
       let node3 = {value: 3, next: null};
       let node2 = {value: 2, next: node3};
       let node = {value: 1, next: node2};
 
       list.head = node;
 
-
-      expect(() => {
-        list.kthFromEnd(5);
-      }).toThrow();
+      expect(list.kthFromEnd(5)).toEqual('Index is invalid');
     });
 
     it('Where k and the length of the list are the same', () => {
@@ -171,16 +146,11 @@ describe('kthFromEnd()', () => {
     });
 
     it('Where k is not a positive integer', () => {
-      // list.insert(1);
-      // list.insert(2);
-      // list.insert(3);
-      // list.insert(4);
-
       let node4 = {value: 4, next: null};
       let node3 = {value: 3, next: node4};
       let node2 = {value: 2, next: node3};
       let node = {value: 1, next: node2};
-
+      
       expect(() => {
         list.kthFromEnd(-5);
       }).toThrow();
@@ -196,18 +166,18 @@ describe('kthFromEnd()', () => {
     });
 
     it('"Happy Path" where k is not at the end, but somewhere in the middle of the linked list', () => {
-      list.insert(1);
-      list.insert(2);
-      list.insert(3);
-      list.insert(4);
-      list.insert(5);
+      // list.insert(1);
+      // list.insert(2);
+      // list.insert(3);
+      // list.insert(4);
+      // list.insert(5);
 
-      // let node5 = {value: 5, next: null};
-      // let node4 = {value: 4, next: node5};
-      // let node3 = {value: 3, next: node4};
-      // let node2 = {value: 2, next: node3};
-      // let node = {value: 1, next: node2};
-
-      expect(list.kthFromEnd(3).value).toEqual(4);
+      let node5 = {value: 5, next: null};
+      let node4 = {value: 4, next: node5};
+      let node3 = {value: 3, next: node4};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
+      list.head = node;
+      expect(list.kthFromEnd(1).value).toEqual(4);
     });
 });
