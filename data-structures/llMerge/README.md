@@ -31,7 +31,10 @@ Write a function called mergeLists which takes two linked lists as arguments. Zi
 #### Example
 
 mergeLists(list1, list2)
-Arg list1	Arg list2	Output
-head -> [1] -> [3] -> [2] -> X	head -> [5] -> [9] -> [4] -> X	head -> [1] -> [5] -> [3] -> [9] -> [2] -> [4] -> X
-head -> [1] -> [3] -> X	head -> [5] -> [9] -> [4] -> X	head -> [1] -> [5] -> [3] -> [9] -> [4] -> X
-head -> [1] -> [3] -> [2] -> X	head -> [5] -> [9] -> X	head -> [1] -> [5] -> [3] -> [9] -> [2] -> X
+
+|  Arg list1 |  Arg list2 | Output  |
+|:-:|---|---|
+| head -> [1] -> [3] -> [2] -> X  | head -> [5] -> [9] -> [4] -> X  |  head -> [1] -> [5] -> [3] -> [9] -> [2] -> [4] -> X |
+| head -> [1] -> [3] -> X  |  head -> [5] -> [9] -> [4] -> X |  head -> [1] -> [5] -> [3] -> [9] -> [4] -> X |
+| head -> [1] -> [3] -> [2] -> X | head -> [5] -> [9] -> X | head -> [1] -> [5] -> [3] -> [9] -> [2] -> X |
+
