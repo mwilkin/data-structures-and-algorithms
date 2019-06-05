@@ -24,7 +24,13 @@ insertBefore(value, index)
 
 insertAfter(value, index)
 
+#### Linked List Insertions image
+
 <img src="./assets/ll_insertions.jpg" width="400">
+
+#### Linked List kth-from-the-end image
+
+<img src="./assets/ll_kth_from_end.jpg" width="400">
 
 ------
 ------

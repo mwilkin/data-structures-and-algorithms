@@ -1,13 +1,3 @@
-// Write tests to prove the following functionality:
-
-// Can successfully instantiate an empty linked list
-// Can properly insert into the linked list
-// The head property will properly point to the first node in the linked list
-// Can properly insert multiple nodes into the linked list
-// Will return true when finding a value within the linked list that exists
-// Will return false when searching for a value in the linked list that does not exist
-// Can properly return a collection of all the values that exist in the linked list
-
 'use strict';
 
 const LinkedList = require('../linked-list.js');
@@ -125,9 +115,9 @@ describe('Linked List Module', () => {
 
     it('can insert a node after the last node', () => {
       //Arrange
-     let node = {value: 1, next: node2};
-     let node2 = {value: 2, next: node3};
      let node3 = {value: 3, next: null};
+     let node2 = {value: 2, next: node3};
+     let node = {value: 1, next: node2};
      // 1 -> 2 -> 3
     list.insertAfter(3, 4);
     //Assert
@@ -170,7 +160,11 @@ describe('Linked List Module', () => {
 
 // Class 7
 
-describe('nthFromEnd()', () => {
+describe('kthFromEnd()', () => {
+  let list;
+  beforeEach(() => {
+    list = new LinkedList();
+  });
 
     it('Where k is greater than the length of the linked list ', () => {
       // list.insert(1);
@@ -178,15 +172,15 @@ describe('nthFromEnd()', () => {
       // list.insert(3);
       // list.insert(4);
 
-      let node = {value: 1, next: node2};
-      let node2 = {value: 2, next: node3};
       let node3 = {value: 3, next: null};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
 
       list.head = node;
 
 
       expect(() => {
-        list.nthFromEnd(5);
+        list.kthFromEnd(5);
       }).toThrow();
     });
 
@@ -194,23 +188,23 @@ describe('nthFromEnd()', () => {
       list.insert(1);
 
       expect(() => {
-        list.nthFromEnd(4);
+        list.kthFromEnd(4);
       }).toThrow();
     });
 
     it('Where k is not a positive integer', () => {
-      list.insert(1);
-      list.insert(2);
-      list.insert(3);
-      list.insert(4);
+      // list.insert(1);
+      // list.insert(2);
+      // list.insert(3);
+      // list.insert(4);
 
-      let node = {value: 1, next: node2};
-      let node2 = {value: 2, next: node3};
+      let node4 = {value: 4, next: null};
       let node3 = {value: 3, next: node4};
-      let node4 = {value: 4, next: null)};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
 
       expect(() => {
-        list.nthFromEnd(-5);
+        list.kthFromEnd(-5);
       }).toThrow();
     });
 
@@ -218,23 +212,24 @@ describe('nthFromEnd()', () => {
       list.insert(1);
 
       expect(() => {
-        list.nthFromEnd(1);
+        list.kthFromEnd(1);
       }).toThrow();
-      expect(list.nthFromEnd(0)).toEqual(1);
+      expect(list.kthFromEnd(0).value).toEqual(1);
     });
 
     it('"Happy Path" where k is not at the end, but somewhere in the middle of the linked list', () => {
-      // list.insert(1);
-      // list.insert(2);
-      // list.insert(3);
-      // list.insert(4);
-      // list.insert(5);
+      list.insert(1);
+      list.insert(2);
+      list.insert(3);
+      list.insert(4);
+      list.insert(5);
 
-      let node = {value: 1, next: node2};
-      let node2 = {value: 2, next: node3};
-      let node3 = {value: 3, next: node4};
-      let node4 = {value: 4, next: node5)};
-      let node5 = {value: 5, next: null)};
+      // let node5 = {value: 5, next: null};
+      // let node4 = {value: 4, next: node5};
+      // let node3 = {value: 3, next: node4};
+      // let node2 = {value: 2, next: node3};
+      // let node = {value: 1, next: node2};
 
-      expect(list.nthFromEnd(3)).toEqual(2);
+      expect(list.kthFromEnd(3).value).toEqual(4);
     });
+});

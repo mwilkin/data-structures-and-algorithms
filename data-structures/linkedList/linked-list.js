@@ -11,6 +11,7 @@ class LinkedList{
   constructor() {
     // this.head = null;
     this.head = new LinkedListNode();
+    this.length = 0;
   }
 
   insert(value){
@@ -19,6 +20,7 @@ class LinkedList{
     node.value = value;
     node.next = this.head;
     this.head = node;
+    this.length++
     return node.value;
 
 
@@ -94,26 +96,37 @@ class LinkedList{
     }
   }
 
-  nthFromEnd(k){
-    let length = 0;
+  // kthFromEnd(k){
+  //   let length = 0;
+  //   let current = this.head;
+
+  //   while(current){
+  //     length++;
+  //     current = current.next;
+  //   }
+
+  //   if(0 > k || k > length){
+  //     throw 'Please check input value';
+  //   }
+
+  //   let iterator = length - k;
+
+  //   current = this.head;
+  //   for(let i = 0; i < iterator+1; i++){
+  //     current = current.next;
+  //   }
+  //   return current.value;
+  // }
+
+   kthFromEnd(k){
     let current = this.head;
-
-    while(current){
-      length++;
+    let listLength = this.length;
+    let counter = listLength - 1;
+    while( counter !== k){
       current = current.next;
+      counter --;
     }
-
-    if(0 > k || k > length){
-      throw 'Please check input value';
-    }
-
-    let iterator = length - k;
-
-    current = this.head;
-    for(let i = 0; i < iterator+1; i++){
-      current = current.next;
-    }
-    return current.value;
+    return current;
   }
 
   printList(){
