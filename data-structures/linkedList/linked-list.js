@@ -11,6 +11,7 @@ class LinkedList{
   constructor() {
     // this.head = null;
     this.head = new LinkedListNode();
+    this.length = 0;
   }
 
   insert(value){
@@ -19,6 +20,7 @@ class LinkedList{
     node.value = value;
     node.next = this.head;
     this.head = node;
+    this.length++
     return node.value;
 
 
@@ -46,8 +48,9 @@ class LinkedList{
   }
 
   append(value){
-    let current = this.head;
     let newNode = new LinkedListNode(value);
+    let current = this.head;
+
     while(current.next !== null) {
       current = current.next;
     }
@@ -92,6 +95,26 @@ class LinkedList{
         current = current.next;
       }
     }
+    return 'Node not found';
+  }
+
+   kthFromEnd(k){
+    let current = this.head;
+    let index = (this.length - k) -1;
+
+    if(k > this.length || k < 0){
+      return 'Index is invalid';
+    } else if(k === this.length){
+      return this.head.value;
+    }
+    for(let i = 0; i <= index; i++){
+      if(i === index){
+        return current.value;
+      } else {
+        current = current.next;
+      }
+    }
+    
   }
 
   printList(){
