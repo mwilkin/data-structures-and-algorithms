@@ -13,6 +13,6 @@ function mergedLinkedLists(list1, list2) {
     current1 = current1.next.next;
     current2 = current2.next;
   }
-
+  return list1.head;
 }
 module.exports = mergedLinkedLists;
