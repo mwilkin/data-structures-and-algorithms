@@ -70,4 +70,26 @@ describe('Merged Linked List Module', () => {
     expect(mergedLinkedLists(list1, list2)).toEqual(list1.head);
 
   });
+
+  it('should contain node values from both lists', () => {
+    // Arrange
+    let node3 = {value: 3, next: null};
+    let node2 = {value: 2, next: node3};
+    let node = {value: 1, next: node2};
+    list1.head = node;
+    list1.length = 3;
+
+    let node13 = {value: 30, next: null};
+    let node12 = {value: 20, next: node13};
+    let node10 = {value: 10, next: node12};
+    list2.head = node10;
+    list1.length = 3;
+
+    // Act
+    let zippedList = mergedLinkedLists(list1, list2);
+
+    // Assert
+    expect(zippedList.next.next.next.next.value).toEqual(3);
+    expect(zippedList.next.next.next.value).toEqual(20);
+  });
 });
