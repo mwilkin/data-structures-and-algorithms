@@ -18,6 +18,8 @@ class Stack {
     node.next = this.top;
     this.top = node;
   }
+
+  
 }
 
 module.exports = {Stack};

@@ -30,6 +30,14 @@ describe('Stacks and Queues Tests', () => {
         expect(stack.top).toBeDefined();
         expect(stack.top.value).toBe(7);
     });
+
+    it('can successfully push multiple values onto a stack', () => {
+      stack.push(10);
+      stack.push(20);
+      stack.push(30);
+      stack.push(40);
+      expect(stack.top.value).toBe(40);
+    });
   });
 
 
