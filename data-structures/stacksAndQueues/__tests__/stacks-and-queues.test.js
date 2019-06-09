@@ -38,6 +38,28 @@ describe('Stacks and Queues Tests', () => {
       stack.push(40);
       expect(stack.top.value).toBe(40);
     });
+
+    it('can successfully pop the top item off the stack', () => {
+      stack.push(10);
+      stack.push(20);
+      stack.push(30);
+      stack.push(40);
+      stack.pop();
+      expect(stack.top.value).toBe(30);
+    });
+
+    it('can successfully empty a stack after multiple pops', ()=> {
+      stack.push(10);
+      stack.push(20);
+      stack.push(30);
+      stack.push(40);
+      stack.pop();
+      stack.pop();
+      stack.pop();
+      stack.pop();
+      expect(stack.top).toBeNull();
+    });
+
   });
 
 

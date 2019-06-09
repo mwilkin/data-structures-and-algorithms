@@ -19,6 +19,10 @@ class Stack {
     this.top = node;
   }
 
+  pop() {
+    this.top = this.top.next;
+  }
+
   
 }
 
