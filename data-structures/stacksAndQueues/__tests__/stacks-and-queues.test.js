@@ -2,24 +2,11 @@
 
 const stacksAndQueues = require('../stacks-and-queues');
 
-// Can successfully push onto a stack
-// Can successfully push multiple values onto a stack
-// Can successfully pop off the stack
-// Can successfully empty a stack after multiple pops
-// Can successfully peek the next item on the stack
-// Can successfully instantiate an empty stack
-// Can successfully enqueue into a queue
-// Can successfully enqueue multiple values into a queue
-// Can successfully dequeue out of a queue the expected value
-// Can successfully peek into a queue, seeing the expected value
-// Can successfully empty a queue after multiple dequeues
-// Can successfully instantiate an empty queue
-
 describe('Stacks and Queues Tests', () => {
   let Stack = stacksAndQueues.Stack;
-  
+  let Queue = stacksAndQueues.Queue;
 
-  describe('Stacks', () => {
+  describe('Stacks tests', () => {
     let stack;
     beforeEach(() => {
       stack = new Stack();
@@ -67,11 +54,30 @@ describe('Stacks and Queues Tests', () => {
       expect(stack.peek()).toBe(33);
     });
 
+    it('can successfully instantiate an empty stack', ()=> {
+      expect(stack).toBeInstanceOf(Stack);
+      expect(stack.peek()).toBeNull();
+    });
+
   });
 
+// Can 
+// Can successfully enqueue multiple values into a queue
+// Can successfully dequeue out of a queue the expected value
+// Can successfully peek into a queue, seeing the expected value
+// Can successfully empty a queue after multiple dequeues
+// Can successfully instantiate an empty queue
+  describe('Queues tests', () => {
+    let queue;
 
-  describe('Queues', () => {
+    beforeEach(() => {
+      queue = new Queue();
+    });
 
+    it('can successfully enqueue into a queue', () => {
+      queue.enqueue(10);
+      expect(queue.front.value).toBe(10);
+    });
   });
 
 });

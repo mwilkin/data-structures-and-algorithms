@@ -13,8 +13,8 @@ class Stack {
   }
 
   push(item) {
-    if(!item) return false;
     let node = new Node(item);
+    if(!item) return false;
     node.next = this.top;
     this.top = node;
   }
@@ -30,7 +30,31 @@ class Stack {
       return this.top.value;
     }
   }
+}
+
+class Queue {
+  constructor(){
+  this.front = null;
+  }
+
+  enqueue(item){
+
+    let node = new Node(item);
+    let current = this.front;
+    if(!item) return false;
+
+    if(!this.front){
+      this.front = node;
+    } else {
+      while(current.next){
+        current = current.next;
+      }
+      current.next = node;
+    }
+  }
 
 }
 
-module.exports = {Stack};
+
+
+module.exports = {Stack, Queue};
