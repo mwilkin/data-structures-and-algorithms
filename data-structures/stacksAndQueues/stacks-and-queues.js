@@ -53,6 +53,9 @@ class Queue {
     }
   }
 
+  dequeue(){
+    this.front = this.front.next;
+  }
 }
 
 

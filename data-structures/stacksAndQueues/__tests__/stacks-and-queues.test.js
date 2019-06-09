@@ -24,6 +24,9 @@ describe('Stacks and Queues Tests', () => {
       stack.push(30);
       stack.push(40);
       expect(stack.top.value).toBe(40);
+      expect(stack.top.next.value).toBe(30);
+      expect(stack.top.next.next.value).toBe(20);
+      expect(stack.top.next.next.next.value).toBe(10);
     });
 
     it('can successfully pop the top item off the stack', () => {
@@ -83,6 +86,19 @@ describe('Stacks and Queues Tests', () => {
       queue.enqueue(12);
       queue.enqueue(13);
       expect(queue.front.value).toBe(10);
+      expect(queue.front.next.value).toBe(11);
+      expect(queue.front.next.next.value).toBe(12);
+      expect(queue.front.next.next.next.value).toBe(13);
+    });
+
+    it('can successfully dequeue out of a queue the expected value', () => {
+      queue.enqueue(10);
+      queue.enqueue(11);
+      queue.enqueue(12);
+      queue.enqueue(13);
+      queue.dequeue();
+      expect(queue.front.value).toBe(11);
+      expect(queue.front.next.value).toBe(12);
     });
 
   });
