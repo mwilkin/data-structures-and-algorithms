@@ -60,6 +60,13 @@ describe('Stacks and Queues Tests', () => {
       expect(stack.top).toBeNull();
     });
 
+    it('can successfully peek the next item on the stack', () => {
+      stack.push(11);
+      stack.push(22);
+      stack.push(33);
+      expect(stack.peek()).toBe(33);
+    });
+
   });
 
 
