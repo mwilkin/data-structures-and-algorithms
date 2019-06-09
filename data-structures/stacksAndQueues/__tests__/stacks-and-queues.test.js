@@ -48,6 +48,7 @@ describe('Stacks and Queues Tests', () => {
       stack.pop();
       stack.pop();
       expect(stack.top).toBeNull();
+      expect(stack).toBeInstanceOf(Stack);
     });
 
     it('can successfully peek the next item on the stack', () => {
@@ -64,9 +65,6 @@ describe('Stacks and Queues Tests', () => {
 
   });
 
-// Can successfully dequeue out of a queue the expected value
-// Can successfully peek into a queue, seeing the expected value
-// Can successfully empty a queue after multiple dequeues
 // Can successfully instantiate an empty queue
   describe('Queues tests', () => {
     let queue;
@@ -101,6 +99,22 @@ describe('Stacks and Queues Tests', () => {
       expect(queue.front.next.value).toBe(12);
     });
 
+    it('can successfully empty a queue after multiple dequeues', () => {
+      queue.enqueue(10);
+      queue.enqueue(11);
+      queue.enqueue(12);
+      queue.enqueue(13);
+      queue.dequeue();
+      queue.dequeue();
+      queue.dequeue();
+      queue.dequeue();
+      expect(queue.front).toBeNull();
+      expect(queue).toBeInstanceOf(Queue);
+    });
+
+    // it('can successfully peek into a queue, seeing the expected value', () => {
+
+    // });
   });
 
 });
