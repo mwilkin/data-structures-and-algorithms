@@ -65,7 +65,6 @@ describe('Stacks and Queues Tests', () => {
 
   });
 
-// Can successfully instantiate an empty queue
   describe('Queues tests', () => {
     let queue;
 
@@ -117,10 +116,13 @@ describe('Stacks and Queues Tests', () => {
       queue.enqueue(15);
       queue.enqueue(25);
       expect(queue.peek()).toBe(5);
-
     });
 
-    
+    it('can successfully instantiate an empty queue', () => {
+      expect(queue).toBeInstanceOf(Queue);
+      expect(queue.peek()).toBeNull();
+    });
+
   });
 
 });
