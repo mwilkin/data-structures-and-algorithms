@@ -61,8 +61,6 @@ describe('Stacks and Queues Tests', () => {
 
   });
 
-// Can 
-// Can successfully enqueue multiple values into a queue
 // Can successfully dequeue out of a queue the expected value
 // Can successfully peek into a queue, seeing the expected value
 // Can successfully empty a queue after multiple dequeues
@@ -78,6 +76,15 @@ describe('Stacks and Queues Tests', () => {
       queue.enqueue(10);
       expect(queue.front.value).toBe(10);
     });
+
+    it('can successfully enqueue multiple values into a queue', () => {
+      queue.enqueue(10);
+      queue.enqueue(11);
+      queue.enqueue(12);
+      queue.enqueue(13);
+      expect(queue.front.value).toBe(10);
+    });
+
   });
 
 });
