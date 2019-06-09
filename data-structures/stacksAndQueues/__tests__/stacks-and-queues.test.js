@@ -112,9 +112,15 @@ describe('Stacks and Queues Tests', () => {
       expect(queue).toBeInstanceOf(Queue);
     });
 
-    // it('can successfully peek into a queue, seeing the expected value', () => {
+    it('can successfully peek into a queue, seeing the expected value', () => {
+      queue.enqueue(5);
+      queue.enqueue(15);
+      queue.enqueue(25);
+      expect(queue.peek()).toBe(5);
 
-    // });
+    });
+
+    
   });
 
 });

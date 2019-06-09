@@ -56,6 +56,14 @@ class Queue {
   dequeue(){
     this.front = this.front.next;
   }
+
+  peek(){
+    if(!this.front){
+      return null;
+    } else {
+      return this.front.value;
+    }
+  }
 }
 
 
