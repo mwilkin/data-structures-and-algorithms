@@ -36,4 +36,12 @@ describe('Queue with Stacks Tests', () => {
     expect(pseudoQueue.stack1.length).toBe(4);
   });
 
+  it('can successfully dequeue one item', () => {
+    pseudoQueue.enqueue(3);
+    pseudoQueue.enqueue(6);
+    pseudoQueue.enqueue(9);
+    pseudoQueue.enqueue(12);
+    expect(pseudoQueue.dequeue()).toEqual(3);
+  });
+
 });
