@@ -19,7 +19,13 @@ describe('Queue with Stacks Tests', () => {
   it('should instantiate 2 Stacks', () => {
     expect(pseudoQueue.stack1).toBeDefined();
     expect(pseudoQueue.stack2).toBeDefined();
-
   });
+
+  it('can successfully push a item into a stack', () => {
+    pseudoQueue.enqueue(9);
+    expect(pseudoQueue.stack1.peek()).toBe(9);
+  });
+
+  
 
 });
