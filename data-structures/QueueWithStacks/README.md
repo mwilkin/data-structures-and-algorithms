@@ -1,6 +1,6 @@
 # Challenge Summary
 
-Implement Queues by using only the methods available to Stacks.
+Implement Queues by using two Stack internally and only the methods available to Stacks.
 
 ## Challenge Description
 
