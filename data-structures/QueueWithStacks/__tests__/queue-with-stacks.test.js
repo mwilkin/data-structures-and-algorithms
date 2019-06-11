@@ -21,11 +21,19 @@ describe('Queue with Stacks Tests', () => {
     expect(pseudoQueue.stack2).toBeDefined();
   });
 
-  it('can successfully push a item into a stack', () => {
+  it('can successfully enqueue a item into a queue', () => {
     pseudoQueue.enqueue(9);
     expect(pseudoQueue.stack1.peek()).toBe(9);
+    expect(pseudoQueue.stack1.length).toBe(1);
   });
 
-  
+  it('can successfully enqueue many items into a queue', () => {
+    pseudoQueue.enqueue(3);
+    pseudoQueue.enqueue(6);
+    pseudoQueue.enqueue(9);
+    pseudoQueue.enqueue(12);
+    expect(pseudoQueue.stack1.peek()).toBe(12);
+    expect(pseudoQueue.stack1.length).toBe(4);
+  });
 
 });
