@@ -2,6 +2,43 @@
 
 const stack = require('../stacksAndQueues/stacks-and-queues.js');
 
+class Node {
+  constructor(value) {
+    this.value = value;
+    this.next = null;
+  }
+}
+
+class Stack {
+  constructor(){
+    this.top = null;
+    this.length = 0;
+  }
+
+  push(value){
+    if(!value) return false;
+    let node = new Node(value);
+    node.next = this.top;
+    this.top = node;
+    this.length++;
+  }
+
+  pop(){
+    let temp = this.top.value;
+    this.top = this.top.next;
+    this.length--;
+    return temp;
+  }
+
+  peek() {
+    it(!this.top){
+      return null;
+    } else {
+      return this.top.value;
+    }
+  }
+}
+
 class PseudoQueue(){
   constructor(){
     this.stack1 = new Stack();
