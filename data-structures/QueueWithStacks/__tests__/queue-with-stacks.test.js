@@ -16,5 +16,10 @@ describe('Queue with Stacks Tests', () => {
     expect(pseudoQueue).toBeInstanceOf(QueuesAndStacks);
   });
 
+  it('should instantiate 2 Stacks', () => {
+    expect(pseudoQueue.stack1).toBeDefined();
+    expect(pseudoQueue.stack2).toBeDefined();
+
+  });
 
 });
