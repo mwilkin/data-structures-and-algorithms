@@ -1,7 +1,6 @@
 'use strict';
 
 // test for a string
-// test for an empty string returns not valid
 // test for one element of a string returns not valid
 // test for two matching brackets return true
 // test for more than two matching brackets return true
@@ -19,6 +18,10 @@ describe('multiBracketValidation Module', () => {
     expect(actual).toEqual(false);
   })
 
-  
+  it('should return false for one bracket', () => {
+    let inputString = '{';
+    let actual = multiBracketValidation(inputString);
+    expect(actual).toEqual(false); 
+  });
 
 });

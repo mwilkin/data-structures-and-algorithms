@@ -16,8 +16,10 @@ class Stack {
   }
 
   push(item){
+    let node = new Node(item);
     if(item === undefined) {throw new Error('Error: push of undefined not accepted');}
-    this.storage.prepend(item);
+    node.next = this.top;
+    this.top = node;
     this.size++;
   }
 
