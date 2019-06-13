@@ -59,6 +59,15 @@ describe('multiBracketValidation Module', () => {
     expect(insertedCharacters).toBe(true);
   });
 
+  it('should return false for unbalenced brackets with characters intermixed', () => {
+    let insertedCharacters = multiBracketValidation('{c{d[og(a)}t}');
+    let insertedBadCharacters = multiBracketValidation('{cd[]og(a)}t}');
+    let insertedUnbalancedCharacters = multiBracketValidation('{c{d[]og(a)}t}[');
+
+    expect(insertedCharacters).toBe(false);
+    expect(insertedBadCharacters).toBe(false);
+    expect(insertedUnbalancedCharacters).toBe(false);
+  });
   
 
 });
