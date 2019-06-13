@@ -38,4 +38,20 @@ describe('multiBracketValidation Module', () => {
     expect(curlyBracketsNested).toBe(true);
     expect(smoothBrackets).toBe(true);
   });
+
+    it('should return false for an unbalence set of brackets', () => {
+    let unbalencedOne = multiBracketValidation('{]}');
+    let mixed = multiBracketValidation('{[}]');
+
+    expect(unbalencedOne).toBe(false);
+    expect(mixed).toBe(false);
+  });
+
+    it('should return true for balenced sets of brackets with other characters inserted', () => {
+    let insertedCharacters = multiBracketValidation('{{dog}}');
+
+    expect(insertedCharacters).toBe(true);
+  }); 
+
+  
 });
