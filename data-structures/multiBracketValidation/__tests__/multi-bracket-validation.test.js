@@ -28,5 +28,14 @@ describe('multiBracketValidation Module', () => {
     expect(smoothBrackets).toBe(true);
   });
 
-  
+  it('should return true for more and 2 sets of complementary brackets', () => {
+
+    let squareBracketsPairs = multiBracketValidation('[][]');
+    let curlyBracketsNested = multiBracketValidation('{{}}');
+    let smoothBrackets = multiBracketValidation('[{()()()}]');
+   
+    expect(squareBracketsPairs).toBe(true);
+    expect(curlyBracketsNested).toBe(true);
+    expect(smoothBrackets).toBe(true);
+  });
 });
