@@ -10,7 +10,7 @@
 // test for balenced brakets with other characters returns true
 // test for unbalenced with other characters returns false
 
-const multiBracketValidation = require('./multi-bracket-validation')
+const multiBracketValidation = require('../multi-bracket-validation')
 
 describe('multiBracketValidation Module', () => {
   it('show empty string returns false', () => {
