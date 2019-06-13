@@ -11,3 +11,14 @@
 // test for unbalenced with other characters returns false
 
 const multiBracketValidation = require('./multi-bracket-validation')
+
+describe('multiBracketValidation Module', () => {
+  it('show empty string returns false', () => {
+    let inputString = '';
+    let actual = multiBracketValidation(inputString);
+    expect(actual).toEqual(false);
+  })
+
+  
+
+});
