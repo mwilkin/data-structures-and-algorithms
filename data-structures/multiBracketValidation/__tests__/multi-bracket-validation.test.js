@@ -53,5 +53,12 @@ describe('multiBracketValidation Module', () => {
     expect(insertedCharacters).toBe(true);
   }); 
 
+    it('should return true for balenced sets of brackets with characters intermixed', () => {
+    let insertedCharacters = multiBracketValidation('{c{d[]og(a)}t}');
+
+    expect(insertedCharacters).toBe(true);
+  });
+
   
+
 });
