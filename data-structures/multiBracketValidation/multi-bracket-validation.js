@@ -24,21 +24,22 @@ class Stack {
   }
 
   pop(){
-    let data = this.storage.remove(0);
+    this.top = this.top.next;
     this.size--;
-    return data;
   }
 
   peek(){
-    if(!this.storage.head){ return null}
-    else { return this.storage.head.value };
+    if(!this.top) {
+      return null;
+    } else {
+      return this.top.value;
+    }
   }
 
 }
 
 
-
-let multiBranchValidation = (inputString) => {
+function multiBranchValidation(inputString){
 
   let bracketObject = {
     ')' : '(',
@@ -56,13 +57,13 @@ let multiBranchValidation = (inputString) => {
       bracketStack.push(character);
     } else if (bracketObject[character]){
       let currentBracket = bracketStack.peek();
-      if (bracketObject[char] === currentBracket){
+      if (bracketObject[character] === currentBracket){
         bracketStack.pop();
       } else { return false }
     }
   }
-  if(bracketStack.size === 0 ){return false}
+  if(bracketStack.size === 0 ){return true}
   else {return false}
 };
 
- module.exports = multiBranchValidation
+ module.exports = multiBranchValidation;
