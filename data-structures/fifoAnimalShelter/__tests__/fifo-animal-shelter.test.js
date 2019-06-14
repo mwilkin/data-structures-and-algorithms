@@ -1,5 +1,6 @@
 'use strict';
 
+
 const Shelter = require('../fifo-animal-shelter');
 
 describe('FIFO Animal Shelter', () => {
@@ -39,21 +40,21 @@ describe('FIFO Animal Shelter', () => {
       expect(adoptedAnimal.value).toBe('cat');
     });
 
-      it('dequeues cat from the front of the queue when the preference is cat', () => {
-        rescueShelter = new Shelter();
-        rescueShelter.enqueue('cat');
-        rescueShelter.dequeue('dog');
-        let adoptedAnimal = rescueShelter.dequeue('cat');
-        expect(animal.value).toBe('cat');
-      });
+    it('dequeues cat from the front of the queue when the preference is cat', () => {
+      rescueShelter = new Shelter();
+      rescueShelter.enqueue('cat');
+      rescueShelter.dequeue('dog');
+      let adoptedAnimal = rescueShelter.dequeue('cat');
+      expect(animal.value).toBe('cat');
+    });
 
-      it('dequeues first dog from queue when preference is dog', () => {
-        rescueShelter = new Shelter();
-        rescueShelter.enqueue('cat');
-        rescueShelter.enqueue('dog');
-        let adoptedAnimal = rescueShelter.dequeue('dog');
-        expect(animal.value).toBe('dog');
-      }); 
+    it('dequeues first dog from queue when preference is dog', () => {
+      rescueShelter = new Shelter();
+      rescueShelter.enqueue('cat');
+      rescueShelter.enqueue('dog');
+      let adoptedAnimal = rescueShelter.dequeue('dog');
+      expect(animal.value).toBe('dog');
+    }); 
   });
 
 });
