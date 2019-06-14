@@ -15,16 +15,19 @@
 // it can empty catQueue
 
 
-const Shelter = require('./fifo-animal-shelter');
+const Shelter = require('../fifo-animal-shelter');
 
 describe('FIFO Animal Shelter', () => {
   
-  it('should verify that whenan animal is enqueued, it is in the shelter' ()=> {
-    rescueShelter = new Shelter();
+  it('should verify that whenan animal is enqueued, it is in the shelter', () => {
+    let rescueShelter = new Shelter();
     rescueShelter.enqueue('cat');
 
-    expect(rescueShelter.storage.head.value).toBe('cat');
+    expect(rescueShelter.stack1.peek()).toBe('cat');
+    expect(rescueShelter.stack1.length).toBe(1);
   });
+
+  
   
 
 });
