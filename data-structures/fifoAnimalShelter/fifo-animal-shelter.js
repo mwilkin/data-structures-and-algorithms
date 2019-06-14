@@ -1,35 +1,31 @@
 'use strict';
+// const Queue = require('../stacksAndQueues/stacks-and-queues');
 
 class Node {
-  constructor(value) {
+  constructor(value){
     this.value = value;
     this.next = null;
   }
 }
 
 class Stack {
-  constructor(){
+  constructor() {
     this.top = null;
-    this.length = 0;
   }
 
-  push(value){
-    if(!value) return false;
-    let node = new Node(value);
+  push(item) {
+    let node = new Node(item);
+    if(!item) return false;
     node.next = this.top;
     this.top = node;
-    this.length++;
   }
 
-  pop(){
-    let temp = this.top.value;
+  pop() {
     this.top = this.top.next;
-    this.length--;
-    return temp;
   }
 
   peek() {
-    if(!this.top){
+    if(!this.top) {
       return null;
     } else {
       return this.top.value;
@@ -37,31 +33,42 @@ class Stack {
   }
 }
 
-class PseudoQueue{
+class Queue {
   constructor(){
-    this.stack1 = new Stack();
-    this.stack2 = new Stack();
+  this.front = null;
   }
 
-  enqueue(value){
-    if(value === undefined) {throw new Error('Error: enqueue of undefined not accepted');}
-    this.stack1.push(value);
-  }
-  
-  dequeue(){
-    if(this.stack2.length === 0){
-      if(this.stack1.length === 0) return 'Queue is empty';
-      while(this.stack1.length > 0){
-        let temp = this.stack1.pop();
-        this.stack2.push(temp);
+  enqueue(item){
+
+    let node = new Node(item);
+    let current = this.front;
+    if(!item) return false;
+
+    if(!this.front){
+      this.front = node;
+    } else {
+      while(current.next){
+        current = current.next;
       }
+      current.next = node;
     }
-    return this.stack2.pop();
+  }
+
+  dequeue(){
+    this.front = this.front.next;
+  }
+
+  peek(){
+    if(!this.front){
+      return null;
+    } else {
+      return this.front.value;
+    }
   }
 }
 
 
-class AnimalShelter extends PseudoQueue{
+class AnimalShelter extends Queue{
   constructor(){
     super();
   }
@@ -77,7 +84,11 @@ class AnimalShelter extends PseudoQueue{
 
   dequeue(pref){
     if (pref === 'cat' || pref === 'dog') {
- 
+
+      //if pref=== cat, dequeue 1st cat
+
+      //if pref === dog, dequeue 1st dog
+      
     }
     //if preference isn't cat or dog give them the first at the queue as if no preference
     return super.dequeue();
