@@ -8,6 +8,15 @@ class BinarySearchTree {
   }
 
   preOrder(){
+    let results = [];
+
+    let _walk = node => {
+    results.push(node.value);
+    if(node.left) _wak(node.left);
+    if(node.right) _walk(node.right);
+    };
+    _walk(this.root);
+    return results;
 
   }
 
@@ -15,25 +24,24 @@ class BinarySearchTree {
     let results = [];
 
     let _walk = node => {
-      //Left Route Right
-
-
-      //Left
-      if(node.lef) _wak(node.left);
-
-      //Route
+      if(node.left) _wak(node.left);
       results.push(node.value);
-
-      //Right
       if(node.right) _walk(node.right);
     };
-
     _walk(this.root);
     return results;
   }
 
   postOrder(){
+    let results = [];
 
+    let _walk = node => {
+      if(node.left) _wak(node.left);
+      if(node.right) _walk(node.right);
+      results.push(node.value);
+    };
+    _walk(this.root);
+    return results;
   }
 
   add(node) {
@@ -66,7 +74,6 @@ class BinarySearchTree {
         throw new Error('Value already exists in Binary Search Tree');
       }
   }
-
 
 }
 
