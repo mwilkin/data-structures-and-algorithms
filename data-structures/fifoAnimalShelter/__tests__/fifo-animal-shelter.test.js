@@ -18,15 +18,22 @@
 const Shelter = require('../fifo-animal-shelter');
 
 describe('FIFO Animal Shelter', () => {
-  
+  let rescueShelter;
+
   it('should verify that whenan animal is enqueued, it is in the shelter', () => {
-    let rescueShelter = new Shelter();
+    rescueShelter = new Shelter();
     rescueShelter.enqueue('cat');
 
     expect(rescueShelter.stack1.peek()).toBe('cat');
     expect(rescueShelter.stack1.length).toBe(1);
   });
 
+  it('should return an error no animal is passed into enqueued', () => {
+    rescueShelter = new Shelter();
+    expect( () => {
+      rescueShelter.enqueue();
+    }).toThrow('Error: enqueue of undefined not accepted');
+  });
   
   
 
