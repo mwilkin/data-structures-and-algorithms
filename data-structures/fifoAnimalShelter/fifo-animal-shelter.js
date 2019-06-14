@@ -74,29 +74,14 @@ class AnimalShelter extends PseudoQueue{
     super.enqueue(animal);
   }
 
+
+  dequeue(pref){
+    if (pref === 'cat' || pref === 'dog') {
+ 
+    }
+    //if preference isn't cat or dog give them the first at the queue as if no preference
+    return super.dequeue();
+  }
 }
-// dequeue(pref){
-
-// }
-
-  // Todo: need to define Enqueue method
-  // Todo: need to define Dequeue method
-  // Todo: need to define Peek method
-
-
-  // enqueue(animal){
-  // if animal === cat -> push into catQueue
-  // iterate counter
-  // if animal === dog -> push into dogQueue
-  // iterate counter
-  // }
-
-  // dequeue(pref){
-  // if pref !== cat || pref !== dog return null
-  // if pref === cat, dequeue from catQueue
-  // if pref === dog, dequeue from dogQueue
-  // }
-
-
 
 module.exports = AnimalShelter;

@@ -1,20 +1,5 @@
 'use strict';
 
-// Tests 
-// it can instantiation of dogQueue
-// it can instantiation of catQueue
-// it can enqueue cat to catQueue
-// it can enqueue multiple cats to catQueue
-// it can enqueue dog to dogQueue
-// it can enqueue multiple dogs to dogQueue
-// it can dequeue a cat from catQueue
-// it can dequeue multiple cats from catQueue
-// it can dequeue a dog from dogQueue
-// it can dequeue multiple dogs from dogQueue
-// it can empty dogQueue
-// it can empty catQueue
-
-
 const Shelter = require('../fifo-animal-shelter');
 
 describe('FIFO Animal Shelter', () => {
@@ -35,13 +20,13 @@ describe('FIFO Animal Shelter', () => {
       }).toThrow('Error: enqueue of undefined not accepted');
     });
     
-    // it('should return an error when an animal other than a dog or cat is passed in', () => {
-    //   rescueShelter = new Shelter();
+    it('should return an error when an animal other than a dog or cat is passed in', () => {
+      rescueShelter = new Shelter();
 
-    //   expect( () => {
-    //     rescueShelter.enqueue('donkey');
-    //   }).toThrow('This shelter only accepts dogs and cats!');
-    // });
+      expect( () => {
+        rescueShelter.enqueue('donkey');
+      }).toThrow('This shelter only accepts dogs and cats!');
+    });
 
   });
   
@@ -53,6 +38,22 @@ describe('FIFO Animal Shelter', () => {
       let adoptedAnimal = rescueShelter.dequeue();
       expect(adoptedAnimal.value).toBe('cat');
     });
+
+      it('dequeues cat from the front of the queue when the preference is cat', () => {
+        rescueShelter = new Shelter();
+        rescueShelter.enqueue('cat');
+        rescueShelter.dequeue('dog');
+        let adoptedAnimal = rescueShelter.dequeue('cat');
+        expect(animal.value).toBe('cat');
+      });
+
+      it('dequeues first dog from queue when preference is dog', () => {
+        rescueShelter = new Shelter();
+        rescueShelter.enqueue('cat');
+        rescueShelter.enqueue('dog');
+        let adoptedAnimal = rescueShelter.dequeue('dog');
+        expect(animal.value).toBe('dog');
+      }); 
   });
 
 });
