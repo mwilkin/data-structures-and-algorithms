@@ -68,7 +68,7 @@ class AnimalShelter extends PseudoQueue{
 
   
   enueue(animal) {
-    if(anmimal !== 'cat' && animal !== 'dog'){
+    if(animal !== 'cat' && animal !== 'dog'){
       throw new Error('This shelter only accepts dogs and cats!');
     }
     super.enqueue(animal);
