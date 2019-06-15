@@ -1,6 +1,6 @@
 # Binary Tree and Binary Search Tree Data Structures
 
-
+Explore Binary Trees and Binary Search Trees Data Structures.
 
 ## Challenge
 
