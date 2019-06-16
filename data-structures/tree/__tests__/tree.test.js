@@ -68,17 +68,22 @@ describe('contains method', () => {
   let node3 = new TreeNode(3);
   let node7 = new TreeNode(7);
 
-  it('that contains method returns root node from BST with 1 node', () => {
-    let actual = testTree.contains(5);
-    expect(actual.value).toBe(5);
+  it('that contains method returns root node from BST', () => {
+    
+    expect(testTree.contains(5)).toBeTruthy();
   })
 
+  it('should return false if tree does not contain value', () => {
+    expect(testTree.contains(100)).toBeFalsy();
+  });
+
+  it('should return error if no value is given', () => {
+    expect(testTree.contains()).toEqual('No value given');
+  });
+
   it('that contains method returns a node from BST with 3 nodes', () => {
-    testTree.root.right = node7;
-    testTree.root.left = node3;
-    let actual = testTree.contains(3);
-    expect(actual.value).toBe(3);
-    expect(actual.right).toBe(null);
+
+
 
   })
 });
