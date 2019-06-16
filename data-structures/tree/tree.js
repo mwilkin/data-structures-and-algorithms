@@ -46,9 +46,9 @@ class BinaryTree {
   }
 }
 
-class BinarySearchTree extends BinaryTree {
-  constructor() {
-    super();
+class BinarySearchTree extends BinaryTree{
+  constructor(node) {
+    super(node);
   }
 
   add(node) {
@@ -81,6 +81,25 @@ class BinarySearchTree extends BinaryTree {
         throw new Error('Value already exists in Binary Search Tree');
       }
     }
+  }
+
+  contains(value){
+    if(!value) return 'No value given';
+
+    let result = false;
+
+    let _walk = node => {
+      if(node.value === value) {
+        result = true;
+        return;
+      } else if(node.left !== undefined && value < node.value){
+        _walk(node.left);
+      } else if(node.righ !== undefined && value > node.value){
+        _walk(node.right);
+      } 
+    }
+    _walk(this.root);
+    return result;
   }
 }
 

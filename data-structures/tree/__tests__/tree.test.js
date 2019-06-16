@@ -19,7 +19,12 @@ describe('tree constructor', () => {
     let actual = new Tree();
 
     expect(typeof actual).toBe('object');
-  })
+    expect(actual).toBeDefined();
+  });
+
+  it('can successfully instantiate a tree with a single root node', ()=> {
+
+  });
 
   it('tree constructor returns object with root and value', () => {
     let node = new TreeNode(5);
@@ -52,7 +57,7 @@ describe('tree add method', () => {
       let testTree = new Tree(new TreeNode(5));
       testTree.add(new TreeNode('asdf'));
       console.log(testTree);
-    }).toThrow('add method only works with numbers');
+    }).toThrow('Value already exists in Binary Search Tree');
   });
 
 });
@@ -64,14 +69,14 @@ describe('contains method', () => {
   let node7 = new TreeNode(7);
 
   it('that contains method returns root node from BST with 1 node', () => {
-    let actual = testTree.find(5);
+    let actual = testTree.contains(5);
     expect(actual.value).toBe(5);
   })
 
   it('that contains method returns a node from BST with 3 nodes', () => {
     testTree.root.right = node7;
     testTree.root.left = node3;
-    let actual = testTree.find(3);
+    let actual = testTree.contains(3);
     expect(actual.value).toBe(3);
     expect(actual.right).toBe(null);
 
