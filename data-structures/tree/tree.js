@@ -1,6 +1,6 @@
 'use strict';
 
-const Node = require('node/index.js');
+const Node = require('./node/index.js');
 
 
 class BinaryTree {

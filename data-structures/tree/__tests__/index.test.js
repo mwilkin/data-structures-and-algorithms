@@ -15,6 +15,6 @@ describe('binary tree node', () => {
   })
 
   it('should show that new node with no value input returns error', () => {
-    expect(() => new TreeNode()).toThrow('Error: cannot enter value of null or undefined');
+    expect(() => new TreeNode()).toThrow('Error: cannot enter a value of null or undefined');
   })
 });
