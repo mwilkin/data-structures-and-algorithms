@@ -1,15 +1,5 @@
 'use strict';
 
-// Can successfully instantiate an empty tree
-// Can successfully instantiate a tree with a single root node
-// Can successfully add a left child and right child to a single root node
-// Can successfully return a collection from a preorder traversal
-// Can successfully return a collection from an inorder traversal
-// Can successfully return a collection from a postorder traversal
-
-
-'use strict';
-
 const Tree = require('../tree.js');
 const TreeNode = require('../node/index.js');
 
@@ -81,9 +71,93 @@ describe('contains method', () => {
     expect(testTree.contains()).toEqual('No value given');
   });
 
-  it('that contains method returns a node from BST with 3 nodes', () => {
+});
 
+describe('preOrder method', () => {
+  let testTree;
+  beforeEach(() => {
+    testTree = new Tree(new TreeNode());
+  
+      // create root
+    testTree.root = {value: 25, left: null, right: null};
 
+    // root.left
+    testTree.root.left = {value: 15, left: null, right: null};
+    // root.left.left
+    testTree.root.left.left = {value: 10, left: null, right: null};
+    // root.left.right
+    testTree.root.left.right = {value: 20, left: null, right: null};
 
-  })
+    // root.right
+    testTree.root.right = {value: 30, left: null, right: null};
+    // root.right.right
+    testTree.root.right.right = {value: 35, left: null, right: null};
+    // root.right.left
+    testTree.root.right.left = {value: 28, left: null, right: null};
+  });
+
+  it('can successfully return a collection from a preorder traversal', () => {
+    // let preOrderTestTree = testTree.preOrder();
+    expect(testTree.preOrder()).toBeDefined();
+    expect(testTree.preOrder()).toEqual([25, 15, 10, 20, 30, 28, 35]);
+  });
+
+});
+describe('inOrder method', () => {
+    let testTree;
+  beforeEach(() => {
+    testTree = new Tree(new TreeNode());
+  
+      // create root
+    testTree.root = {value: 25, left: null, right: null};
+
+    // root.left
+    testTree.root.left = {value: 15, left: null, right: null};
+    // root.left.left
+    testTree.root.left.left = {value: 10, left: null, right: null};
+    // root.left.right
+    testTree.root.left.right = {value: 20, left: null, right: null};
+
+    // root.right
+    testTree.root.right = {value: 30, left: null, right: null};
+    // root.right.right
+    testTree.root.right.right = {value: 35, left: null, right: null};
+    // root.right.left
+    testTree.root.right.left = {value: 28, left: null, right: null};
+  });
+
+  it('can successfully return a collection from an inorder traversal', () => {
+    expect(testTree.inOrder()).toBeDefined();
+    expect(testTree.inOrder()).toEqual([10, 15, 20, 25, 28, 30, 35]);
+
+  });
+});
+describe('postOrder method', () => {
+    let testTree;
+  beforeEach(() => {
+    testTree = new Tree(new TreeNode());
+  
+      // create root
+    testTree.root = {value: 25, left: null, right: null};
+
+    // root.left
+    testTree.root.left = {value: 15, left: null, right: null};
+    // root.left.left
+    testTree.root.left.left = {value: 10, left: null, right: null};
+    // root.left.right
+    testTree.root.left.right = {value: 20, left: null, right: null};
+
+    // root.right
+    testTree.root.right = {value: 30, left: null, right: null};
+    // root.right.right
+    testTree.root.right.right = {value: 35, left: null, right: null};
+    // root.right.left
+    testTree.root.right.left = {value: 28, left: null, right: null};
+  });
+
+  it('can successfully return a collection from a postorder traversal', () => {
+
+    expect(testTree.postOrder()).toBeDefined();
+    expect(testTree.postOrder()).toEqual([10, 20, 15, 28, 35, 30, 25]);
+  });
 });
