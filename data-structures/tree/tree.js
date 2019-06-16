@@ -2,7 +2,8 @@
 
 const Node = require('node/index.js');
 
-class BinarySearchTree {
+
+class BinaryTree {
   constructor(node){
     this.root = node;
   }
@@ -43,6 +44,12 @@ class BinarySearchTree {
     _walk(this.root);
     return results;
   }
+}
+
+class BinarySearchTree extends BinaryTree {
+  constructor() {
+    super();
+  }
 
   add(node) {
     if(!this.root){
@@ -73,8 +80,8 @@ class BinarySearchTree {
         //duplicate value found
         throw new Error('Value already exists in Binary Search Tree');
       }
+    }
   }
-
 }
 
 module.exports = BinarySearchTree;
