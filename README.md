@@ -58,6 +58,7 @@ ____
 
 [Multi-Bracket_Validation](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/multiBracketValidation)
 
+[Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/tree)
 
 _____
 ### Authored by Matt Wilkin
