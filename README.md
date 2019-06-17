@@ -60,6 +60,8 @@ ____
 
 [Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/tree)
 
+[FizzBuzz Tree](https://github.com/mwilkin/data-structures-and-algorithms/tree/fizzbuzz_tree/data-structures/fizzBuzzTree)
+
 _____
 ### Authored by Matt Wilkin
 
