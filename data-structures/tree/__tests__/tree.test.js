@@ -132,6 +132,7 @@ describe('inOrder method', () => {
 
   });
 });
+
 describe('postOrder method', () => {
     let testTree;
   beforeEach(() => {
@@ -160,4 +161,25 @@ describe('postOrder method', () => {
     expect(testTree.postOrder()).toBeDefined();
     expect(testTree.postOrder()).toEqual([10, 20, 15, 28, 35, 30, 25]);
   });
+});
+
+describe('breadthFirst traversal', () => {
+  it('should throw and error if root is null', () => {
+    let testTree = new Tree(new TreeNode());
+
+    let result = testTree.breadthFirst();
+
+    expect(( ) => {
+      result.breadthFirst();
+    }).toThrow();
+  });
+
+  it('should properly traverse the tree in a breadth-first manner', () => {
+
+
+  });
+
+
+
+
 });
