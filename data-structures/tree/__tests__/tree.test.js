@@ -134,7 +134,13 @@ describe('postOrder method', () => {
 
 describe('breadthFirst traversal', () => {
   it('should throw and error if root is null', () => {
-    let testTree = new Tree(new TreeNode());
+    let testTree = new Tree(new TreeNode(null));
+    let result = testTree.breadthFirst();
+    expect(result).toBe('error');
+  });
+
+  it('should throw and error if root is undefined', () => {
+    let testTree = new Tree(new TreeNode(undefined));
     let result = testTree.breadthFirst();
     expect(result).toBe('error');
   });
