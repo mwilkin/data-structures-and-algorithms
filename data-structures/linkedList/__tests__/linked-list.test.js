@@ -8,7 +8,6 @@ describe('Linked List Module', () => {
     list = new LinkedList();
   });
 
-
   describe('constructor', () => {
     it('Can successfully instantiate an empty linked list', () => {
       expect(list).toBeDefined();
@@ -32,10 +31,8 @@ describe('Linked List Module', () => {
       list.insert(4);
       list.insert(7);
       expect(list.head.next.value).toEqual(4);
-      // expect(list.tail.value).toEqual(2);
     });
   });
-
 
   it('Will return true when finding a value within the linked list that exists', () =>{
     list.insert(9);
@@ -79,6 +76,9 @@ describe('Linked List Module', () => {
       expect(list.head.next.next.next.value).toEqual(12);
     });
   });
+
+});
+
 
   describe('insertBefore method', () => {
     it('can insert a node before a designated node', () => {
@@ -175,3 +175,4 @@ describe('kthFromEnd()', () => {
       expect(list.kthFromEnd(1)).toEqual(4);
     });
 });
+
