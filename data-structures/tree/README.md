@@ -20,32 +20,6 @@ Define a method named `contains` that accepts a value, and returns a boolean ind
 
 ## Approach & Efficiency
 
-At no time should an exception or stack trace be shown to the end user. 
+## Solution
 
-Catch and handle any such exceptions and return a printed value or operation which cleanly represents the state and either stops execution cleanly, or provides the user with clear direction and output.
-
-Create a BinarySearchTree class
-
-Define a method named `add` that accepts a value, and adds a new node with that value in the correct location in the binary search tree.
-
-Define a method named `contains` that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
-
-
-### Testing
-
-Write tests to prove the following functionality:
-
-Can successfully instantiate an empty tree
-
-Can successfully instantiate a tree with a single root node
-
-Can successfully add a left child and right child to a single root node
-
-Can successfully return a collection from a preorder traversal
-
-Can successfully return a collection from an inorder traversal
-
-Can successfully return a collection from a postorder traversal
-
-Ensure your tests are passing before you submit your solution.
-
+<img src="./assets/breadth_first.jpg">
