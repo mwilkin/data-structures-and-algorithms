@@ -3,7 +3,10 @@
 const LinkedList = require('../linked-list.js');
 
 describe('Linked List Module', () => {
-  let list = new LinkedList();
+  let list;
+  beforeEach(() => {
+    list = new LinkedList();
+  });
 
   describe('constructor', () => {
     it('Can successfully instantiate an empty linked list', () => {
@@ -46,17 +49,130 @@ describe('Linked List Module', () => {
   });
 
   describe('the print method', () => {
-    it('Can properly return a collection of all the values that exist in the linked list', () =>{
-      expect(list.printList()).toEqual([100, 45, 21, 16, 30, 9, 7, 4, 2, 2, 1, 7, 7]);
+    it('Can properly console log all the values that exist in the linked list', () =>{
+      let mockConsoleLog = jest.spyOn(console, 'log');
+
+      mockConsoleLog.mockImplementation(() => true);
+      
+      list.printList();
+
+      expect(mockConsoleLog).toBeCalled();
+    });
+  });
+
+  describe('append method', () => {
+    it ('should successfully add an element to the end of the list', () => {
+      list.insert(1);
+      list.append(20);
+      expect (list.head.next.next.value).toEqual(20);
+
     });
 
-    // note to self: insert console.log in print function for this to work
-    // it('should console.log zero times for and empty list', () => {
-    //   let mockConsoleLog = jest.spyOne(console, 'log');
-    //    mockConsoleLog.mockImplementation(() => true);
-    //    list.print();
-    //    expect(mockConsoleLog).not ...(finish this from the video class 6 @ 9:42AM)
-    // });
-
+    it('can append multiple nodes to the end of the list', () => {
+      list.insert(4);
+      list.append(7);
+      list.append(12);
+      expect(list.head.next.next.value).toEqual(7);
+      expect(list.head.next.next.next.value).toEqual(12);
+    });
   });
+
 });
+
+
+  describe('insertBefore method', () => {
+    it('can insert a node before a designated node', () => {
+      list.insert(2);
+      list.insert(5);
+      list.insert(7);
+      list.insertBefore(5, 22);
+      expect(list.head.next.value).toEqual(22);
+    });
+
+    it('can insert a new node before the first node', () => {
+      list.insert(1);
+      list.insert(2);
+      list.insert(3);
+      list.insertBefore(3, 0);
+      expect(list.head.value).toEqual(0);
+    });
+  });
+
+  describe('insertAfter method', () => {
+    it('can insert a node after a designated node', () => {
+      list.insert(2);
+      list.insert(4);
+      list.insert(6);
+      list.insertAfter(4, 9);
+      expect(list.head.next.next.value).toEqual(9);
+    });
+
+    it('can insert a node after the last node', () => {
+      let node3 = {value: 33, next: null};
+      let node2 = {value: 22, next: node3};
+      let node = {value: 11, next: node2};
+      list.head = node;
+      list.insertAfter(33, 1);
+      expect(list.head.next.next.next.value).toEqual(1);
+    });
+  });
+
+});
+
+// Class 7
+
+describe('kthFromEnd()', () => {
+  let list;
+  beforeEach(() => {
+    list = new LinkedList();
+  });
+
+    it('Where k is greater than the length of the linked list ', () => {
+      let node3 = {value: 3, next: null};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
+      list.head = node;
+
+      expect(list.kthFromEnd(5)).toEqual('Index is invalid');
+    });
+
+    it('Where k and the length of the list are the same', () => {
+      let node3 = {value: 3, next: null};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
+      list.head = node;
+      list.length = 3;
+      expect(list.kthFromEnd(3)).toEqual(1);
+    });
+
+    it('Where k is not a positive integer', () => {
+      let node4 = {value: 4, next: null};
+      let node3 = {value: 3, next: node4};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
+      list.head = node;
+
+      expect(list.kthFromEnd(-1)).toEqual('Index is invalid');
+    });
+
+    it('Where the linked list is of a size 1', () => {
+      let node = {value: 1, next: null};
+      list.head = node;
+      list.length = 1;
+
+      expect(list.kthFromEnd(1)).toEqual(1);
+    });
+
+    it('"Happy Path" where k is not at the end, but somewhere in the middle of the linked list', () => {
+      let node5 = {value: 5, next: null};
+      let node4 = {value: 4, next: node5};
+      let node3 = {value: 3, next: node4};
+      let node2 = {value: 2, next: node3};
+      let node = {value: 1, next: node2};
+      list.head = node;
+      list.length = 5;
+      
+      expect(list.kthFromEnd(1)).toEqual(4);
+    });
+});
+
