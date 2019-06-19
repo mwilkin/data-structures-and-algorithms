@@ -2,6 +2,8 @@
 
 const Node = require('./node/index.js');
 
+const Queue = require('../stacksAndQueues/stacks-and-queues.js').Queue;
+
 
 class BinaryTree {
   constructor(node){
@@ -12,9 +14,9 @@ class BinaryTree {
     let results = [];
 
     let _walk = node => {
-    results.push(node.value);
-    if(node.left) _walk(node.left);
-    if(node.right) _walk(node.right);
+      results.push(node.value);
+      if(node.left) _walk(node.left);
+      if(node.right) _walk(node.right);
     };
     _walk(this.root);
     return results;
@@ -46,9 +48,23 @@ class BinaryTree {
   }
 
   breadthFirst(){
-    
-  }
+    // if(!this.root){
+    //   throw new Error('Error: must have a root');
+    // }
+    let result = [];
 
+    let breadthQueue = new Queue();
+    breadthQueue.enqueue(this.root);
+
+    while(breadthQueue.size){
+      current = breadthQueue.dequeue();
+      result.push(current.value);
+
+      if(current.left) breadthQueue.enqueue(current.left);
+      if(current.right) breadthQueue.enqueue(current.right);
+    }
+    return result;
+  }
 }
 
 class BinarySearchTree extends BinaryTree{
@@ -56,7 +72,9 @@ class BinarySearchTree extends BinaryTree{
     super(node);
   }
 
-  add(node) {
+  add(value) {
+    let node = new Node(value);
+    // if(!value) return 'No value given';
     if(!this.root){
       this.root = node;
       return node;
@@ -83,7 +101,8 @@ class BinarySearchTree extends BinaryTree{
         }
       }else {
         //duplicate value found
-        throw new Error('Value already exists in Binary Search Tree');
+        return 'Value already exists';
+        // throw new Error('Value already exists in Binary Search Tree');
       }
     }
   }
