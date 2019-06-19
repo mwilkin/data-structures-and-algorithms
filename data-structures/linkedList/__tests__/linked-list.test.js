@@ -1,24 +1,9 @@
-// Write tests to prove the following functionality:
-
-// Can successfully instantiate an empty linked list
-// Can properly insert into the linked list
-// The head property will properly point to the first node in the linked list
-// Can properly insert multiple nodes into the linked list
-// Will return true when finding a value within the linked list that exists
-// Will return false when searching for a value in the linked list that does not exist
-// Can properly return a collection of all the values that exist in the linked list
-
 'use strict';
 
 const LinkedList = require('../linked-list.js');
 
 describe('Linked List Module', () => {
   let list = new LinkedList();
-
-  // let list;
-  //beforeEach(() => {
-  //   list = new LinkedList
-  // }
 
   describe('constructor', () => {
     it('Can successfully instantiate an empty linked list', () => {
@@ -43,10 +28,8 @@ describe('Linked List Module', () => {
       list.insert(4);
       list.insert(7);
       expect(list.head.next.value).toEqual(4);
-      // expect(list.tail.value).toEqual(2);
     });
   });
-
 
   it('Will return true when finding a value within the linked list that exists', () =>{
     list.insert(9);
@@ -76,13 +59,4 @@ describe('Linked List Module', () => {
     // });
 
   });
-
-  //it('should throw an error when no value is passed',()=>{
-  // var error;
-  // try{
-  // 
-  // }
- // });
-
-
-})
+});

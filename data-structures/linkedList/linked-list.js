@@ -1,10 +1,9 @@
 'use strict';
 
 class LinkedListNode {
-  constructor(value, next) {
+  constructor(value) {
     this.value = value;
     this.next = null;
-    // this.head = null;
   }
 }
 
@@ -16,15 +15,6 @@ class LinkedList{
   insert(value){
     // if(!value) throw 'Missing value parameter';
     let node = new LinkedListNode(value);
-
-    // if(!this.head){
-    //   this.head = node;
-    //   return this.head;
-    // }
-    // node.next = this.head;
-    // this.head = node;
-    // return this.head;
-
     node.value = value;
     node.next = this.head;
     this.head = node;
@@ -42,7 +32,6 @@ class LinkedList{
       }
     }
     return false;
-
   }
 
   printList(){
@@ -53,19 +42,7 @@ class LinkedList{
       current = current.next;
     }
     return results;
-
-    // let string = '';
-    // while(current){
-    //   str += current.element + ' ';
-    //   current = current.next;
-    // }
-    // console.log(string);
-    // //returns a collection all of the current Node values in the Linked List.
-    // return string;
   }
 }
-
-
-// Catch and handle any such exceptions and return a printed value or operation which cleanly represents the state and either stops execution cleanly, or provides the user with clear direction and output.
 
 module.exports = LinkedList;
