@@ -2,8 +2,7 @@
 
 const Node = require('./node/index.js');
 
-const Queue = require('../stacksAndQueues/stacks-and-queues.js').Queue;
-
+// const Queue = require('../stacksAndQueues/stacks-and-queues.js').Queue;
 
 class BinaryTree {
   constructor(node){
@@ -48,37 +47,35 @@ class BinaryTree {
   }
 
   breadthFirst(tree){
+    if(tree === undefined || tree === null) return 'error';
+    let queue = [tree.root];
+    let currentNode = queue.shift();
+
+    while(currentNode){
+      console.log(currentNode.value);
+      queue.push(currentNode.left);
+      queue.push(currentNode.right);
+      currentNode = queue.shift();
+    }
+  }
+
   //   if(!this.root){
   //     throw new Error('Error: must have a root');
   //   }
-  //   let queue = [tree.root];
-  //   let currentNode = queue.shift();
+  //   // let result = [];
+  //   let current;
+  //   let breadthQueue = new Queue();
+  //   let result = breadthQueue.enqueue(this.root);
 
-    //   while(currentNode){
-    //     console.log(currentNode.value);
-    //     queue.push(currentNode.left);
-    //     queue.push(currentNode.right);
-    //     currentNode = queue.shift();
-    //   }
-    // }
+  //   while(breadthQueue.size){
+  //     current = breadthQueue.dequeue();
+  //     result.push(current.value);
 
-    if(!this.root){
-      throw new Error('Error: must have a root');
-    }
-    let result = [];
-    let current;
-    let breadthQueue = new Queue();
-    breadthQueue.enqueue(this.root);
-
-    while(breadthQueue.size){
-      current = breadthQueue.dequeue();
-      result.push(current.value);
-
-      if(current.left) breadthQueue.enqueue(current.left);
-      if(current.right) breadthQueue.enqueue(current.right);
-    }
-    return result;
-  }
+  //     if(current.left) breadthQueue.enqueue(current.left);
+  //     if(current.right) breadthQueue.enqueue(current.right);
+  //   }
+  //   return result;
+  // }
 }
 
 class BinarySearchTree extends BinaryTree{
