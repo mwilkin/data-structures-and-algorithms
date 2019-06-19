@@ -20,11 +20,11 @@ class LinkedList{
     node.value = value;
     node.next = this.head;
     this.head = node;
-    this.length++
+    this.length++;
     return node.value;
 
 
-  //Placeholder for myself, considering changing insert
+    //Placeholder for myself, considering changing insert
     // if(!this.head){
     //   this.head = node;
     //   return this.head;
@@ -98,7 +98,7 @@ class LinkedList{
     return 'Node not found';
   }
 
-   kthFromEnd(k){
+  kthFromEnd(k){
     let current = this.head;
     let index = (this.length - k) -1;
 
@@ -114,13 +114,13 @@ class LinkedList{
         current = current.next;
       }
     }
-    
+
   }
 
   printList(){
     let current = this.head;
     while(current){
-      console.log(current.value)
+      console.log(current.value);
       current = current.next;
     }
   }
