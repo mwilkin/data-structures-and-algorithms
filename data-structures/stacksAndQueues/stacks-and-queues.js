@@ -37,21 +37,31 @@ class Stack {
 class Queue {
   constructor(){
     this.front = null;
+    this.tail = null;
   }
 
-  enqueue(item){
-    let node = new Node(item);
-    let current = this.front;
-    if(!item) return false;
+  enqueue(value){
+    let node = new Node(value);
 
-    if(!this.front){
+    if(this.tail === null) {
       this.front = node;
+      this.tail = node;
     } else {
-      while(current.next){
-        current = current.next;
-      }
-      current.next = node;
+      this.tail.next = node;
+      this.tail = this.tail.next;
     }
+
+    // let current = this.front;
+    // if(!value) return false;
+
+    // if(!this.front){
+    //   this.front = node;
+    // } else {
+    //   while(current.next){
+    //     current = current.next;
+    //   }
+    //   current.next = node;
+    // }
   }
 
   dequeue(){
