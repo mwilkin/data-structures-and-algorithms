@@ -47,12 +47,26 @@ class BinaryTree {
     return results;
   }
 
-  breadthFirst(){
-    // if(!this.root){
-    //   throw new Error('Error: must have a root');
-    // }
-    let result = [];
+  breadthFirst(tree){
+  //   if(!this.root){
+  //     throw new Error('Error: must have a root');
+  //   }
+  //   let queue = [tree.root];
+  //   let currentNode = queue.shift();
 
+    //   while(currentNode){
+    //     console.log(currentNode.value);
+    //     queue.push(currentNode.left);
+    //     queue.push(currentNode.right);
+    //     currentNode = queue.shift();
+    //   }
+    // }
+
+    if(!this.root){
+      throw new Error('Error: must have a root');
+    }
+    let result = [];
+    let current;
     let breadthQueue = new Queue();
     breadthQueue.enqueue(this.root);
 
@@ -120,8 +134,8 @@ class BinarySearchTree extends BinaryTree{
         _walk(node.left);
       } else if(node.righ !== undefined && value > node.value){
         _walk(node.right);
-      } 
-    }
+      }
+    };
     _walk(this.root);
     return result;
   }
