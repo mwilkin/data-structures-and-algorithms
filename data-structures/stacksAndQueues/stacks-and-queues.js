@@ -20,7 +20,9 @@ class Stack {
   }
 
   pop() {
+    let temp = this.top;
     this.top = this.top.next;
+    return temp.val;
   }
 
   peek() {
@@ -34,11 +36,10 @@ class Stack {
 
 class Queue {
   constructor(){
-  this.front = null;
+    this.front = null;
   }
 
   enqueue(item){
-
     let node = new Node(item);
     let current = this.front;
     if(!item) return false;
@@ -54,7 +55,12 @@ class Queue {
   }
 
   dequeue(){
-    this.front = this.front.next;
+    if(this.front !== null){
+      let temp = this.front;
+      this.front = this.front.next;
+      return temp.value;
+
+    } else return null;
   }
 
   peek(){
@@ -66,6 +72,4 @@ class Queue {
   }
 }
 
-
-
-module.exports = {Stack, Queue};
+module.exports = {Node, Stack, Queue};
