@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const QueuesAndStacks = require('../queue-with-stacks');
 
@@ -52,7 +52,7 @@ describe('Queue with Stacks Tests', () => {
     pseudoQueue.dequeue();
     expect(pseudoQueue.dequeue()).toEqual(6);
   });
-  
+
   it('can successfully empty the queue', () => {
     pseudoQueue.enqueue(3);
     pseudoQueue.enqueue(6);
