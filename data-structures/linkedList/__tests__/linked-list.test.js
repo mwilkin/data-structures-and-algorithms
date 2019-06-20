@@ -53,7 +53,7 @@ describe('Linked List Module', () => {
       let mockConsoleLog = jest.spyOn(console, 'log');
 
       mockConsoleLog.mockImplementation(() => true);
-      
+
       list.printList();
 
       expect(mockConsoleLog).toBeCalled();
@@ -127,52 +127,51 @@ describe('kthFromEnd()', () => {
     list = new LinkedList();
   });
 
-    it('Where k is greater than the length of the linked list ', () => {
-      let node3 = {value: 3, next: null};
-      let node2 = {value: 2, next: node3};
-      let node = {value: 1, next: node2};
-      list.head = node;
+  it('Where k is greater than the length of the linked list ', () => {
+    let node3 = {value: 3, next: null};
+    let node2 = {value: 2, next: node3};
+    let node = {value: 1, next: node2};
+    list.head = node;
 
-      expect(list.kthFromEnd(5)).toEqual('Index is invalid');
-    });
+    expect(list.kthFromEnd(5)).toEqual('Index is invalid');
+  });
 
-    it('Where k and the length of the list are the same', () => {
-      let node3 = {value: 3, next: null};
-      let node2 = {value: 2, next: node3};
-      let node = {value: 1, next: node2};
-      list.head = node;
-      list.length = 3;
-      expect(list.kthFromEnd(3)).toEqual(1);
-    });
+  it('Where k and the length of the list are the same', () => {
+    let node3 = {value: 3, next: null};
+    let node2 = {value: 2, next: node3};
+    let node = {value: 1, next: node2};
+    list.head = node;
+    list.length = 3;
+    expect(list.kthFromEnd(3)).toEqual(1);
+  });
 
-    it('Where k is not a positive integer', () => {
-      let node4 = {value: 4, next: null};
-      let node3 = {value: 3, next: node4};
-      let node2 = {value: 2, next: node3};
-      let node = {value: 1, next: node2};
-      list.head = node;
+  it('Where k is not a positive integer', () => {
+    let node4 = {value: 4, next: null};
+    let node3 = {value: 3, next: node4};
+    let node2 = {value: 2, next: node3};
+    let node = {value: 1, next: node2};
+    list.head = node;
 
-      expect(list.kthFromEnd(-1)).toEqual('Index is invalid');
-    });
+    expect(list.kthFromEnd(-1)).toEqual('Index is invalid');
+  });
 
-    it('Where the linked list is of a size 1', () => {
-      let node = {value: 1, next: null};
-      list.head = node;
-      list.length = 1;
+  it('Where the linked list is of a size 1', () => {
+    let node = {value: 1, next: null};
+    list.head = node;
+    list.length = 1;
 
-      expect(list.kthFromEnd(1)).toEqual(1);
-    });
+    expect(list.kthFromEnd(1)).toEqual(1);
+  });
 
-    it('"Happy Path" where k is not at the end, but somewhere in the middle of the linked list', () => {
-      let node5 = {value: 5, next: null};
-      let node4 = {value: 4, next: node5};
-      let node3 = {value: 3, next: node4};
-      let node2 = {value: 2, next: node3};
-      let node = {value: 1, next: node2};
-      list.head = node;
-      list.length = 5;
-      
-      expect(list.kthFromEnd(1)).toEqual(4);
-    });
+  it('"Happy Path" where k is not at the end, but somewhere in the middle of the linked list', () => {
+    let node5 = {value: 5, next: null};
+    let node4 = {value: 4, next: node5};
+    let node3 = {value: 3, next: node4};
+    let node2 = {value: 2, next: node3};
+    let node = {value: 1, next: node2};
+    list.head = node;
+    list.length = 5;
+
+    expect(list.kthFromEnd(1)).toEqual(4);
+  });
 });
-

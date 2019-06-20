@@ -50,6 +50,8 @@ ____
 
 [Linked List](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/linkedList)
 
+[Merge Linked Lists](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/llMerge)
+
 [Array Binary Search](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayBinarySearch)
 
 [Stacks and Queues](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/stacksAndQueues)
