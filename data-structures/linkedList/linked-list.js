@@ -23,7 +23,6 @@ class LinkedList{
     this.length++;
     return node.value;
 
-
     //Placeholder for myself, considering changing insert
     // if(!this.head){
     //   this.head = node;
@@ -32,6 +31,7 @@ class LinkedList{
     // node.next = this.head;
     // this.head = node;
     // return this.head;
+
 
   }
 
@@ -45,6 +45,7 @@ class LinkedList{
       }
     }
     return false;
+
   }
 
   append(value){
@@ -123,10 +124,10 @@ class LinkedList{
       console.log(current.value);
       current = current.next;
     }
+
+    return results;
+
   }
 }
-
-
-// Catch and handle any such exceptions and return a printed value or operation which cleanly represents the state and either stops execution cleanly, or provides the user with clear direction and output.
 
 module.exports = LinkedList;
