@@ -169,7 +169,31 @@ describe('breadthFirst traversal', () => {
   });
 
   it('should not change the tree ', () => {
-    
-  });
-});
+    let testTree = new Tree();
+    let root = new TreeNode(15);
+    let five = new TreeNode(5);
+    let eighteen = new TreeNode(18);
+    let four = new TreeNode(4);
+    let twenty = new TreeNode(20);
+    let twentytwo = new TreeNode(22);
 
+    root.left = five;
+    root.right = eighteen;
+
+    five.left = four;
+    five.right = twenty;
+    eighteen.right =twentytwo;
+
+    testTree.root = root;
+
+    //          15
+    //        /   \
+    //       5    18
+    //     /  \     \
+    //    4    20   22
+
+    testTree.breadthFirst(testTree);
+    expect(testTree).toEqual(testTree);
+  });
+
+});
