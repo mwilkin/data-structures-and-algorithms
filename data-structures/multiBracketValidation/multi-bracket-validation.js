@@ -12,7 +12,7 @@ class Stack {
 
   constructor(){
     this.storage = new Node();
-    this.size = 0
+    this.size = 0;
   }
 
   push(item){
@@ -45,9 +45,9 @@ function multiBranchValidation(inputString){
     ')' : '(',
     ']' : '[',
     '}' : '{'
-  }
+  };
 
-  let closings = Object.keys(bracketObject);
+  // let closings = Object.keys(bracketObject);
   let openings = Object.values(bracketObject);
 
   let bracketStack = new Stack;
@@ -59,11 +59,12 @@ function multiBranchValidation(inputString){
       let currentBracket = bracketStack.peek();
       if (bracketObject[character] === currentBracket){
         bracketStack.pop();
-      } else { return false }
+      } else return false;
     }
   }
-  if(bracketStack.size === 0 ){return true}
-  else {return false}
-};
+  if(bracketStack.size === 0 ){
+    return true;
+  } else return false;
+}
 
- module.exports = multiBranchValidation;
+module.exports = multiBranchValidation;
