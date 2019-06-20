@@ -1,7 +1,7 @@
 'use strict';
 
-const Tree = require('../tree/tree.js');
-const TreeNode = require('../tree/node/index.js');
+// const Tree = require('../tree/tree.js');
+// const TreeNode = require('../tree/node/index.js');
 
 let fizzBuzzTree = (binarySearchTree) => {
 
@@ -17,8 +17,8 @@ let fizzBuzzTree = (binarySearchTree) => {
     }
     if (node.right){ _walkTransform(node.right);
     }
-  }
-  _walkTransform(binarySearchTree.root)
+  };
+  _walkTransform(binarySearchTree.root);
   return binarySearchTree;
 };
 
