@@ -39,7 +39,7 @@ describe('fizzBuzz function(treeObj) ', () => {
     fizzBuzzTree(bst);
     expect(bst.root.right.value).toBe('fizz');
   });
-  
+
   it('should change value of root.right.right from 30 to FizzBuzz', () => {
     fizzBuzzTree(bst);
     expect(bst.root.right.right.value).toBe('fizzbuzz');
