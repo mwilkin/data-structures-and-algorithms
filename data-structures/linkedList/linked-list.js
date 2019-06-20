@@ -21,8 +21,7 @@ class LinkedList{
     this.head = node;
     return node.value;
 
-
-  //Placeholder for myself, considering changing insert
+    //Placeholder for myself, considering changing insert
     // if(!this.head){
     //   this.head = node;
     //   return this.head;
@@ -97,7 +96,7 @@ class LinkedList{
   printList(){
     let current = this.head;
     while(current){
-      console.log(current.value)
+      console.log(current.value);
       current = current.next;
     }
   }

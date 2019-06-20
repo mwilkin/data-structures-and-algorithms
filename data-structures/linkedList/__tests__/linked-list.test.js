@@ -73,9 +73,9 @@ describe('Linked List Module', () => {
   //it('should throw an error when no value is passed',()=>{
   // var error;
   // try{
-  // 
+  //
   // }
- // });
+  // });
 
   describe('append method', () => {
     it ('should successfully add an element to the end of the list', () => {
@@ -125,13 +125,13 @@ describe('Linked List Module', () => {
 
     it('can insert a node after the last node', () => {
       //Arrange
-     let node = {value: 1, next: node2};
-     let node2 = {value: 2, next: node3};
-     let node3 = {value: 3, next: null};
-     // 1 -> 2 -> 3
-    list.insertAfter(3, 4);
-    //Assert
-    expect(list.head.next.next.next.value).toEqual(4);
+      let node = {value: 1, next: node2};
+      let node2 = {value: 2, next: node3};
+      let node3 = {value: 3, next: null};
+      // 1 -> 2 -> 3
+      list.insertAfter(3, 4);
+      //Assert
+      expect(list.head.next.next.next.value).toEqual(4);
 
     });
   });
