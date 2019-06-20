@@ -13,9 +13,9 @@ describe('Stacks and Queues Tests', () => {
     });
 
     it('can successfully push onto a stack', () => {
-        stack.push(7);
-        expect(stack.top).toBeDefined();
-        expect(stack.top.value).toBe(7);
+      stack.push(7);
+      expect(stack.top).toBeDefined();
+      expect(stack.top.value).toBe(7);
     });
 
     it('can successfully push multiple values onto a stack', () => {

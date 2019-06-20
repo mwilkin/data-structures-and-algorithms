@@ -20,7 +20,9 @@ class Stack {
   }
 
   pop() {
+    let temp = this.top;
     this.top = this.top.next;
+    return temp.val;
   }
 
   peek() {
@@ -34,27 +36,41 @@ class Stack {
 
 class Queue {
   constructor(){
-  this.front = null;
+    this.front = null;
+    this.tail = null;
   }
 
-  enqueue(item){
+  enqueue(value){
+    let node = new Node(value);
 
-    let node = new Node(item);
-    let current = this.front;
-    if(!item) return false;
-
-    if(!this.front){
+    if(this.tail === null) {
       this.front = node;
+      this.tail = node;
     } else {
-      while(current.next){
-        current = current.next;
-      }
-      current.next = node;
+      this.tail.next = node;
+      this.tail = this.tail.next;
     }
+
+    // let current = this.front;
+    // if(!value) return false;
+
+    // if(!this.front){
+    //   this.front = node;
+    // } else {
+    //   while(current.next){
+    //     current = current.next;
+    //   }
+    //   current.next = node;
+    // }
   }
 
   dequeue(){
-    this.front = this.front.next;
+    if(this.front !== null){
+      let temp = this.front;
+      this.front = this.front.next;
+      return temp.value;
+
+    } else return null;
   }
 
   peek(){
@@ -66,6 +82,4 @@ class Queue {
   }
 }
 
-
-
-module.exports = {Stack, Queue};
+module.exports = {Node, Stack, Queue};
