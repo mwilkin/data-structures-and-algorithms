@@ -2,7 +2,7 @@
 
 // test for unbalenced with other characters returns false
 
-const multiBracketValidation = require('../multi-bracket-validation')
+const multiBracketValidation = require('../multi-bracket-validation');
 
 describe('multiBracketValidation Module', () => {
   it('show empty string returns false', () => {
@@ -14,7 +14,7 @@ describe('multiBracketValidation Module', () => {
   it('should return false for one bracket', () => {
     let inputString = '{';
     let actual = multiBracketValidation(inputString);
-    expect(actual).toEqual(false); 
+    expect(actual).toEqual(false);
   });
 
   it('should return true for 1 set of complementary brackets', () => {
@@ -22,7 +22,7 @@ describe('multiBracketValidation Module', () => {
     let squareBrackets = multiBracketValidation('[]');
     let curlyBrackets = multiBracketValidation('{}');
     let smoothBrackets = multiBracketValidation('()');
-   
+
     expect(squareBrackets).toBe(true);
     expect(curlyBrackets).toBe(true);
     expect(smoothBrackets).toBe(true);
@@ -33,13 +33,13 @@ describe('multiBracketValidation Module', () => {
     let squareBracketsPairs = multiBracketValidation('[][]');
     let curlyBracketsNested = multiBracketValidation('{{}}');
     let smoothBrackets = multiBracketValidation('[{()()()}]');
-   
+
     expect(squareBracketsPairs).toBe(true);
     expect(curlyBracketsNested).toBe(true);
     expect(smoothBrackets).toBe(true);
   });
 
-    it('should return false for an unbalence set of brackets', () => {
+  it('should return false for an unbalence set of brackets', () => {
     let unbalencedOne = multiBracketValidation('{]}');
     let mixed = multiBracketValidation('{[}]');
 
@@ -47,13 +47,13 @@ describe('multiBracketValidation Module', () => {
     expect(mixed).toBe(false);
   });
 
-    it('should return true for balenced sets of brackets with other characters inserted', () => {
+  it('should return true for balenced sets of brackets with other characters inserted', () => {
     let insertedCharacters = multiBracketValidation('{{dog}}');
 
     expect(insertedCharacters).toBe(true);
-  }); 
+  });
 
-    it('should return true for balenced sets of brackets with characters intermixed', () => {
+  it('should return true for balenced sets of brackets with characters intermixed', () => {
     let insertedCharacters = multiBracketValidation('{c{d[]og(a)}t}');
 
     expect(insertedCharacters).toBe(true);
@@ -68,6 +68,4 @@ describe('multiBracketValidation Module', () => {
     expect(insertedBadCharacters).toBe(false);
     expect(insertedUnbalancedCharacters).toBe(false);
   });
-  
-
 });
