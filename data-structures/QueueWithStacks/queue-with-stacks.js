@@ -1,7 +1,5 @@
 'use strict';
 
-const stack = require('../stacksAndQueues/stacks-and-queues.js');
-
 class Node {
   constructor(value) {
     this.value = value;
@@ -48,7 +46,7 @@ class PseudoQueue{
   enqueue(value){
     this.stack1.push(value);
   }
-  
+
   dequeue(){
     if(this.stack2.length === 0){
       if(this.stack1.length === 0) return 'Queue is empty';
