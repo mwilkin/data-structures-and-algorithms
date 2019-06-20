@@ -59,23 +59,22 @@ class BinaryTree {
     }
   }
 
-  //   if(!this.root){
-  //     throw new Error('Error: must have a root');
-  //   }
-  //   // let result = [];
-  //   let current;
-  //   let breadthQueue = new Queue();
-  //   let result = breadthQueue.enqueue(this.root);
+  findMaximumValue(tree){
+    if(tree === undefined || tree === null) return 'error';
+    let maxValue = tree.root.value;
 
-  //   while(breadthQueue.size){
-  //     current = breadthQueue.dequeue();
-  //     result.push(current.value);
+    let _walk = node => {
+      if(node.left) _walk(node.left);
+      if(node.value > maxValue){
+        maxValue = node.value;
+      }
+      if(node.right) _walk(node.right);
+    };
+    _walk(tree.root);
+    return maxValue;
+  }
 
-  //     if(current.left) breadthQueue.enqueue(current.left);
-  //     if(current.right) breadthQueue.enqueue(current.right);
-  //   }
-  //   return result;
-  // }
+
 }
 
 class BinarySearchTree extends BinaryTree{

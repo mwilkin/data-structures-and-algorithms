@@ -195,5 +195,50 @@ describe('breadthFirst traversal', () => {
     testTree.breadthFirst(testTree);
     expect(testTree).toEqual(testTree);
   });
+});
 
+describe('findMaximumValue method', () => {
+  let testTree = new Tree();
+  let root = new TreeNode(15);
+  let five = new TreeNode(5);
+  let eighteen = new TreeNode(18);
+  let four = new TreeNode(4);
+  let twenty = new TreeNode(20);
+  let twentytwo = new TreeNode(22);
+
+  root.left = five;
+  root.right = eighteen;
+
+  five.left = four;
+  five.right = twenty;
+  eighteen.right =twentytwo;
+
+  testTree.root = root;
+
+
+
+  //          15
+  //        /   \
+  //       5    18
+  //     /  \     \
+  //    4    20   22
+
+  it('should not alter the tree', () => {
+    testTree.findMaximumValue(testTree);
+    expect(testTree).toEqual(testTree);
+  });
+  it('should return the maximum value in a tree', () => {
+    expect(testTree.findMaximumValue(testTree)).toEqual(22);
+  });
+  it('should throw and error if root is null', () => {
+    let testTree = new Tree(new TreeNode(null));
+    let result = testTree.findMaximumValue();
+    expect(result).toBe('error');
+  });
+
+  it('should throw and error if root is undefined', () => {
+    let testTree = new Tree(new TreeNode(undefined));
+    let result = testTree.findMaximumValue();
+    expect(result).toBe('error');
+  });
 });
