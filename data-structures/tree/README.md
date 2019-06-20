@@ -22,4 +22,10 @@ Define a method named `contains` that accepts a value, and returns a boolean ind
 
 ## Solution
 
+* Breadth First Search 
 <img src="./assets/breadth_first.jpg">
+
+* Find Maximum Value 
+<img src="./assets/find_max_value.jpg">
+
+
