@@ -18,7 +18,21 @@ Define a method named `add` that accepts a value, and adds a new node with that 
 
 Define a method named `contains` that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 
+### Find the Maximum Value in a Binary Tree
+
+Write a function called `find-maximum-value` which takes binary tree as its only input. 
+
+Without utilizing any of the built-in methods available to your language, return the maximum value stored in the tree. 
+
+You can assume that the values stored in the Binary Tree will be numeric.
+
 ## Approach & Efficiency
+
+1. Problem Domain accurately describes problem
+2. Visual will capture the process
+3. Algorithm will decribe the function
+4. Pseudo code will match the Algorithm
+5. Code will match the Pseudo
 
 ## Solution
 

@@ -12,8 +12,4 @@ describe('binary tree node', () => {
     let actual = new TreeNode(42);
     expect(actual.value).toBe(42);
   });
-
-  it('should show that new node with no value input returns error', () => {
-    expect(() => new TreeNode()).toThrow('Error: cannot enter a value of null or undefined');
-  });
 });
