@@ -50,10 +50,23 @@ ____
 
 [Linked List](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/linkedList)
 
+[Merge Linked Lists](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/llMerge)
+
 [Array Binary Search](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayBinarySearch)
 
+[Stacks and Queues](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/stacksAndQueues)
+
+[Queues with Stacks](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/QueueWithStacks)
+
+[Multi-Bracket_Validation](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/multiBracketValidation)
+
+[Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/tree)
+
+[FizzBuzz Tree](https://github.com/mwilkin/data-structures-and-algorithms/tree/fizzbuzz_tree/data-structures/fizzBuzzTree)
 
 _____
 ### Authored by Matt Wilkin
 
-#### 4/21/19
+#### Started 4/21/19
+
+#### Last update 6/10/19

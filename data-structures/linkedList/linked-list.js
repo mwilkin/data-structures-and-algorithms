@@ -11,6 +11,7 @@ class LinkedList{
   constructor() {
     // this.head = null;
     this.head = new LinkedListNode();
+    this.length = 0;
   }
 
   insert(value){
@@ -19,6 +20,7 @@ class LinkedList{
     node.value = value;
     node.next = this.head;
     this.head = node;
+    this.length++;
     return node.value;
 
     //Placeholder for myself, considering changing insert
@@ -29,6 +31,7 @@ class LinkedList{
     // node.next = this.head;
     // this.head = node;
     // return this.head;
+
 
   }
 
@@ -42,11 +45,13 @@ class LinkedList{
       }
     }
     return false;
+
   }
 
   append(value){
-    let current = this.head;
     let newNode = new LinkedListNode(value);
+    let current = this.head;
+
     while(current.next !== null) {
       current = current.next;
     }
@@ -91,6 +96,26 @@ class LinkedList{
         current = current.next;
       }
     }
+    return 'Node not found';
+  }
+
+  kthFromEnd(k){
+    let current = this.head;
+    let index = (this.length - k) -1;
+
+    if(k > this.length || k < 0){
+      return 'Index is invalid';
+    } else if(k === this.length){
+      return this.head.value;
+    }
+    for(let i = 0; i <= index; i++){
+      if(i === index){
+        return current.value;
+      } else {
+        current = current.next;
+      }
+    }
+
   }
 
   printList(){
@@ -99,10 +124,10 @@ class LinkedList{
       console.log(current.value);
       current = current.next;
     }
+
+    return results;
+
   }
 }
-
-
-// Catch and handle any such exceptions and return a printed value or operation which cleanly represents the state and either stops execution cleanly, or provides the user with clear direction and output.
 
 module.exports = LinkedList;
