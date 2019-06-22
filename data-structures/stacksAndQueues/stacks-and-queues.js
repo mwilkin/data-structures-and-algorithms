@@ -13,8 +13,8 @@ class Stack {
   }
 
   push(value) {
-    let node = new Node(value);
     if(!value) return false;
+    let node = new Node(value);
     node.next = this.top;
     this.top = node;
   }
