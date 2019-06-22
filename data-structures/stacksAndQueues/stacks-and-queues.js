@@ -12,9 +12,9 @@ class Stack {
     this.top = null;
   }
 
-  push(item) {
-    let node = new Node(item);
-    if(!item) return false;
+  push(value) {
+    let node = new Node(value);
+    if(!value) return false;
     node.next = this.top;
     this.top = node;
   }
