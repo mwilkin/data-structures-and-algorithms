@@ -74,7 +74,6 @@ class BinaryTree {
     return maxValue;
   }
 
-
 }
 
 class BinarySearchTree extends BinaryTree{
