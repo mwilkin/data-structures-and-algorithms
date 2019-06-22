@@ -83,8 +83,8 @@ class BinarySearchTree extends BinaryTree{
   }
 
   add(value) {
+    if(!value) return 'No value given';
     let node = new Node(value);
-    // if(!value) return 'No value given';
     if(!this.root){
       this.root = node;
       return node;
