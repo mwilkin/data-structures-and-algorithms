@@ -58,15 +58,19 @@ ____
 
 [Queues with Stacks](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/QueueWithStacks)
 
+<<<<<<< HEAD
 [Multi-Bracket_Validation](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/multiBracketValidation)
 
 [Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/tree)
 
 [FizzBuzz Tree](https://github.com/mwilkin/data-structures-and-algorithms/tree/fizzbuzz_tree/data-structures/fizzBuzzTree)
 
+=======
 [FIFI Animal Shelter](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/fifoAnimalShelter)
-
+>>>>>>> 32e34211dd543dc7115e41d292f7954e5767af1a
 _____
 ### Authored by Matt Wilkin
 
 #### Started 4/21/19
+
+#### Last update 6/11/19
