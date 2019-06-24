@@ -26,4 +26,9 @@ I reviewed the class demo, did a lot of research to learn more about Linked List
 ------
 ------
 
+<<<<<<< HEAD
 Feature Tasks
+=======
+Feature Tasks
+
+>>>>>>> 32e34211dd543dc7115e41d292f7954e5767af1a

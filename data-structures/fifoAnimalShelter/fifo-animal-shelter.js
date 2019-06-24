@@ -36,6 +36,7 @@ class AnimalShelter{
     return result;
   }
 
+
 }
 
 module.exports = AnimalShelter;

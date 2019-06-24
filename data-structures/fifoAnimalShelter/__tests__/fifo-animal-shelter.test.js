@@ -69,4 +69,5 @@ describe('Animal Shelter', () => {
       expect(newShelter.dequeue()).toBeUndefined();
     });
   });
+
 });

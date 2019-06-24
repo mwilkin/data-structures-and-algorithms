@@ -58,6 +58,7 @@ ____
 
 [Queues with Stacks](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/QueueWithStacks)
 
+<<<<<<< HEAD
 [Multi-Bracket_Validation](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/multiBracketValidation)
 
 [Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/tree)
@@ -70,3 +71,6 @@ _____
 ### Authored by Matt Wilkin
 
 #### Started 4/21/19
+
+#### Last update 6/11/19
+
