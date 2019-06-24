@@ -46,27 +46,15 @@ describe('Animal Shelter', () => {
   describe('dequeue', () => {
 
     it('Should remove the oldest specified animal from the queue', () => {
-      newShelter.enqueue('cat');
-      newShelter.enqueue('dog');
-      newShelter.enqueue('cat');
-      let popped = newShelter.dequeue('dog');
-      expect(popped).toEqual({name:'dog'});
-      expect(newShelter).toBeDefined();
-      expect(newShelter).toBeInstanceOf(AnimalShelter);
-      expect(newShelter.storage.length).toEqual(2);
+   
     });
 
     it('Should not remove any other animal', () => {
-      newShelter.enqueue('cat');
-      newShelter.enqueue('dog');
-      newShelter.enqueue('cat');
-      newShelter.dequeue('dog');
-      expect(newShelter.storage[0].name).toEqual('cat');
-      expect(newShelter.storage[1].name).toEqual('cat');
+
     });
 
     it('Should return undefined if no parameter given', () => {
-      expect(newShelter.dequeue()).toBeUndefined();
+      
     });
   });
 });
