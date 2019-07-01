@@ -38,7 +38,7 @@ describe('Insertion sort Algorithm tests', () => {
     let emptyArray = [];
     insertionSort(emptyArray);
     expect( () => {
-      git coinsertionSort(emptyArray);
+      insertionSort(emptyArray);
     }).toThrow('Array elements are not valid.');
   });
 });
