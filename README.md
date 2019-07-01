@@ -40,6 +40,10 @@ ____
 
 ## 401 
 
+### Sorts
+
+[Insertion Sort](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/sorts/insertionSort)
+
 ### Code Challenges 
 
 [Array Reverse](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayReverse)
@@ -48,29 +52,28 @@ ____
 
 ### Data Structures
 
-[Linked List](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/linkedList)
+[Linked List](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/llMerge)
 
-[Merge Linked Lists](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/llMerge)
+[Merge Linked Lists](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/llMerge)
 
-[Array Binary Search](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayBinarySearch)
+[Array Binary Search](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/code-challenges/401/arrayBinarySearch)
 
-[Stacks and Queues](https://github.com/mwilkin/data-structures-and-algorithms/data-structures/stacksAndQueues)
+[Stacks and Queues](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/stacksAndQueues)
 
-[Queues with Stacks](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/QueueWithStacks)
+[Queues with Stacks](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/QueueWithStacks)
 
-<<<<<<< HEAD
-[Multi-Bracket_Validation](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/multiBracketValidation)
+[Multi-Bracket_Validation](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/multiBracketValidation)
 
-[Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/tree)
+[Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/tree)
 
-[FizzBuzz Tree](https://github.com/mwilkin/data-structures-and-algorithms/tree/fizzbuzz_tree/data-structures/fizzBuzzTree)
+[FizzBuzz Tree](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/fizzBuzzTree)
 
-[FIFI Animal Shelter](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/fifoAnimalShelter)
+[FIFI Animal Shelter](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/fifoAnimalShelter)
 
 _____
 ### Authored by Matt Wilkin
 
 #### Started 4/21/19
 
-#### Last update 6/11/19
+#### Last update 7/01/19
 
