@@ -36,9 +36,8 @@ describe('Insertion sort Algorithm tests', () => {
 
   it('should throw an error if the input array is empty', () => {
     let emptyArray = [];
-    insertionSort(emptyArray);
     expect( () => {
       insertionSort(emptyArray);
-    }).toThrow('Array elements are not valid.');
+    }).toThrow('Array is not valid');
   });
 });

@@ -8,7 +8,7 @@
 
 function insertionSort(arr){
   if (!Array.isArray(arr)) throw 'Input is not an array.';
-  if(arr === undefined || arr.length === 0) throw 'Array is not valid';
+  if(arr.length === 0) throw 'Array is not valid';
 
   for(let i = 1; i < arr.length; i++){
     let j = i - 1;
