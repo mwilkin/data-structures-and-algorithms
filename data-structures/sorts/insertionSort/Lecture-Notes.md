@@ -24,7 +24,7 @@ Is it more efficient than others? How does it attack the problem differently?
 
 ### Diagram
 
-Include your “Visual” here
+<img src="./assets/insertionSort.png" width=400>
 
 ### Algorithm
 
@@ -49,13 +49,14 @@ Describe in detail how the algorithm works. Include small code snippets to possi
 
 #### Watch
 
-[Insertion Sort in JavaScript](https://www.youtube.com/watch?v=ArPCGZRXXc0)
+* [Insertion Sort in JavaScript](https://www.youtube.com/watch?v=ArPCGZRXXc0)
 
 #### Read
 
-[Javascript Algorithms — Insertion Sort](https://medium.com/javascript-algorithms/javascript-algorithms-insertion-sort-59b6b655373c)
-[Insertion Sorting for Beginners in JS](https://dev.to/ryan_dunton/insertion-sorting-for-beginners-in-js------fkg)
+* [Javascript Algorithms — Insertion Sort](https://medium.com/javascript-algorithms/javascript-algorithms-insertion-sort-59b6b655373c)
+
+* [Insertion Sorting for Beginners in JS](https://dev.to/ryan_dunton/insertion-sorting-for-beginners-in-js------fkg)
 
 #### Bookmark
 
-[GeeksfoGeeks Insertion sort](https://www.geeksforgeeks.org/insertion-sort/)
+* [GeeksfoGeeks Insertion sort](https://www.geeksforgeeks.org/insertion-sort/)
