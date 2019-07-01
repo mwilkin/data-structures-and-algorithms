@@ -1,11 +1,26 @@
-# Challenge Summary
-<!-- Short summary or background information -->
+# Challenge Summary: Insertion Sort
+
+The basic idea of insertion sort is to select one element at a time and then search for the correct place to insert it.
 
 ## Challenge Description
-<!-- Description of the challenge -->
+
+Complete a working, tested implementation of Insertion Sort, based on the pseudo code provided
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
 
-## Solution
-<!-- Embedded whiteboard image -->
+I reasearch insertion sort (watched videos, read articles, and reviewed incremental illustrations ), reviewed the Pseudo code, wrote tests and then created to code.
+
+## Provided Pseduo Code 
+
+  InsertionSort(int[] arr)
+  
+    FOR i = 1 to arr.length
+    
+      int j <-- i - 1
+      int temp <-- arr[i]
+      
+      WHILE j >= 0 AND temp < arr[j]
+        arr[j + 1] <-- arr[j]
+        j <-- j - 1
+        
+      arr[j + 1] <-- temp

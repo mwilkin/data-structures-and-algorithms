@@ -49,13 +49,13 @@ Describe in detail how the algorithm works. Include small code snippets to possi
 
 #### Watch
 
-[Video]()
+[Insertion Sort in JavaScript](https://www.youtube.com/watch?v=ArPCGZRXXc0)
 
 #### Read
 
-[Article 1]()
-[Article 2]()
+[Javascript Algorithms — Insertion Sort](https://medium.com/javascript-algorithms/javascript-algorithms-insertion-sort-59b6b655373c)
+[Insertion Sorting for Beginners in JS](https://dev.to/ryan_dunton/insertion-sorting-for-beginners-in-js------fkg)
 
 #### Bookmark
 
-[Website]()
+[GeeksfoGeeks Insertion sort](https://www.geeksforgeeks.org/insertion-sort/)

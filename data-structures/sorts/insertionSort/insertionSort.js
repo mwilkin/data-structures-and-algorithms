@@ -1,1 +1,16 @@
 'use strict';
+
+let insertionSort = (inputArr) => {
+  if (!inputArr.isArray()) throw Error('Input is not an array.');
+    let length = inputArr.length;
+    for (let i = 1; i < length; i++) {
+        let key = inputArr[i];
+        let j = i - 1;
+        while (j >= 0 && inputArr[j] > key) {
+            inputArr[j + 1] = inputArr[j];
+            j = j - 1;
+        }
+        inputArr[j + 1] = key;
+    }
+    return inputArr;
+};
