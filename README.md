@@ -40,6 +40,10 @@ ____
 
 ## 401 
 
+### Sorts
+
+[Insertion Sort]()
+
 ### Code Challenges 
 
 [Array Reverse](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayReverse)
@@ -58,7 +62,6 @@ ____
 
 [Queues with Stacks](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/QueueWithStacks)
 
-<<<<<<< HEAD
 [Multi-Bracket_Validation](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/multiBracketValidation)
 
 [Binary Tree and Binary Search Tree](https://github.com/mwilkin/data-structures-and-algorithm/data-structures/tree)
@@ -72,5 +75,5 @@ _____
 
 #### Started 4/21/19
 
-#### Last update 6/11/19
+#### Last update 7/01/19
 
