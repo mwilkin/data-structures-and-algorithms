@@ -31,7 +31,18 @@ The Merge Sort Algorithm is a divide and conquer algorithm which runs in O(n log
 
 ### Algorithm
 
-* 
+* Merge sort keeps on dividing the list into equal halves until it can no more be divided.
+
+* If there is only one element in the list, it is sorted.
+
+* Finally, merge sort combines the smaller sorted lists keeping the new list sorted too.
+
+* Step 1: If there is only one element in the list, it is already sorted; return.
+
+* Step 2: Divide the list recursively into two halves until it can no more be divided.
+
+* Step 3: Merge the smaller lists into new list in sorted order.
+
 
 ### Pseudocode
 
