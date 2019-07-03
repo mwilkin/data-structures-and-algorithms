@@ -1,7 +1,7 @@
 'use strict';
 
 function mergeSort (array) {
-  //  one element or empty arrays don't need sorting. 
+  //  one element or empty arrays don't need sorting.
   if (array.length <= 1) {
     return array;
   }
@@ -20,24 +20,26 @@ function mergeSort (array) {
 
 // Merge the two arrays
 function merge (left, right) {
-  let resultArray = []; 
-  leftIndex = 0;
-  rightIndex = 0;
+  let resultArray = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
 
   //concatenate values into the resultArray in order
   while (leftIndex < left.length && rightIndex < right.length) {
     if (left[leftIndex] < right[rightIndex]) {
       resultArray.push(left[leftIndex]);
-      leftIndex++; 
+      leftIndex++;
     } else {
       resultArray.push(right[rightIndex]);
-      rightIndex++; 
+      rightIndex++;
     }
   }
 
   // We need to concat here because there will be one element remaining
   // from either left OR the right
   return resultArray
-          .concat(left.slice(leftIndex))
-          .concat(right.slice(rightIndex));
+    .concat(left.slice(leftIndex))
+    .concat(right.slice(rightIndex));
 }
+
+module.exports = mergeSort;
