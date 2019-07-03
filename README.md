@@ -44,6 +44,9 @@ ____
 
 [Insertion Sort](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/sorts/insertionSort)
 
+[Merge Sort](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/sorts/merge)
+
+
 ### Code Challenges 
 
 [Array Reverse](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayReverse)
