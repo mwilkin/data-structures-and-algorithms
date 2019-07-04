@@ -46,6 +46,8 @@ ____
 
 [Merge Sort](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/sorts/merge)
 
+[Quick Sort](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/sorts/quickSort)
+
 
 ### Code Challenges 
 
@@ -78,5 +80,5 @@ _____
 
 #### Started 4/21/19
 
-#### Last update 7/01/19
+#### Last update 7/03/19
 
