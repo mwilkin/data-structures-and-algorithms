@@ -3,7 +3,7 @@
 'use strict';
 
 function quickSort(arr, left, right){
-  if(!Array.isArray(arr)){
+  if(!Array.isArray(arr) || arr.length === 0){
     throw 'Input not a valid array';
   }
 
