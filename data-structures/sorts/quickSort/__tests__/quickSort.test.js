@@ -24,11 +24,20 @@ describe('quickSort', () => {
   });
 
   it('should return a sorted array with no changes', () => {
-    // I do not know why the tests failed without the different arrays
     const arr = [1, 1, 2, 3, 4, 5, 99, 1000, 10021];
     const array = [1, 1, 2, 3, 4, 5, 99, 1000, 10021];
     expect(quickSort(arr)).toEqual(array);
-
+  });
   
+  it('should return a backwards-sorted array in sorted order', () => {
+    const backwards = [12121, 1221, 99, 88, 77, 66, 44, 22, 1, 0.123];
+    const forwards = [0.123, 1, 22, 44, 66, 77, 88, 99, 1221, 12121];
+    expect(quickSort(backwards)).toEqual(forwards);
+  });
+
+  it('should return a single-element array unchanged', () => {
+    const one = [1];
+    expect(quickSort(one)).toEqual(one);
+  });
 
 });
