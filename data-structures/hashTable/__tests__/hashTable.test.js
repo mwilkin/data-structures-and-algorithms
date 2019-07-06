@@ -1,6 +1,6 @@
 'use strict';
 
-const { LinkedList, HashTable } =require('../hashTable');
+const { HashTable } =require('../hashTable');
 
 describe('Hash Table', () => {
   it('should construct a Hash Table', () => {
@@ -51,23 +51,49 @@ describe('hash(key) function', () => {
 
 describe('add(key, value)', () => {
   it('should add a key/value to the hashtable resulting in the value being in the data structure', () => {
-    let hashTable = new HashTable(5); 
+    let hashTable = new HashTable(5);
     let key = 'pig';
     let value = 'round';
+    let key1 = 'foo';
+    let value1 = 55;
 
     hashTable.add(key, value);
-    const index = hashTable.hash(key);
+    hashTable.add(key1, value1);
 
     expect(hashTable.buckets[0].values()).toEqual([['pig', 'round']]);
+    expect(hashTable.buckets[1].values()).toEqual([['foo', 55]]);
 
   });
+
+  it('should throw an error if the key is already being used', () => {
+    let hashTable = new HashTable(5);
+    let key = 'pig';
+    let value = 'round';
+    let key1 = 'pig';
+    let value1 = 55;
+
+    hashTable.add(key, value);
+    expect( () => {
+      hashTable.add(key1, value1);
+    }).toThrow('Key already being used');
+  });
+
+  it('should throw an error if no key is provided', () => {
+    let hashTable = new HashTable(5);
+    let key = '';
+    let value = 'round';
+    expect( () => {
+      hashTable.add(key, value);
+    }).toThrow('Invalid key provided');
+  });
+
 });
 
 describe('get(key)', () => {
   it('should retrieve based on a key returns the value stored', () => {
     let key = 'horse';
-    let value = 'brown'
-    let hashTable = new HashTable(5); 
+    let value = 'brown';
+    let hashTable = new HashTable(5);
 
     hashTable.add(key, value);
 
@@ -84,12 +110,34 @@ describe('get(key)', () => {
       hashTable.get(badKey);
     }).toThrow('Invalid key provided');
   });
-  
+
 });
 
+describe('Collision handling', () => {
 
+  it('should successfully retrieve a value from a bucket within the hashtable that has a collision', () => {
+    let hashTable = new HashTable(5);
+    let key = 'cat';
+    let value = 42;
+    let key1 = 'bbt';
+    let value1 = 25;
 
+    hashTable.add(key, value);
+    hashTable.add(key1, value1);
 
-// Successfully handle a collision within the hashtable
+    expect(hashTable.buckets[3].values()).toEqual([['cat', 42], ['bbt', 25]]);
+  });
 
-// Successfully retrieve a value from a bucket within the hashtable that has a collision
+  it('should successfully handle a collision within the hashtable', () => {
+    let hashTable = new HashTable(5);
+    let key = 'cat';
+    let value = 42;
+    let key1 = 'bbt';
+    let value1 = 25;
+
+    hashTable.add(key, value);
+    hashTable.add(key1, value1);
+
+    expect(hashTable.buckets[3].values()).toEqual([['cat', 42], ['bbt', 25]]);
+  });
+});
