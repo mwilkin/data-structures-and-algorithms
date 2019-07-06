@@ -46,8 +46,8 @@ class LinkedList{
     let current = this.head;
 
     while(current){
-      valuesH.push(current.value);
-      current.current.next;
+      values.push(current.value);
+      current = current.next;
     }
     return values;
   }
@@ -109,7 +109,6 @@ class HashTable {
   prettyPrint() {
     this.buckets.forEach( (item, index) => console.log(index, item && item.values()));
   }
-
 }
 
 module.exports = { LinkedList, HashTable };

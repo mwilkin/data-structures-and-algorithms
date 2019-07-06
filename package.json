@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage --verbose",
-    "watch": "jest --watchall --verbose --coverage",
+    "watch": "jest --watch --verbose --coverage",
     "start": "node index.js",
-    "lint": "eslint **/*.js",
-    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+    "lint": "eslint **/*.js --fix",
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json ."
   },
   "keywords": [],
   "author": "Matt Wilkin",

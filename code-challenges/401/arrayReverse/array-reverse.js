@@ -11,4 +11,4 @@ exports.reverseArray = (inputArray) => {
     counter++;
   }
   return reversedArr;
-}
+};
