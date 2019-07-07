@@ -75,7 +75,7 @@ ____
 
 [FIFI Animal Shelter](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/fifoAnimalShelter)
 
-[Hash Table](https://github.com/mwilkin/data-structures-and-algorithms/blob/master/data-structures/hashTable/README.md)
+[Hash Table](https://github.com/mwilkin/data-structures-and-algorithms/master/data-structures/hashTable/README.md)
 
 _____
 ### Authored by Matt Wilkin
