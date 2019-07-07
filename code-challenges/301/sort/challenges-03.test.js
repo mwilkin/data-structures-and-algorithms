@@ -198,7 +198,7 @@ const weekDays = [
 ];
 
 const sortMeetingsByDay = (arr) => {
-  
+
   arr.sort ((a,b) => {
     if(a.getDay(dayOfWeek) < b.getDay(dayOfWeek)){
       return -1;

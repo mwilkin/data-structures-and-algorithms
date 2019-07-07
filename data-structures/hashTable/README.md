@@ -1,46 +1,29 @@
-# Hash Table
+# Create a Hash Table
 
-[![Build Status](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-04.svg?branch=master)](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-04)
+Create a simple implementation of a Hash Table with collision protection. 
 
-### Author: Matt Wilkin
+## Challenge
 
-### Links and Resources
-* [Submission PR](https://github.com/mwilkin-401-advanced-javascript/lab-04/pull/4)
+Implement a Hashtable with the following methods:
 
-* [Travis](https://www.travis-ci.com/mwilkin-401-advanced-javascript/lab-04)
+* `add`: takes in both the key and value. This method should hash the key, and add the key and value pairto the table, handling collisions as needed.
 
-* [Heroku]()
+* `get`: takes in the key and returns the value from the table.
 
-* [UML]()
+* `contains`: takes in the key and returns a boolean, indicating if the key exists in the table already.
 
-### Documentation
+* `hash`: takes in an arbitrary key and returns an index in the collection.
 
-Dependencies
-jest
+## Approach & Efficiency
 
-eslint
+1. Problem Domain accurately describes problem
+2. Visual will capture the process
+3. Algorithm will decribe the function
+4. Pseudo code will match the Algorithm
+5. Code will match the Pseudo
 
-Modules
+## Solution
 
+* Whiteboard image
+<img src="./assets/Hash_Table.jpg" width=400>
 
-Exported Values and Methods
-
-
-### Setup
-
-Running the app
-
-`npm start`
-
-### Tests
-How do you run tests?
-
-`npm test`
-
-What assertions were made?
-What assertions need to be / should be made?
-
-_________________
-_________________
-
-Project Guidelines

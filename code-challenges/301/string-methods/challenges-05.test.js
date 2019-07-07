@@ -18,7 +18,7 @@ const howMuchPencil = (str) => {
   // [str].forEach(element => {
   //   result.push(str.slice([-element, [element]]));
   // });
-  
+
   for(let i = 0; i <= str.length; i++){
     result.push(str.slice(i));
   }
@@ -144,7 +144,7 @@ const removeEvenValues = (arr) => {
     }
   }
   return arr;
-};  
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7
