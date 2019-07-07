@@ -114,7 +114,6 @@ describe('get(key)', () => {
 });
 
 describe('Collision handling', () => {
-
   it('should successfully retrieve a value from a bucket within the hashtable that has a collision', () => {
     let hashTable = new HashTable(5);
     let key = 'cat';
