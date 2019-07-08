@@ -1,9 +1,11 @@
 'use strict';
 const findRepeatedWord = (inputString) => {
   if(typeof inputString !== 'string'){throw new Error ('Not a valid input string');}
-  // let word = inputString.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/, ' ');
+  // let word = inputString.toLowerCase().replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/, ' ');
 
-  let word = inputString.replace(/[.,/#!$%^&*;:{}=\-_`~()]/, ' ').toLowerCase();
+  // let word = inputString.replace(/[.,/#!$%^&*;:{}=\-_`~()]/, ' ');
+  let word = inputString.toLowerCase().split(' ');
+
   let wordCount = {};
 
   for (let i = 0; i < word.length; i++){
