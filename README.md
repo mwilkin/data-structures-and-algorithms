@@ -79,10 +79,12 @@ ____
 
 [Repeated Word](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/repeatedWord)
 
+[Tree Intersection](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/treeIntersection)
+
 _____
 ### Authored by Matt Wilkin
 
 #### Started 4/21/19
 
-#### Last update 7/08/19
+#### Last update 7/09/19
 
