@@ -8,7 +8,9 @@ Find the first repeated word in a book.
 
 ## Approach & Efficiency
 
+I reviewed the class demo, did a lot of research to learn more about Stacks and Queues, and then planned my project, wrote my tests, then executed the code.
 
+All tests are passing, all the code is covered by tests.
 
 ## Solution
 <img src="./assets/repeated_word.jpg" width=400>
