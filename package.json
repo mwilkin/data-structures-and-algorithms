@@ -7,7 +7,7 @@
     "test": "jest --coverage --verbose",
     "watch": "jest --watch --verbose --coverage",
     "start": "node index.js",
-    "lint": "eslint **/*.js --fix",
+    "lint": "eslint \"**/*.js\"",
     "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json ."
   },
   "keywords": [],
