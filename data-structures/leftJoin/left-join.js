@@ -4,7 +4,7 @@ const leftJoin = ( leftHash, rightHash) => {
   let results = leftHash;
   for (const key in rightHash){
     if (leftHash[key]){
-      results[key] = [leftHash[key], rightHash[key]];
+      results[key] = [key, leftHash[key], rightHash[key]];
     }
   }
   return results;
