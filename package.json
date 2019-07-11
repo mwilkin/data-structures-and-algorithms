@@ -14,6 +14,7 @@
   "author": "Matt Wilkin",
   "license": "MIT",
   "dependencies": {
+    "eslint": "^6.0.1",
     "jest": "^24.8.0"
   }
 }
