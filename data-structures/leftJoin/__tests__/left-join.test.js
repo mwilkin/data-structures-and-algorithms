@@ -29,7 +29,13 @@ describe('leftJoin function on hashtables', () => {
   });
 
   // it('should properly append the antonym value to the key and synonym values', ()=> {
+  //   let test = leftJoin(synonymHash, antonymHash);
+  //   expect(test.wrath).toEqual(['wrath', 'anger', 'delight']);
+  // });
 
+  // it('should return null if key is not found in second table', ()=>{
+  //   let test = leftJoin(synonymHash, antonymHash);
+  //   expect(test.outfil).toEqual(['outfil', 'garb', null]);
   // });
 
 });

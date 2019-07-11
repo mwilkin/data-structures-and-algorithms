@@ -1,5 +1,5 @@
 'use strict';
-const leftJoin = ( leftHash, rightHash) => {
+const leftJoin = ( leftHash, rightHash ) => {
   if(!leftHash || !rightHash)throw new Error('Not valid input. Two hashtables required');
   let results = leftHash;
   for (const key in rightHash){
