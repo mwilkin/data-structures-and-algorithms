@@ -65,7 +65,7 @@ class Graph {
 
       const neighbors = this.getNeighbors(currentVertex);
 
-      for(let edge in neighbors){
+      for(let edge of neighbors){
         const neighborVertex = edge.vertex;
 
         if(visitedVertices.has(neighborVertex)){
@@ -113,7 +113,8 @@ graph.addDirectedEdge(three, oh);
 graph.addDirectedEdge(oh, nine);
 graph.addDirectedEdge(nine, eight);
 
-console.log(graph.getNeighbors(eight));
+// console.log(graph);
+// console.log(graph.getNeighbors(eight));
 
-
+console.log(graph.pathTo(eight, seven));
 module.exports = Graph;
