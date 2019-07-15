@@ -70,9 +70,10 @@ describe('Graph data structure', ()=> {
   // it('should properly return a graph with only one node and edge', () => {
 
   // });
-  // it('should prperly return null for an empty graph', () => {
-
-  // });
+  it('should prperly return null for an empty graph', () => {
+    let testGraph = new Graph();
+    expect(testGraph.size()).toBe(null);
+  });
 });
 
 
