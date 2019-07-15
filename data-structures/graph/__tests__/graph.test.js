@@ -78,8 +78,14 @@ describe('Graph data structure', ()=> {
 });
 
 describe('breadthFirstTraversal method', () => {
+  
   it('should properly throw an error when given an invalid input', () => {
-    
+    let badNode = '';
+    let badGraph = new Graph(badNode);
+    expect( () => {
+      badGraph.breadthFirstTraversal(badNode);
+    }).toThrow('Input invalid');
   });
+
 });
 
