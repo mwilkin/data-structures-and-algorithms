@@ -97,6 +97,32 @@ class Graph {
 
   // }
 
+  breadthFirstTraversal(node){
+    if(!node){ throw new Error('Input invalid');}
+    if(node === 'undefined' || node.data === 'undefined'){
+      return null;
+    }
+
+    let visitedArray = [node];
+    let traversalQueue = [node];
+
+    while(traversalQueue.length){
+      let visitedNode = traversalQueue.shift();
+
+      if(!visitedArray.includes(visitedNode)){
+        visitedArray.push(visitedNode);
+      }
+      const neighbors = this.getNeighbors(visitedNode);
+
+      for(let i = 0; i < neighbors.length; i++){
+        if(!visitedArray.includes(neighbors[i])){
+          traversalQueue.push(neighbors);
+        }
+      }
+    }
+    return visitedArray;
+  }
+
   size(){
     if(this._adjacencyList.size === 0){
       return null;

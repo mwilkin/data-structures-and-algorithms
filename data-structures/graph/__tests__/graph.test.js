@@ -77,4 +77,9 @@ describe('Graph data structure', ()=> {
   });
 });
 
+describe('breadthFirstTraversal method', () => {
+  it('should properly throw an error when given an invalid input', () => {
+    
+  });
+});
 

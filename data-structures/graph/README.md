@@ -49,3 +49,29 @@ Utilize the Single-responsibility principle: any methods you write should be cle
 Write at least three test assertions for each method that you define.
 
 ------
+
+# Breadth First Traversal for a Graph
+
+Implement a breadth-first traversal on a graph.
+
+## Challenge
+
+* Extend your graph object with a breadth-first traversal method that accepts a starting node.
+
+* Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. 
+
+* Display the collection.
+
+## Approach & Efficiency
+
+1. Problem Domain accurately describes problem
+2. Visual will capture the process
+3. Algorithm will decribe the function
+4. Pseudo code will match the Algorithm
+5. Code will match the Pseudo
+
+## Solution
+
+* Breadth First Search Graph 
+<img src="./assets/breadth_first_graph_whiteboard.jpg">
+______
