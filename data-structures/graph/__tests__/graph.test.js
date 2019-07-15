@@ -78,7 +78,7 @@ describe('Graph data structure', ()=> {
 });
 
 describe('breadthFirstTraversal method', () => {
-  
+
   it('should properly throw an error when given an invalid input', () => {
     let badNode = '';
     let badGraph = new Graph(badNode);
@@ -86,6 +86,20 @@ describe('breadthFirstTraversal method', () => {
       badGraph.breadthFirstTraversal(badNode);
     }).toThrow('Input invalid');
   });
+
+  it('should properly return null if the node and/or the node value is underfined', ()=> {
+    let node;
+    let undefinedGraph = new Graph(node);
+    expect(() => {
+      undefinedGraph.breadthFirstTraversal(node).toThrow('Input Invalid');
+    });
+  });
+  // it('should', ()=> {
+
+  // });
+  // it('should', ()=> {
+
+  // });
 
 });
 
