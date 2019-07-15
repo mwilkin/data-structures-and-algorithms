@@ -139,5 +139,5 @@ graph.addDirectedEdge(nine, eight);
 // console.log(graph);
 // console.log(graph.getNeighbors(eight));
 
-console.log(graph.pathTo(eight, seven));
+// console.log(graph.pathTo(eight, seven));
 module.exports = {Graph, Node, Vertex, Edge};
