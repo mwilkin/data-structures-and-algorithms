@@ -2,18 +2,71 @@
 
 const { Graph, Node, Vertex, Edge } = require('../graph.js');
 
-// Node can be successfully added to the graph
-// An edge can be successfully added to the graph
-// A collection of all nodes can be properly retrieved from the graph
-// All appropriate neighbors can be retrieved from the graph
-// Neighbors are returned with the weight between nodes included
-// The proper size is returned, representing the number of nodes in the graph
-// A graph with only one node and edge can be properly returned
-// An empty graph properly returns null
-
 describe('Graph data structure', ()=> {
-  it('should create an instance graph', ()=> {
-    const newGraph = new Graph();
-    expect(newGraph).toBeDefined();
+  let graph;
+  beforeEach(() => {
+    graph = new Graph();
+
+    const eight = new Vertex(8);
+    const six = new Vertex(6);
+    const seven = new Vertex(7);
+    const five = new Vertex(5);
+    const three = new Vertex(3);
+    const oh = new Vertex(0);
+    const nine = new Vertex(9);
+
+    graph.addVertex(eight);
+    graph.addVertex(six);
+    graph.addVertex(seven);
+    graph.addVertex(five);
+    graph.addVertex(three);
+    graph.addVertex(oh);
+    graph.addVertex(nine);
+
+    graph.addDirectedEdge(eight, six);
+    graph.addDirectedEdge(eight, five);
+    graph.addDirectedEdge(six, seven);
+    graph.addDirectedEdge(seven, five);
+    graph.addDirectedEdge(five, three);
+    graph.addDirectedEdge(three, oh);
+    graph.addDirectedEdge(oh, nine);
+    graph.addDirectedEdge(nine, eight);
   });
+
+  it('should create an instance graph', ()=> {
+    expect(graph).toBeDefined();
+  });
+
+  describe('addNode method', () => {
+    it('should successfully add a Node to the graph', () => {
+
+      let X = 42;
+      graph.addNode(X);
+      expect(graph._adjacencyList.has(X));
+    });
+
+  });
+  // it('should successfully add an edge to the graph', () => {
+
+  // });
+  // it('should properly retrieve a collection of all nodes from the graph', () => {
+
+  // });
+  // it('should retrieve all appropriate neighbors from the graph', () => {
+
+  // });
+  // it('should return neighbors with the weight between nodes included', () => {
+
+  // });
+  // it('should return the proper size, representing the number of nodes in the graph', () => {
+
+  // });
+  // it('should properly return a graph with only one node and edge', () => {
+
+  // });
+  // it('should prperly return null for an empty graph', () => {
+
+  // });
 });
+
+
