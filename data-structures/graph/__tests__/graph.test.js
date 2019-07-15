@@ -61,9 +61,9 @@ describe('Graph data structure', ()=> {
   // it('should retrieve all appropriate neighbors from the graph', () => {
 
   // });
-  // it('should return neighbors with the weight between nodes included', () => {
-
-  // });
+  it('should return neighbors with the weight between nodes included', () => {
+    expect(graph.getNeighbors(five)).toEqual([{'vertex': {'value': 3}, 'weight': 0}]);
+  });
   it('should return the proper size, representing the number of nodes in the graph', () => {
     expect(graph.size()).toEqual(7);
   });
