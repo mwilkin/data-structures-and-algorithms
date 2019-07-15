@@ -79,6 +79,8 @@ ____
 
 [Repeated Word](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/repeatedWord)
 
+[Graph](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/graph)
+
 _____
 ### Authored by Matt Wilkin
 
