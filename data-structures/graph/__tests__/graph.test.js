@@ -6,10 +6,11 @@ describe('Graph data structure', ()=> {
   let graph;
   let five;
   let six;
+  let eight;
   beforeEach(() => {
     graph = new Graph();
 
-    const eight = new Vertex(8);
+    eight = new Vertex(8);
     six = new Vertex(6);
     const seven = new Vertex(7);
     five = new Vertex(5);
@@ -59,7 +60,7 @@ describe('Graph data structure', ()=> {
 
   // });
   // it('should retrieve all appropriate neighbors from the graph', () => {
-
+  //   expect(graph.getNeighbors(eight)).toEqual([{'vertex': {'value': 5}, 'weight': 0}, {'vertex': {'value': 6}, 'weight': 0}]);
   // });
   it('should return neighbors with the weight between nodes included', () => {
     expect(graph.getNeighbors(five)).toEqual([{'vertex': {'value': 3}, 'weight': 0}]);
