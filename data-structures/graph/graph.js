@@ -98,6 +98,9 @@ class Graph {
   // }
 
   size(){
+    if(this._adjacencyList.size === 0){
+      return null;
+    }
     return this._adjacencyList.size;
   }
 

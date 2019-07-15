@@ -72,7 +72,7 @@ describe('Graph data structure', ()=> {
   // });
   it('should prperly return null for an empty graph', () => {
     let testGraph = new Graph();
-    expect(testGraph.size()).toBe(null);
+    expect(testGraph.size()).toEqual(null);
   });
 });
 
