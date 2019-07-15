@@ -1,5 +1,12 @@
 'use strict';
 
+class Node {
+  constructor(data = null){
+    this.data = data;
+  }
+}
+
+
 class Vertex {
   constructor(value){
     this.value = value;
@@ -25,6 +32,13 @@ class Graph {
   addVertex(vertex){
     this._adjacencyList.set(vertex, []);
   }
+
+  addNode(data){
+    const node = new Node(data);
+    this._adjacencyList.set(node, []);
+    return node;
+  }
+
 
   addDirectedEdge(startVertex, endVertex, weight = 0){
     if(!this._adjacencyList.has(startVertex) || !this._adjacencyList.has(endVertex)){
@@ -78,6 +92,15 @@ class Graph {
     }
   }
 
+  // getNodes(){
+
+
+  // }
+
+  size(){
+    return this._adjacencyList.size;
+  }
+
   prettPrintAdjacencyList(){
     //Iterate over all kes in map
     //For each key, print to scree
@@ -117,4 +140,4 @@ graph.addDirectedEdge(nine, eight);
 // console.log(graph.getNeighbors(eight));
 
 console.log(graph.pathTo(eight, seven));
-module.exports = Graph;
+module.exports = {Graph, Node, Vertex, Edge};

@@ -1,5 +1,7 @@
 'use strict';
 
+const { Graph, Node, Vertex, Edge } = require('../graph.js');
+
 // Node can be successfully added to the graph
 // An edge can be successfully added to the graph
 // A collection of all nodes can be properly retrieved from the graph
@@ -9,3 +11,9 @@
 // A graph with only one node and edge can be properly returned
 // An empty graph properly returns null
 
+describe('Graph data structure', ()=> {
+  it('should create an instance graph', ()=> {
+    const newGraph = new Graph();
+    expect(newGraph).toBeDefined();
+  });
+});
