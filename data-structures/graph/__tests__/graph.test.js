@@ -59,9 +59,7 @@ describe('Graph data structure', ()=> {
   // it('should properly retrieve a collection of all nodes from the graph', () => {
 
   // });
-  // it('should retrieve all appropriate neighbors from the graph', () => {
-  //   expect(graph.getNeighbors(eight)).toEqual([{'vertex': {'value': 5}, 'weight': 0}, {'vertex': {'value': 6}, 'weight': 0}]);
-  // });
+
   it('should return neighbors with the weight between nodes included', () => {
     expect(graph.getNeighbors(five)).toEqual([{'vertex': {'value': 3}, 'weight': 0}]);
   });
@@ -87,17 +85,36 @@ describe('breadthFirstTraversal method', () => {
     }).toThrow('Input invalid');
   });
 
-  it('should properly return null if the node and/or the node value is underfined', ()=> {
+  it('should properly return null if the node and/or the node value is undefined', ()=> {
     let node;
     let undefinedGraph = new Graph(node);
     expect(() => {
       undefinedGraph.breadthFirstTraversal(node).toThrow('Input Invalid');
     });
   });
-  // it('should', ()=> {
 
-  // });
-  // it('should', ()=> {
+  it('should return an array', ()=> {
+    let graph = new Graph();
+    graph.addVertex('one', []);
+
+    let actual = graph.breadthFirstTraversal('one');
+
+    expect(actual).toBeInstanceOf(Array);
+
+  });
+  // it('should return an array with visited nodes', ()=> {
+  //   let graph = new Graph();
+  //   graph.vertex = {
+  //     'a' : ['b', 'c', 'd'],
+  //     'b' : ['a'],
+  //     'c' : ['a', 'd'],
+  //     'd' : ['a', 'c'],
+
+  //   };
+
+  //   let result = graph.breadthFirstTraversal('a');
+
+  //   expect(result).toEqual(['a', 'b', 'c', 'd']);
 
   // });
 

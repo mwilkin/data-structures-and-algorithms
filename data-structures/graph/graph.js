@@ -92,16 +92,21 @@ class Graph {
     }
   }
 
-  // getNodes(){
-
-
-  // }
+  // Felipe helped me with this
+  getNodes(){
+  //   return this.size() ? [...this._adjacencyList.keys()] : null;
+  
+    let nodes = [ ...this._adjacencyList.keys()];
+    let result = [];
+    nodes.map(key => {
+      key = key.value;
+      result.push(key);
+    });
+    return result;
+  }
 
   breadthFirstTraversal(node){
     if(!node){ throw new Error('Input invalid');}
-    if(node === 'undefined' || node.data === 'undefined'){
-      return null;
-    }
 
     let visitedArray = [node];
     let traversalQueue = [node];
