@@ -20,5 +20,3 @@ Given a business trip itinerary, and an Alaska Airlines route map, is the trip p
 
 * `getEdge (graph, array)` 
 <img src="./assets/get-edge-whiteboard.jpg">
-
-

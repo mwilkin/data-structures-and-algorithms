@@ -55,6 +55,8 @@ ____
 
 [Insert and Shift Array](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayShift)
 
+[Get Edge](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/getEdge)
+
 ### Data Structures
 
 [Linked List](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/llMerge)
