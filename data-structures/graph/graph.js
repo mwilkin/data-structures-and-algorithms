@@ -96,13 +96,13 @@ class Graph {
   getNodes(){
   //   return this.size() ? [...this._adjacencyList.keys()] : null;
   
-    let nodes = [ ...this._adjacencyList.keys()];
-    let result = [];
-    nodes.map(key => {
-      key = key.value;
-      result.push(key);
-    });
-    return result;
+    // let nodes = [ ...this._adjacencyList.keys()];
+    // let result = [];
+    // nodes.map(key => {
+    //   key = key.value;
+    //   result.push(key);
+    // });
+    // return result;
   }
 
   breadthFirstTraversal(node){
