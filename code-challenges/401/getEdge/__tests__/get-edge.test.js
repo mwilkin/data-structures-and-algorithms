@@ -24,5 +24,23 @@ describe('getEdges method', () => {
     expect(badResult).toEqual([false, 0]);
   });
 
+  it('should properly traverse a graph and return summed weights', ()=>{
+    const goodGraph = new Graph();
+
+    const a = goodGraph.addNode('cat');
+    const b = goodGraph.addNode('dog');
+    const c = goodGraph.addNode('fish');
+    const d = goodGraph.addNode('horse');
+
+    goodGraph.addBiDirectionalEdge(a, b, 10);
+    goodGraph.addBiDirectionalEdge(b, c, 20);
+    goodGraph.addBiDirectionalEdge(c, d, 30);
+
+    // let result = getEdges(goodGraph, [a, b, c]);
+
+    // expect(result).toEqual([true, 30]);
+    expect(goodGraph).toBeDefined();
+  });
+
 });
 

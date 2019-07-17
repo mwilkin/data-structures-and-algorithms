@@ -8,8 +8,8 @@ const getEdges = (graph,array) => {
   }
 
   let tripTotal = 0;
-  for(let i = 0; i < array.length; i++){
-    let neighbors = graph.getNeighbor(array[i]);
+  for(let i = 0; i < array.length - 1; i++){
+    let neighbors = graph.getNeighbors(array[i]);
     let index = neighbors.findIndex(neighbor => neighbor.node === array[i + 1]);
     if(index >= 0){
       tripTotal =+ neighbors[index].weight;
@@ -19,5 +19,7 @@ const getEdges = (graph,array) => {
   }
   return [true, tripTotal];
 };
+
+
 
 module.exports = getEdges ;
