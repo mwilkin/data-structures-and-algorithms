@@ -1,4 +1,4 @@
-# Binary Tree and Binary Search Tree Data Structures
+# Get Edges : Finding a path while keeping track of 
 
 Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
 
