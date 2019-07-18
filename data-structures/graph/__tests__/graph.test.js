@@ -36,6 +36,10 @@ describe('Graph data structure', ()=> {
     graph.addDirectedEdge(nine, eight);
   });
 
+  // afterEach( () => {
+  //   graph._adjacencyList.clear();
+  // });
+
   it('should create an instance graph', ()=> {
     expect(graph).toBeDefined();
   });
@@ -49,29 +53,46 @@ describe('Graph data structure', ()=> {
     });
 
   });
-  // describe('addDirectedEdge method', () => {
-  //   it('should successfully add an edge to the graph', () => {
-  //     graph.addDirectedEdge(five, six, 2);
-  //     expect(graph[five].toHave)
-  //   });
+  describe('addDirectedEdge method', () => {
+    it('should successfully add an edge to the graph', () => {
+      let catVertex = new Vertex(50);
+      let dogVertex = new Vertex(22);
+      graph.addVertex(catVertex);
+      graph.addVertex(dogVertex);
+      graph.addDirectedEdge(catVertex, dogVertex, 2);
+      let actual = [new Edge(new Vertex(22), 2)];
+      expect(graph._adjacencyList.get(catVertex)).toEqual(actual);
+    });
 
-  // });
-  // it('should properly retrieve a collection of all nodes from the graph', () => {
+  });
+  it('should properly retrieve a collection of all nodes from the graph', () => {
 
-  // });
+    expect(graph.getNodes()).toEqual([{'value': 8}, {'value': 6}, {'value': 7}, {'value': 5}, {'value': 3}, {'value': 0}, {'value': 9}]);
+  });
 
   it('should return neighbors with the weight between nodes included', () => {
     expect(graph.getNeighbors(five)).toEqual([{'vertex': {'value': 3}, 'weight': 0}]);
   });
+
   it('should return the proper size, representing the number of nodes in the graph', () => {
     expect(graph.size()).toEqual(7);
   });
-  // it('should properly return a graph with only one node and edge', () => {
 
-  // });
+  it('should properly return a graph with only one node and edge', () => {
+    let minnieGraph = new Graph();
+    let actual = new Vertex(50);
+    minnieGraph.addVertex(actual);
+    minnieGraph.addBiDirectionalEdge(actual, actual);
+    expect(minnieGraph.size()).toEqual(1);
+
+  });
   it('should prperly return null for an empty graph', () => {
     let testGraph = new Graph();
     expect(testGraph.size()).toEqual(null);
+  });
+
+  it('can properly find a path between verticies', () => {
+    expect(graph.pathTo(six, five)).toEqual([{'value': 7}, {'value': 6}, {'value': 5}, {'value': 7}]);
   });
 });
 
@@ -103,20 +124,27 @@ describe('breadthFirstTraversal method', () => {
 
   });
   // it('should return an array with visited nodes', ()=> {
-  //   let graph = new Graph();
-  //   graph.vertex = {
-  //     'a' : ['b', 'c', 'd'],
-  //     'b' : ['a'],
-  //     'c' : ['a', 'd'],
-  //     'd' : ['a', 'c'],
+  //   let cityGraph = new Graph();
+  //   let bendVertex = new Vertex('bend');
+  //   let sunriverVertex = new Vertex('sunriver');
+  //   let fossilVertex = new Vertex('fossil');
+  //   cityGraph.addNode(bendVertex);
+  //   cityGraph.addNode(sunriverVertex);
+  //   cityGraph.addNode(fossilVertex);
+  //   cityGraph.addDirectedEdge(bendVertex, sunriverVertex);
+  //   cityGraph.addDirectedEdge(bendVertex, fossilVertex);
 
-  //   };
+  //   let actual = cityGraph.breadthFirstTraversal(bendVertex);
 
-  //   let result = graph.breadthFirstTraversal('a');
+  //   expect(actual).toEqual(['bend', 'sunriver', 'fossil']);
+  // });
 
-  //   expect(result).toEqual(['a', 'b', 'c', 'd']);
+  // it('should detect only one vertex if only one given', ()=> {
+  //   let oneGraph = new Graph();
+  //   let oneVertex = new Vertex('One');
 
+  //   let result = oneGraph.breadthFirstTraversal(oneVertex);
+  //   expect(result).toEqual(['One']);
   // });
 
 });
-

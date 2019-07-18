@@ -66,14 +66,14 @@ class Graph {
   pathTo(startVertex, goalVertex){
     const stack = [];
     const visitedVertices = new Set();
-    const parentPath = new Map();
+    const parentPath = new Array();
     stack.push(startVertex);
     visitedVertices.add(startVertex);
 
     while(stack.length){
       const currentVertex = stack.pop();
 
-      console.log(currentVertex, goalVertex);
+      // console.log(currentVertex, goalVertex);
       if(currentVertex === goalVertex){
         return parentPath;
       }
@@ -88,7 +88,8 @@ class Graph {
         } else {
           visitedVertices.add(neighborVertex);
         }
-        stack.push(neighborVertex, currentVertex);
+        stack.push(neighborVertex);
+        parentPath.push(neighborVertex, currentVertex);
       }
     }
   }
@@ -126,6 +127,7 @@ class Graph {
     }
     return visitedArray;
   }
+
 
   size(){
     if(this._adjacencyList.size === 0){
