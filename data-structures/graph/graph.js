@@ -23,7 +23,7 @@ class Edge {
 class Graph {
   constructor(){
     this._adjacencyList = new Map();
-
+    this.numberOfNodes = 0;
   }
   addValue(value){
     this.addVertex(new Vertex(value));
@@ -31,6 +31,7 @@ class Graph {
 
   addVertex(vertex){
     this._adjacencyList.set(vertex, []);
+    this.numberOfNodes += 1;
   }
 
   addNode(data){
@@ -65,14 +66,14 @@ class Graph {
   pathTo(startVertex, goalVertex){
     const stack = [];
     const visitedVertices = new Set();
-    const parentPath = new Map();
+    const parentPath = new Array();
     stack.push(startVertex);
     visitedVertices.add(startVertex);
 
     while(stack.length){
       const currentVertex = stack.pop();
 
-      console.log(currentVertex, goalVertex);
+      // console.log(currentVertex, goalVertex);
       if(currentVertex === goalVertex){
         return parentPath;
       }
@@ -87,22 +88,21 @@ class Graph {
         } else {
           visitedVertices.add(neighborVertex);
         }
-        stack.push(neighborVertex, currentVertex);
+        stack.push(neighborVertex);
+        parentPath.push(neighborVertex, currentVertex);
       }
     }
   }
 
-  // Felipe helped me with this
+
   getNodes(){
   //   return this.size() ? [...this._adjacencyList.keys()] : null;
-  
-    // let nodes = [ ...this._adjacencyList.keys()];
-    // let result = [];
-    // nodes.map(key => {
-    //   key = key.value;
-    //   result.push(key);
-    // });
-    // return result;
+
+    if(this.numberOfNodes !==0){
+      return [...this._adjacencyList.keys()];
+    } else {
+      return null;
+    }
   }
 
   breadthFirstTraversal(node){
@@ -128,6 +128,7 @@ class Graph {
     return visitedArray;
   }
 
+
   size(){
     if(this._adjacencyList.size === 0){
       return null;
@@ -135,40 +136,14 @@ class Graph {
     return this._adjacencyList.size;
   }
 
-  prettPrintAdjacencyList(){
-    //Iterate over all kes in map
-    //For each key, print to scree
-    //Print vertex in all edges
-  }
+  // prettPrintAdjacencyList(){
+  //Iterate over all kes in map
+  //For each key, print to scree
+  //Print vertex in all edges
+  // }
 
 }
 
-const graph = new Graph();
-
-const eight = new Vertex(8);
-const six = new Vertex(6);
-const seven = new Vertex(7);
-const five = new Vertex(5);
-const three = new Vertex(3);
-const oh = new Vertex(0);
-const nine = new Vertex(9);
-
-graph.addVertex(eight);
-graph.addVertex(six);
-graph.addVertex(seven);
-graph.addVertex(five);
-graph.addVertex(three);
-graph.addVertex(oh);
-graph.addVertex(nine);
-
-graph.addDirectedEdge(eight, six);
-graph.addDirectedEdge(eight, five);
-graph.addDirectedEdge(six, seven);
-graph.addDirectedEdge(seven, five);
-graph.addDirectedEdge(five, three);
-graph.addDirectedEdge(three, oh);
-graph.addDirectedEdge(oh, nine);
-graph.addDirectedEdge(nine, eight);
 
 // console.log(graph);
 // console.log(graph.getNeighbors(eight));
