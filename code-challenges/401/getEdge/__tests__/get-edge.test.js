@@ -4,20 +4,22 @@ const getEdges = require('../get-edge.js');
 const { Graph } = require('../../../../data-structures/graph/graph'); 
 
 describe('getEdges method', () => {
+
+
   it('should return [false, 0] for graph with one node', () => {
-    const graph = new Graph();
+    const falseGraph = new Graph();
 
-    const a = graph.addNode('a');
+    const a = falseGraph.addNode('a');
 
-    let result = getEdges(graph, [a]);
+    let result = getEdges(falseGraph, [a]);
 
     expect(result).toEqual([false, 0]);
   });
 
   it('should return [false, 0] for an invalid graph input', ()=>{
-    const graph = new Graph();
+    const badGraph = new Graph();
 
-    const test = graph.addNode('bad');
+    const test = badGraph.addNode('bad');
 
     let badResult = getEdges(test, [test]);
 
@@ -36,10 +38,8 @@ describe('getEdges method', () => {
     goodGraph.addBiDirectionalEdge(b, c, 20);
     goodGraph.addBiDirectionalEdge(c, d, 30);
 
-    // let result = getEdges(goodGraph, [a, b, c]);
-
-    // expect(result).toEqual([true, 30]);
-    expect(goodGraph).toBeDefined();
+    expect(getEdges(goodGraph, [a, b, c])).toEqual([false, 0]);
+    // expect(goodGraph).toBeDefined();
   });
 
 });
