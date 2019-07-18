@@ -10,6 +10,8 @@ Given a business trip itinerary, and an Alaska Airlines route map, is the trip p
 
 ## Approach & Efficiency
 
+Big O(n+K)
+
 1. Problem Domain accurately describes problem
 2. Visual will capture the process
 3. Algorithm will decribe the function
