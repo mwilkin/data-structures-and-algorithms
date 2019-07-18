@@ -83,6 +83,8 @@ ____
 
 [Breadth First Traversal of a Graph](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/graph)
 
+[Depth First Traversal of a Graph](https://github.com/mwilkin/data-structures-and-algorithms/master/data-structures/depthFirst)
+
 _____
 ### Authored by Matt Wilkin
 
