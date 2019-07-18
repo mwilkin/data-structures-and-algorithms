@@ -1,4 +1,4 @@
-# Binary Tree and Binary Search Tree Data Structures
+# Get Edges : Finding a path while keeping track of 
 
 Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
 
@@ -10,6 +10,8 @@ Given a business trip itinerary, and an Alaska Airlines route map, is the trip p
 
 ## Approach & Efficiency
 
+Big O(n+K)
+
 1. Problem Domain accurately describes problem
 2. Visual will capture the process
 3. Algorithm will decribe the function
@@ -20,5 +22,3 @@ Given a business trip itinerary, and an Alaska Airlines route map, is the trip p
 
 * `getEdge (graph, array)` 
 <img src="./assets/get-edge-whiteboard.jpg">
-
-
