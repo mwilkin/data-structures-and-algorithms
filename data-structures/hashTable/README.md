@@ -16,6 +16,8 @@ Implement a Hashtable with the following methods:
 
 ## Approach & Efficiency
 
+* Big O(1) on average and worst case of BigO(n)
+
 1. Problem Domain accurately describes problem
 2. Visual will capture the process
 3. Algorithm will decribe the function

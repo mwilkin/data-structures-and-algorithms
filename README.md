@@ -55,6 +55,8 @@ ____
 
 [Insert and Shift Array](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/arrayShift)
 
+[Get Edge](https://github.com/mwilkin/data-structures-and-algorithms/tree/array_shift/code-challenges/401/getEdge)
+
 ### Data Structures
 
 [Linked List](https://github.com/mwilkin/data-structures-and-algorithms/tree/master/data-structures/llMerge)
@@ -79,12 +81,19 @@ ____
 
 [Repeated Word](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/repeatedWord)
 
+
 [Tree Intersection](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/treeIntersection)
+
+[Graph](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/graph)
+
+[Breadth First Traversal of a Graph](https://github.com/mwilkin/data-structures-and-algorithms/tree/repeat/data-structures/graph)
+
 
 _____
 ### Authored by Matt Wilkin
 
 #### Started 4/21/19
 
-#### Last update 7/09/19
+
+#### Last update 7/15/19
 
